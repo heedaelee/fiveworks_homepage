@@ -1,50 +1,26 @@
+# fiveworks-hompage Project
 # React + TypeScript + Vite
+- 실행
+  yarn dev
+- 빌드
+  yarn build
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<!-- - pm2 명령어
+  - 루트 경로에서 pm2 serve dist 7090 --spa 로 실행 -->
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 👨‍💻 기술 스택
 
-## Expanding the ESLint configuration
+- react & typescript
+- styled-components
+- tailwindCSS
+- Vite
+  
+## 👨‍💻 라이브러리
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## 🚗 &nbsp; 사용하는 도구 버전
 
-- Configure the top-level `parserOptions` property like this:
+`[react] v18.~`  
+`[node] v20.14.0`  
+`[java] openJDK 21.0.2`
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
