@@ -13,3 +13,7 @@ body,
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  font-family: 'Lato', 'Pretendard-Regular', '맑은 고딕', sans-serif;
+  word-break: keep-all;
+}
