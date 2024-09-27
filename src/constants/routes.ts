@@ -11,9 +11,9 @@ export const ROUTE_PATHS = {
   product: 'business/product',
   news: 'media/news',
   event: 'media/event',
-  human: 'recruit/human',
-  process: 'recruit/process',
-  benefit: 'recruit/benefit',
+  human: 'careers/human',
+  process: 'careers/process',
+  benefit: 'careers/benefit',
   contact: 'contact',
 };
 
