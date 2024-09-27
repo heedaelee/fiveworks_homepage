@@ -1,0 +1,11 @@
+/* .depth2 {
+  display: none;
+} */
+
+.shadow-custom {
+  box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.125);
+}
+/* 
+body {
+  font-family: 'Lato', 'Pretendard-Regular', '맑은 고딕', sans-serif;
+} */
