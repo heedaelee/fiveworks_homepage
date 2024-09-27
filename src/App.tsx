@@ -9,7 +9,6 @@ const Overview = () => <div>Overview</div>;
 const Group = () => <div>Group</div>;
 const History = () => <div>History</div>;
 const Partners = () => <div>Partners</div>;
-const Map = () => <div>Map</div>;
 const AI = () => <div>AI</div>;
 const SI = () => <div>SI</div>;
 const BigData = () => <div>BigData</div>;
@@ -21,44 +20,27 @@ const Process = () => <div>Process</div>;
 const Benefit = () => <div>Benefit</div>;
 const Contact = () => <div>Contact</div>;
 
-const {
-  overview,
-  group,
-  history,
-  partners,
-  map,
-  ai,
-  si,
-  bigdata,
-  product,
-  news,
-  event,
-  human,
-  process,
-  benefit,
-  contact,
-} = ROUTE_PATHS;
+const {intro, business, media, careers, contact} = ROUTE_PATHS;
 
 function App() {
   return (
     <Routes>
       <Route path={'/'} element={<Container />}>
         <Route index element={<Home />} />
-        <Route path={overview} element={<Overview />} />
-        <Route path={group} element={<Group />} />
-        <Route path={history} element={<History />} />
-        <Route path={partners} element={<Partners />} />
-        <Route path={map} element={<Map />} />
-        <Route path={ai} element={<AI />} />
-        <Route path={si} element={<SI />} />
-        <Route path={bigdata} element={<BigData />} />
-        <Route path={product} element={<Product />} />
-        <Route path={news} element={<News />} />
-        <Route path={event} element={<Event />} />
-        <Route path={human} element={<Human />} />
-        <Route path={process} element={<Process />} />
-        <Route path={benefit} element={<Benefit />} />
-        <Route path={contact} element={<Contact />} />
+        <Route path={intro.overview} element={<Overview />} />
+        <Route path={intro.group} element={<Group />} />
+        <Route path={intro.history} element={<History />} />
+        <Route path={intro.partners} element={<Partners />} />
+        <Route path={business.ai} element={<AI />} />
+        <Route path={business.si} element={<SI />} />
+        <Route path={business.bigdata} element={<BigData />} />
+        <Route path={business.product} element={<Product />} />
+        <Route path={media.news} element={<News />} />
+        <Route path={media.event} element={<Event />} />
+        <Route path={careers.human} element={<Human />} />
+        <Route path={careers.process} element={<Process />} />
+        <Route path={careers.benefit} element={<Benefit />} />
+        <Route path={contact.contact} element={<Contact />} />
       </Route>
     </Routes>
   );
