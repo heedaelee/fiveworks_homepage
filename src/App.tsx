@@ -2,9 +2,10 @@ import {Route, Routes} from 'react-router-dom';
 import Container from '@/pages/container';
 // import Home from '@/pages/home';
 import {ROUTE_PATHS} from './constants/routes';
+import Home from './pages/home';
 
 // 예시 컴포넌트들
-const Home = () => <div>Home</div>;
+// const Home = () => <div>Home</div>;
 const Overview = () => <div>Overview</div>;
 const Group = () => <div>Group</div>;
 const History = () => <div>History</div>;

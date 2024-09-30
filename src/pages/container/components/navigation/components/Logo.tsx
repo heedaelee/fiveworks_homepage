@@ -14,12 +14,12 @@ const Logo = ({isOpen}: {isOpen: boolean}) => {
   };
 
   return (
-    <div className='bg-yellow-200 w-[15%] flex flex-row justify-center p-[20px] h-[125px]'>
+    <div className={`w-[15%] flex flex-row justify-center p-[20px] h-[125px]  `}>
       <Link to='/'>
         <img
           src={getLogoImagePath()}
           alt='logo'
-          className='h-[70px] object-cover opacity-transition fade-in'
+          className='h-[70px] object-cover'
           onClick={() => navigate('/')}
         />
       </Link>
