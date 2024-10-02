@@ -8,7 +8,7 @@ export interface SubMenuItem {
 export interface MenuItem {
   to: string;
   label: string;
-  subItems?: SubMenuItem[];
+  subItems: SubMenuItem[];
 }
 
 const {intro, business, media, careers, contact} = ROUTE_PATHS;

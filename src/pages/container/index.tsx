@@ -1,19 +1,29 @@
 import {useState} from 'react';
-import {Link, Outlet} from 'react-router-dom';
+import {Outlet} from 'react-router-dom';
 import '@/styles/globalCss.css';
 import MenuList from './components/navigation/MenuList';
 import Logo from './components/navigation/components/Logo';
 import useIsHomepage from '@/hooks/useIsHomePage';
-
-// import logoWhite from '@/assets/img/logo-white.png';
+import Footer from './components/footer';
+import SubNavigation from './components/subNavigation';
+import {MENU_LIST} from '@/constants/menu-list';
+import Asdie from './components/aside';
 
 const Container = () => {
   const [isOpen, setIsOpen] = useState(false);
   const isHome = useIsHomepage();
+  const pathname = location.pathname;
+
+  const firstMenuName =
+    MENU_LIST.find(menuItem => menuItem.to.split('/')[1] === pathname.split('/')[1])?.subItems.find(
+      subItem => subItem.to === pathname,
+    )?.label || '';
+
+  console.log('firstMenuName : ', firstMenuName);
 
   return (
-    <div className='h-full'>
-      <div className='flex flex-col h-screen'>
+    <div className={isHome ? 'h-full' : ''}>
+      <div className='flex flex-col h-full'>
         <header
           onMouseEnter={() => setIsOpen(true)}
           onMouseLeave={() => setIsOpen(false)}
@@ -27,37 +37,17 @@ const Container = () => {
           </div>
         </header>
         {/* 홈 아닐시 */}
-        {/* <aside className='bg-green-300 h-[450px] w-full flex flex-col justify-end pb-[100px] border-b-[1px] border-solid border-[#ddd]'>
-        <div className='container mx-auto h-[160px]'>
-          <div className='bg-white w-full text-6xl'>Overview</div>
-        </div>
-      </aside> */}
+        {!isHome && (
+          <>
+            <Asdie firstMenuName={firstMenuName} />
+            <SubNavigation />
+          </>
+        )}
         <main className='flex-grow relative'>
           <Outlet />
         </main>
       </div>
-      <footer className='bg-black   '>
-        <div className='container flex flex-col mx-auto py-4'>
-          <div className='flex flex-row justify-between items-center'>
-            <div className='text-[16px] text-[#6f7880]'>
-              서울 특별시 강남구 봉은사로 30길 42 202호
-            </div>
-            <div className='text-[16px] text-[#6f7880]'>
-              <div>Tel: 02-3661-0813</div>
-            </div>
-          </div>
-          <hr className='my-4  border-[#6f7880]' />
-          <div className='flex flex-row justify-between items-center'>
-            <div className='text-[16px] text-[#6f7880]'>
-              Copyright ©FiveWorks. All Rights Reserved.
-            </div>
-            <div className='text-[16px] text-[#6f7880] flex flex-col items-end'>
-              <div>Fax: 02-3664-0813</div>
-              <div>사업자번호: 261-88-01451</div>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

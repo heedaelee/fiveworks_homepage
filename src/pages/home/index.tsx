@@ -1,5 +1,3 @@
-import React, {useEffect, useRef} from 'react';
-
 import Carousel from '@/pages/home/components/carousel';
 
 const Home = () => {

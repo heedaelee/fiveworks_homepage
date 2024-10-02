@@ -5,6 +5,14 @@
 .shadow-custom {
   box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.125);
 }
+/* 타이틀 */
+.h1 {
+  line-height: 1.3;
+  font-weight: 600;
+  font-size: 50px;
+  color: #4b5563;
+}
+
 /* 
 body {
   font-family: 'Lato', 'Pretendard-Regular', '맑은 고딕', sans-serif;

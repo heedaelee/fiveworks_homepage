@@ -2,13 +2,16 @@ import {Route, Routes} from 'react-router-dom';
 import Container from '@/pages/container';
 // import Home from '@/pages/home';
 import {ROUTE_PATHS} from './constants/routes';
-import Home from './pages/home';
+import Home from '@/pages/home';
+import Overview from '@/pages/intro/overview';
+import Group from '@/pages/intro/group';
+import History from '@/pages/intro/history';
 
 // 예시 컴포넌트들
 // const Home = () => <div>Home</div>;
-const Overview = () => <div>Overview</div>;
-const Group = () => <div>Group</div>;
-const History = () => <div>History</div>;
+// const Overview = () => <div>Overview</div>;
+// const Group = () => <div>Group</div>;
+// const History = () => <div>History</div>;
 const Partners = () => <div>Partners</div>;
 const AI = () => <div>AI</div>;
 const SI = () => <div>SI</div>;

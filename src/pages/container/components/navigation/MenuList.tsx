@@ -1,10 +1,8 @@
 import MenuItem from './MenuItem';
 import {MENU_LIST} from '@/constants/menu-list';
 import {MenuListProps} from './interface.navigation';
-import useIsHomepage from '@/hooks/useIsHomePage';
 
 const MenuList = ({isOpen, setIsOpen}: MenuListProps) => {
-  const isHome = useIsHomepage();
   return (
     <ul className={`flex flex-row justify-around pt-[35px] w-[85%] `}>
       {MENU_LIST.map(menuItem => (
