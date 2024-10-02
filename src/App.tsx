@@ -6,13 +6,14 @@ import Home from '@/pages/home';
 import Overview from '@/pages/intro/overview';
 import Group from '@/pages/intro/group';
 import History from '@/pages/intro/history';
+import Partners from './pages/intro/partners';
 
 // 예시 컴포넌트들
 // const Home = () => <div>Home</div>;
 // const Overview = () => <div>Overview</div>;
 // const Group = () => <div>Group</div>;
 // const History = () => <div>History</div>;
-const Partners = () => <div>Partners</div>;
+// const Partners = () => <div>Partners</div>;
 const AI = () => <div>AI</div>;
 const SI = () => <div>SI</div>;
 const BigData = () => <div>BigData</div>;
