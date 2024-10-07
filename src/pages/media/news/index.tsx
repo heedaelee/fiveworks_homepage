@@ -23,10 +23,15 @@ const News = () => {
   // console.log(`mockNewsData.length : ${mockNewsData.length}`);
   // console.log(`currentItems : ${currentItems}`);
 
+  const handleCardClick = (url: string) => {
+    console.log('card clicked', url);
+    window.open(url, '_blank');
+  };
+
   return (
     <div className='container mx-auto flex flex-col gap-[60px] mb-[150px]'>
       <div>총 {totalCnt} 개의 게시물이 있습니다.</div>
-      <CardList data={currentItems} />
+      <CardList data={currentItems} handleCardClick={handleCardClick} />
       <Pagination count={count} page={page} onChange={handlePageChange} next={next} prev={prev} />
     </div>
   );

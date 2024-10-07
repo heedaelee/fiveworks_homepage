@@ -30,11 +30,3 @@ body {
 .carousel-number-fade-in {
   animation: fadeIn 2s ease-in-out;
 }
-
-/* 이미지 호버시 줌인 */
-/* .link-image-zoom {
-  transition: transform 0.3s;
-}
-.link-image-zoom:hover {
-  transform: scale(1.05);
-} */
