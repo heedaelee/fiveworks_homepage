@@ -15,6 +15,7 @@ import News from '@/pages/media/news';
 import Event from '@/pages/media/event';
 import Human from './pages/careers/human';
 import Process from './pages/careers/process';
+import Benefits from './pages/careers/benefit';
 
 // 예시 컴포넌트들
 // const Home = () => <div>Home</div>;
@@ -30,7 +31,7 @@ import Process from './pages/careers/process';
 // const Event = () => <div>Event</div>;
 // const Human = () => <div>Human</div>;
 // const Process = () => <div>Process</div>;
-const Benefit = () => <div>Benefit</div>;
+// const Benefit = () => <div>Benefit</div>;
 const Contact = () => <div>Contact</div>;
 
 const {intro, business, media, careers, contact} = ROUTE_PATHS;
@@ -52,7 +53,7 @@ function App() {
         <Route path={media.event} element={<Event />} />
         <Route path={careers.human} element={<Human />} />
         <Route path={careers.process} element={<Process />} />
-        <Route path={careers.benefit} element={<Benefit />} />
+        <Route path={careers.benefit} element={<Benefits />} />
         <Route path={contact.contact} element={<Contact />} />
       </Route>
     </Routes>

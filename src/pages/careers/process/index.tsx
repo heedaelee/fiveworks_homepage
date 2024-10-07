@@ -1,4 +1,4 @@
-import Title from './components/title';
+import Title from './components/Title';
 import {recruitmentSteps, processSteps} from './components/careers-data';
 import RecruitmentStep from './components/RecruitmentStep';
 import ProcessStep from './components/ProcessStep';
