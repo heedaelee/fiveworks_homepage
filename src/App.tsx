@@ -1,17 +1,18 @@
 import {Route, Routes} from 'react-router-dom';
 import Container from '@/pages/container';
 // import Home from '@/pages/home';
-import {ROUTE_PATHS} from './constants/routes';
+import {ROUTE_PATHS} from '@/constants/routes';
 import Home from '@/pages/home';
 import Overview from '@/pages/intro/overview';
 import Group from '@/pages/intro/group';
 import History from '@/pages/intro/history';
 import Partners from '@/pages/intro/partners';
 import Ai from '@/pages/business/ai';
-import Si from './pages/business/si';
-import Bigdata from './pages/business/bigdata';
-import Product from './pages/business/product';
-import News from './pages/media/news';
+import Si from '@/pages/business/si';
+import Bigdata from '@/pages/business/bigdata';
+import Product from '@/pages/business/product';
+import News from '@/pages/media/news';
+import Event from '@/pages/media/event';
 
 // 예시 컴포넌트들
 // const Home = () => <div>Home</div>;
@@ -24,7 +25,7 @@ import News from './pages/media/news';
 // const BigData = () => <div>BigData</div>;
 // const Product = () => <div>Product</div>;
 // const News = () => <div>News</div>;
-const Event = () => <div>Event</div>;
+// const Event = () => <div>Event</div>;
 const Human = () => <div>Human</div>;
 const Process = () => <div>Process</div>;
 const Benefit = () => <div>Benefit</div>;

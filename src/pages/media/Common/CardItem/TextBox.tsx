@@ -1,6 +1,7 @@
+import {EventItem} from '@/constants/event-data';
 import {NewsItem} from '@/constants/news-data';
 
-const TextBox = ({item}: {item: NewsItem}) => {
+const TextBox = ({item}: {item: NewsItem | EventItem}) => {
   return (
     <div className='p-4 flex flex-col justify-between'>
       <h2 className='font-bold mb-8 text-[20px] relative w-max tracking-[-0.05em]	'>

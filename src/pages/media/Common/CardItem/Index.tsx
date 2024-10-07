@@ -5,7 +5,7 @@ import TextBox from '@/pages/media/Common/CardItem/TextBox';
 const CardItem = ({item, handleCardClick}: CardItemProps) => {
   return (
     /* 680x453 img */
-    <div className='w-full h-auto cursor-pointer group' onClick={() => handleCardClick(item.link)}>
+    <div className='w-full h-auto cursor-pointer group' onClick={() => handleCardClick(item.src)}>
       <Image item={item} />
       <TextBox item={item} />
     </div>
