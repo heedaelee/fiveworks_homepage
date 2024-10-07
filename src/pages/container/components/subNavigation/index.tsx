@@ -54,7 +54,7 @@ const SubNavigation = () => {
         <div className='relative' ref={dropdownRef}>
           <div
             onClick={handleDropdown}
-            className='border-r relative border-[#ddd] w-[200px] h-[54px] flex flex-row justify-between items-center px-[20px] cursor-pointer'>
+            className='bg-gray-600 text-white border-r relative border-[#ddd] w-[200px] h-[54px] flex flex-row justify-between items-center px-[20px] cursor-pointer'>
             <span>{firstMenuName}</span> <span>{`${isDropdownOpen ? '▲' : '▼'}`}</span>
           </div>
           {isDropdownOpen && <Dropdown items={menuItem.subItems} handleDropdown={handleDropdown} />}

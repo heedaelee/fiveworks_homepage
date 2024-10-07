@@ -13,6 +13,8 @@ import Bigdata from '@/pages/business/bigdata';
 import Product from '@/pages/business/product';
 import News from '@/pages/media/news';
 import Event from '@/pages/media/event';
+import Human from './pages/careers/human';
+import Process from './pages/careers/process';
 
 // 예시 컴포넌트들
 // const Home = () => <div>Home</div>;
@@ -26,8 +28,8 @@ import Event from '@/pages/media/event';
 // const Product = () => <div>Product</div>;
 // const News = () => <div>News</div>;
 // const Event = () => <div>Event</div>;
-const Human = () => <div>Human</div>;
-const Process = () => <div>Process</div>;
+// const Human = () => <div>Human</div>;
+// const Process = () => <div>Process</div>;
 const Benefit = () => <div>Benefit</div>;
 const Contact = () => <div>Contact</div>;
 
