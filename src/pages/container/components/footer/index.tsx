@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
-    <footer className='bg-black   '>
-      <div className='container flex flex-col mx-auto py-4'>
+    <footer className='bg-black'>
+      <div className='container flex flex-col mx-auto py-8'>
         <div className='flex flex-row justify-between items-center'>
           <div className='text-[16px] text-[#6f7880]'>
             서울 특별시 강남구 봉은사로 30길 42 202호
