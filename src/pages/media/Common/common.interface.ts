@@ -10,3 +10,4 @@ export interface CardItemProps {
   item: NewsItem | EventItem;
   handleCardClick: (link: string) => void;
 }
+

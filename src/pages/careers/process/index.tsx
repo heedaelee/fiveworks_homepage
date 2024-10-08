@@ -1,7 +1,7 @@
-import Title from './components/Title';
-import {recruitmentSteps, processSteps} from './components/careers-data';
-import RecruitmentStep from './components/RecruitmentStep';
-import ProcessStep from './components/ProcessStep';
+import Title from '@/pages/careers/process/components/Title';
+import {recruitmentSteps, processSteps} from '@/pages/careers/process/components/careers-data';
+import RecruitmentStep from '@/pages/careers/process/components/RecruitmentStep';
+import ProcessStep from '@/pages/careers/process/components/ProcessStep';
 
 const Process = () => {
   return (
