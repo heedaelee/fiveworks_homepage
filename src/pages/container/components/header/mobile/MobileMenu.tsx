@@ -1,8 +1,9 @@
 import {MouseEvent, useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
-import {Menu, X, ChevronDown, ChevronUp} from 'lucide-react';
+import {ChevronDown, ChevronUp} from 'lucide-react';
 import {MENU_LIST} from '@/constants/menu-list';
 import {Link} from 'react-router-dom';
+import MenuButton from './MenuButton';
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,13 +28,7 @@ const MobileMenu = () => {
 
   return (
     <>
-      <button
-        className='fixed top-4 right-4 z-50 p-2 bg-white rounded-full shadow-md'
-        onClick={toggleMenu}
-        aria-label={isOpen ? 'Close menu' : 'Open menu'}
-        aria-expanded={isOpen}>
-        {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
-      </button>
+      <MenuButton isOpen={isOpen} toggleMenu={toggleMenu} />
       <AnimatePresence>
         {isOpen && (
           <motion.div
