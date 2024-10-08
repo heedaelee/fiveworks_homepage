@@ -1,5 +1,5 @@
-import Logo from '@/pages/container/components/navigation/components/Logo';
-import MenuList from '@/pages/container/components/navigation/MenuList';
+import Logo from '@/pages/container/components/header/desktop/navigation/components/Logo';
+import MenuList from '@/pages/container/components/header/desktop/navigation/MenuList';
 
 interface DesktopHeaderProps {
   isOpen: boolean;

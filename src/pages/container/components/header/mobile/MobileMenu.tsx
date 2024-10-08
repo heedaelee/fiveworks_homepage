@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {MouseEvent, useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion';
 import {Menu, X, ChevronDown, ChevronUp} from 'lucide-react';
 import {MENU_LIST} from '@/constants/menu-list';
@@ -11,14 +11,14 @@ const MobileMenu = () => {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   const toggleSubMenu = (index: number) => {
-    console.log('index : ', index);
-    console.log(openSubMenus);
+    // console.log('index : ', index);
+    // console.log(openSubMenus);
     // openSubMenus 배열에 숫자가 포함된 인덱스는 Open되어 있다는 뜻. 그러므로 포함되어 있다면 배열에 인덱스 제거하고, 아니라면 추가
     setOpenSubMenus(prev =>
       prev.includes(index) ? prev.filter(i => i !== index) : [...prev, index],
     );
   };
-  const handleLinkClick = (event, url) => {
+  const handleLinkClick = (event: MouseEvent<HTMLAnchorElement>, url: string) => {
     // 클라이언트 사이드 내비게이션 보다 새로고침으로 해둠
     // setIsOpen(false); // isOpen 상태를 false로 설정
     event.preventDefault(); // Prevent the default behavior of the link
@@ -77,7 +77,7 @@ const MobileMenu = () => {
                               transition={{delay: subIndex * 0.05}}
                               className='py-2'>
                               <Link
-                                // to={subItem.to}
+                                to={subItem.to}
                                 onClick={e => handleLinkClick(e, subItem.to)}
                                 className='text-white'>
                                 {subItem.label}
