@@ -3,7 +3,7 @@ import logoDefault from '@/assets/img/logo-default.png';
 import logoWhite from '@/assets/img/logo-white.png';
 import useIsHomepage from '@/hooks/useIsHomePage';
 
-const Logo = ({isOpen}: {isOpen: boolean}) => {
+const Logo = ({isOpen, isMobile}: {isOpen?: boolean; isMobile?: boolean}) => {
   const isHomePage = useIsHomepage();
   const navigate = useNavigate();
   const getLogoImagePath = () => {
@@ -13,13 +13,24 @@ const Logo = ({isOpen}: {isOpen: boolean}) => {
     return logoDefault;
   };
 
-  return (
+  return !isMobile ? (
     <div className={`w-[15%] flex flex-row justify-center p-[20px] h-[125px]  `}>
       <Link to='/'>
         <img
           src={getLogoImagePath()}
           alt='logo'
           className='h-[70px] object-cover'
+          onClick={() => navigate('/')}
+        />
+      </Link>
+    </div>
+  ) : (
+    <div className={`w-[15%] flex flex-row justify-center p-[20px] h-[75px]  `}>
+      <Link to='/'>
+        <img
+          src={logoDefault}
+          alt='logo'
+          className='h-[40px] object-cover'
           onClick={() => navigate('/')}
         />
       </Link>
