@@ -16,6 +16,7 @@ import Event from '@/pages/media/event';
 import Human from './pages/careers/human';
 import Process from './pages/careers/process';
 import Benefits from './pages/careers/benefit';
+import Contact from './pages/contact';
 
 // 예시 컴포넌트들
 // const Home = () => <div>Home</div>;
@@ -32,7 +33,7 @@ import Benefits from './pages/careers/benefit';
 // const Human = () => <div>Human</div>;
 // const Process = () => <div>Process</div>;
 // const Benefit = () => <div>Benefit</div>;
-const Contact = () => <div>Contact</div>;
+// const Contact = () => <div>Contact</div>;
 
 const {intro, business, media, careers, contact} = ROUTE_PATHS;
 
