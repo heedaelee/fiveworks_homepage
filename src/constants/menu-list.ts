@@ -54,6 +54,6 @@ export const MENU_LIST: MenuItem[] = [
   {
     label: 'CONTACT',
     to: contact.contact,
-    subItems: [{to: contact.contact, label: '오시는길'}],
+    subItems: [{to: contact.contact, label: 'CONTACT'}],
   },
 ];
