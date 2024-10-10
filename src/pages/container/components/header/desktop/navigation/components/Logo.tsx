@@ -14,7 +14,7 @@ const Logo = ({isOpen, isMobile}: {isOpen?: boolean; isMobile?: boolean}) => {
   };
 
   return !isMobile ? (
-    <div className={`w-[15%] flex flex-row justify-center p-[20px] h-[125px]  `}>
+    <div className={`w-[15%] flex flex-row justify-center p-[20px] h-[125px]`}>
       <Link to='/'>
         <img
           src={getLogoImagePath()}
@@ -25,7 +25,7 @@ const Logo = ({isOpen, isMobile}: {isOpen?: boolean; isMobile?: boolean}) => {
       </Link>
     </div>
   ) : (
-    <div className={`w-[15%] flex flex-row justify-center p-[20px] h-[75px]  `}>
+    <div className={`w-30%] flex flex-row justify-center p-[20px] h-[75px]`}>
       <Link to='/'>
         <img
           src={logoDefault}
