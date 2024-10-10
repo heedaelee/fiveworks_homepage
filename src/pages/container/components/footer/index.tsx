@@ -1,28 +1,43 @@
+import {ReactNode} from 'react';
+
+const address = '서울 특별시 강남구 봉은사로 30길 42 202호';
+const tel = 'Tel: 02-3661-0813';
+const fax = 'Fax: 02-3664-0813';
+const businessNumber = '사업자번호: 261-88-01451';
+const copyright = 'Copyright ©FiveWorks. All Rights Reserved.';
+const textStyle = 'text-[16px] text-[#6f7880]';
+
 const Footer = () => {
   return (
     <footer className='bg-black'>
       <div className='container flex flex-col mx-auto py-8'>
-        <div className='flex flex-row justify-between items-center'>
-          <div className='text-[16px] text-[#6f7880]'>
-            서울 특별시 강남구 봉은사로 30길 42 202호
-          </div>
-          <div className='text-[16px] text-[#6f7880]'>
-            <div>Tel: 02-3661-0813</div>
-          </div>
-        </div>
+        <FooterSection>
+          <FooterText>{address}</FooterText>
+          <FooterText>
+            <div>{tel}</div>
+          </FooterText>
+        </FooterSection>
         <hr className='my-4  border-[#6f7880]' />
-        <div className='flex flex-row justify-between items-center'>
-          <div className='text-[16px] text-[#6f7880]'>
-            Copyright ©FiveWorks. All Rights Reserved.
-          </div>
-          <div className='text-[16px] text-[#6f7880] flex flex-col items-end'>
-            <div>Fax: 02-3664-0813</div>
-            <div>사업자번호: 261-88-01451</div>
-          </div>
-        </div>
+        <FooterSection>
+          <FooterText>{copyright}</FooterText>
+          <FooterText className='flex flex-col md:items-end'>
+            <div>{fax}</div>
+            <div>{businessNumber}</div>
+          </FooterText>
+        </FooterSection>
       </div>
     </footer>
   );
 };
+
+const FooterSection = ({children}: {children: ReactNode}) => (
+  <div className='flex flex-col md:flex-row justify-between md:items-center pl-10 md:pl-0'>
+    {children}
+  </div>
+);
+
+const FooterText = ({children, className = ''}: {children: ReactNode; className?: string}) => (
+  <div className={`${textStyle} ${className}`}>{children}</div>
+);
 
 export default Footer;
