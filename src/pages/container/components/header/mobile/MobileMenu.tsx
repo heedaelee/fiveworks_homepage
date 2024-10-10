@@ -1,6 +1,6 @@
 import {MouseEvent, useState} from 'react';
 import MenuButton from './MenuButton';
-import MenuContent from './MenuContent';
+import MenuListWrapper from './MenuListWrapper';
 
 const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -26,7 +26,7 @@ const MobileMenu = () => {
   return (
     <>
       <MenuButton isOpen={isOpen} toggleMenu={toggleMenu} />
-      <MenuContent
+      <MenuListWrapper
         isOpen={isOpen}
         openSubMenus={openSubMenus}
         toggleSubMenu={toggleSubMenu}
