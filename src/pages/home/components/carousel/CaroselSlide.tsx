@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface CarouselSlideProps {
   imageUrl: string;
   title: string;
@@ -12,8 +10,8 @@ const CarouselSlide = ({imageUrl, title, description}: CarouselSlideProps) => {
       <img src={imageUrl} className='h-full w-full object-cover absolute' />
       <div className='absolute inset-0 bg-black opacity-50' />
       <div className='carousel-caption absolute top-[48%] left-[38%] transform -translate-x-1/2 -translate-y-1/2 text-white z-50'>
-        <h5 className='font-[600] text-[65px]'>{title}</h5>
-        <p>{description}</p>
+        <h5 className='font-[600] text-[40px] sm:text-[65px]'>{title}</h5>
+        <p className="mt-2 sm:mt-0">{description}</p>
       </div>
     </div>
   );
