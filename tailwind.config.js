@@ -101,16 +101,16 @@ module.exports = {
             maxWidth: '450px',
           },
           '@screen sm': {
-            maxWidth: '540px',
+            maxWidth: '640px',
           },
           '@screen md': {
             maxWidth: '768px',
           },
           '@screen lg': {
-            maxWidth: '1280px',
+            maxWidth: '1024px',
           },
           '@screen xl': {
-            maxWidth: '1420px',
+            maxWidth: '1280px',
           },
         },
       });
