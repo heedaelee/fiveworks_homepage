@@ -26,7 +26,7 @@ const Partners = () => {
 
   return (
     <div className='container mx-auto flex flex-col gap-[80px] mb-[150px]'>
-      <div className='w-ful flex flex-col items-center animate-fade-in'>
+      <div className='w-full flex flex-col items-center animate-fade-in'>
         <h1 className='h1'>FIVEWORKS, 파트너사</h1>
       </div>
       <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
