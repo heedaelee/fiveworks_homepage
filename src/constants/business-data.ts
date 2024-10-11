@@ -1,9 +1,7 @@
-import {title} from 'process';
-
 export const data = {
   ai: {
     title: 'AI',
-    description: `A.I. Lab은 A.B.C.D를 기반으로 하는 aaaaa을/를 개발해오고 있으며, xxx를 목표로 성장해나가고 있습니다.`,
+    description: `A.I. Lab은 다양한 인공지능 모듈과 빅데이터 분석 기술을 기반으로 한 자동화 솔루션을 개발해오며, 기업의 디지털 혁신을 목표로 성장하고 있습니다.`,
     workPerformance: [
       'AI기반 PRA 솔루션 개발 (OCR, Object Detection)',
       'BioMetrics 모듈 (Liveness detect, 감정분석모듈)',
@@ -56,7 +54,7 @@ export const data = {
   },
   si: {
     title: 'SI',
-    description: `SI는 A.B.C.D를 기반으로 하는 aaaaa을/를 개발해오고 있으며, xxx를 목표로 성장해나가고 있습니다.`,
+    description: `SI 프로젝트를 통해 기업의 운영 효율성을 높이는 통합 플랫폼을 구축하며, 비즈니스 성과를 극대화하는 것을 목표로 하고 있습니다.`,
     workPerformance: [
       '웹 개발 (React, Vue, Angular)',
       '앱 개발 (React Native, Flutter)',
@@ -85,11 +83,14 @@ export const data = {
   },
   bigdata: {
     title: 'Big Data',
-    description: `Big Data는 A.B.C.D를 기반으로 하는 aaaaa을/를 개발해오고 있으며, xxx를 목표로 성장해나가고 있습니다.`,
+    description: `BigData Lab은 고급 데이터 분석과 예측 모델링을 통해 다양한 산업에서 데이터 기반 혁신을 실현하며, 미래지향적인 비즈니스 전략 수립을 돕고 있습니다.`,
     workPerformance: [
       '빅데이터 수집 및 저장 (Hadoop, Spark)',
       '빅데이터 분석 및 처리 (Pandas, Numpy)',
       '빅데이터 시각화 (Tableau, PowerBI)',
+      '데이터 파이프라인 구축 및 최적화 (Airflow, Kafka)',
+      '실시간 데이터 처리 및 스트리밍 분석 (Flink, Kafka Streams)',
+      '머신러닝 모델을 통한 예측 분석 (Scikit-learn, TensorFlow)',
     ],
     tab: [
       {
@@ -129,13 +130,15 @@ export const data = {
   },
   product: {
     title: 'Product',
-    description: `Product는 A.B.C.D를 기반으로 하는 aaaaa을/를 개발해오고 있으며, xxx를 목표로 성장해나가고 있습니다.`,
+    description: `제품개발 Lab은 최신 기술 트렌드와 시장 요구를 반영한 고성능 제품을 설계하고, 제품 경쟁력을 강화하는 데 중점을 두고 있습니다.`,
     workPerformance: [
-      '웹 개발 (React, Vue, Angular)',
-      '앱 개발 (React Native, Flutter)',
-      '서버 개발 (Node.js, Spring Boot)',
-      '데이터베이스 설계 및 구축 (MySQL, MongoDB)',
-      'CI/CD 구축 및 운영 (Jenkins, GitLab)',
+      '제품 기획 및 설계',
+      '프로토타입 개발 및 검증',
+      '제조 공정 최적화 및 관리',
+      '사용자 경험(UX) 리서치 및 테스트',
+      '신기술 적용 및 제품 성능 향상 연구',
+      '제품 품질 관리 및 개선',
+      '시장 요구 분석 및 제품 전략 수립',
     ],
     tab: [
       {

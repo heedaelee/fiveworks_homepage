@@ -1,7 +1,6 @@
 import {useEffect, useRef} from 'react';
 import {motion} from 'framer-motion';
-import {MapPin, Phone, Mail} from 'lucide-react';
-import logoDefault from '@/assets/img/logo-default.png';
+import ContactInfo from './contactInfo/ContactInfo';
 
 declare global {
   interface Window {
@@ -47,40 +46,13 @@ const Contact = () => {
     };
   }, []);
 
+  
+
   return (
     <div className='container mx-auto px-4 py-8 md:mt-[50px] md:mb-[200px]'>
       <h1 className='text-3xl font-bold mb-4 md:pb-[80px] text-center'>CONTACT</h1>
       <div className='flex flex-col md:flex-row gap-8'>
-        <div className='w-full md:w-1/2'>
-          <motion.div
-            className=' p-6 h-full flex flex-col items-center'
-            initial={{opacity: 0, y: 100}}
-            animate={{opacity: 1, y: 0}}
-            transition={{duration: 1}}>
-            <div className='h-[40%] w-full flex flex-row justify-center items-center '>
-              <img src={logoDefault} alt='회사 로고' className='h-[80px] w-auto object-contain' />
-            </div>
-            <div className='space-y-4 text-lg mt-8 md:mt-0'>
-              <div className='flex items-center'>
-                <MapPin className='w-6 h-6 mr-4 text-gray-600' />
-                <span>서울 특별시 강남구 봉은사로 30길 42 202호</span>
-              </div>
-              <div className='flex items-center'>
-                <Phone className='w-6 h-6 mr-4 text-gray-600' />
-                <span>02-3661-0813</span>
-              </div>
-              <div className='flex items-center'>
-                <Mail className='w-6 h-6 mr-4 text-gray-600' />
-                <span className='text-xl font-semibold'>yseom@5works.co.kr</span>
-              </div>
-              <div className='flex items-center'>
-                <span className='text-xl font-normal'>▶ 역삼역 7번 출구 : 도보 8분</span>
-              </div>
-              <span className='text-xl  font-normal'>▶ 언주역 6번 출구 : 도보 5분</span>
-              <div className='flex items-center'></div>
-            </div>
-          </motion.div>
-        </div>
+        <ContactInfo />
         <motion.div
           className='w-full md:w-1/2 h-[500px]'
           ref={mapRef}

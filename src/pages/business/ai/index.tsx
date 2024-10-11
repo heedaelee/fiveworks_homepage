@@ -5,6 +5,7 @@ import Title from '@/pages/business/Common/Title';
 import Description from '@/pages/business/Common/Description';
 import Tabs from '@/pages/business/Common/Tabs';
 import TabsContent from '@/pages/business/Common/TabContent';
+import {GlobalStyles} from '@/styles/globalStyles';
 
 const Ai = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -23,7 +24,7 @@ const Ai = () => {
   }
 
   return (
-    <div className='container mx-auto flex flex-col gap-[80px] mb-[150px]'>
+    <div className={GlobalStyles.classes.businessContainer}>
       <div className='w-full flex flex-col items-center animate-fade-in '>
         <Title />
         <Description description={description} workPerformance={workPerformance} />

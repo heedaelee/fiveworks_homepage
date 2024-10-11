@@ -7,13 +7,14 @@ import {usePrevNextButtons} from './ArrowButtons';
 import CarouselControls from './CarouselControls';
 import {useEffect, useState} from 'react';
 import {CarouselData} from './data';
+import {motion} from 'framer-motion';
 
 const Carousel = () => {
   /* duration 화면 전환 속도, delay 한페이지 머무르는 속도 */
   const [emblaRef, emblaApi] = useEmblaCarousel({loop: true, duration: 300}, [
     Fade(),
     Autoplay({
-      delay: 6000,
+      delay: 5000,
     }),
   ]);
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -54,6 +55,7 @@ const Carousel = () => {
           currentIndex={currentIndex}
           totalIndex={CarouselData.length}
         />
+        
       </div>
     </div>
   );
