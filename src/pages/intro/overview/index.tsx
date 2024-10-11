@@ -1,9 +1,9 @@
 const Overview = () => {
   return (
-    <div className='container mx-auto animate-fade-in-right flex flex-row gap-[80px]'>
-      <div className='w-[60%] h-full'>
+    <div className='container mx-auto animate-fade-in-right flex flex-col md:flex-row gap-[80px] mb-14 lg:mb-0'>
+      <div className='md:w-[60%] md:h-full'>
         <h1 className='h1'>혁신을 선도하는 FIVE WORKS</h1>
-        <p className='mt-[100px]'>
+        <p className='mt-[70px] md:mt-[100px]'>
           파이브웍스는 Biometrics, RPA, 영상처리 기술을 기반으로 각종 Web/APP Solution 및 KIOSK SW를
           개발하고 있습니다.
           <br />
@@ -21,7 +21,7 @@ const Overview = () => {
           앞으로도 많은 관심과 성원을 기대하겠습니다.
         </p>
       </div>
-      <div className='w-[30%]'>
+      <div className='md:w-[30%]'>
         <img
           src={
             'https://images.unsplash.com/photo-1579487785973-74d2ca7abdd5?q=80&w=3688&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
