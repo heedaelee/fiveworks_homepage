@@ -1,10 +1,10 @@
-import {data} from '@/constants/business-data';
+import {data} from '@/pages/business/Common/business-data';
 import {getImages} from '@/utils';
 import {useEffect, useState} from 'react';
-import Title from '@/pages/business/Common/Title';
+import Title from '@/pages/business/Common/BusinessTitle';
 import Description from '@/pages/business/Common/Description';
 import Tabs from '@/pages/business/Common/Tabs';
-import TabsContent from '@/pages/business/Common/TabContent';
+import TabsContent from '@/pages/business/Common/tab_content';
 import {GlobalStyles} from '@/styles/globalStyles';
 
 const Ai = () => {
