@@ -1,9 +1,9 @@
-import {data} from '@/pages/business/Common/business-data';
+import {data} from '@/constants/business-data';
 import {getImages} from '@/utils';
 import {useEffect, useState} from 'react';
 import Title from '@/pages/business/Common/BusinessTitle';
 import Description from '@/pages/business/Common/Description';
-import Tabs from '@/pages/business/Common/Tabs';
+import TabTitles from '@/pages/business/Common/TabTitles';
 import TabsContent from '@/pages/business/Common/tab_content';
 import {GlobalStyles} from '@/styles/globalStyles';
 
@@ -30,7 +30,7 @@ const Product = () => {
         <Description description={description} workPerformance={workPerformance} />
       </div>
       <div className='w-full mt-16 flex flex-col gap-9'>
-        <Tabs tab={tab} activeTab={activeTab} setActiveTab={setActiveTab} />
+        <TabTitles tab={tab} activeTab={activeTab} setActiveTab={setActiveTab} />
         <TabsContent tab={tab} activeTab={activeTab} images={images} />
       </div>
     </div>

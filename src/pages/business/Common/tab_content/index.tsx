@@ -37,7 +37,6 @@ const TabsContent = ({tab, activeTab, images}: TabContentProps) => {
   return (
     <div className='w-full p-0 md:p-6 flex flex-col gap-16 '>
       <Content tab={tab} activeTab={activeTab} />
-
       <ImageWrapper
         tab={tab}
         activeTab={activeTab}

@@ -9,21 +9,21 @@ const ImageWrapper = ({activeTab, tab, images, handleImageClick}: ImageProps) =>
   return (
     <>
       {Array.isArray(images[activeTab]) ? (
-        (images[activeTab] as string[]).map((image, index) => (
-          <ImageItem
-            key={index}
-            tab={tab}
-            activeTab={activeTab}
-            images={images}
-            handleImageClick={handleImageClick}
-          />
-        ))
+        (images[activeTab] as string[]).map((image, index) => {
+          return (
+            <ImageItem
+              key={index}
+              image={image}
+              title={`${tab[activeTab].title} ${index + 1}`}
+              onClick={() => handleImageClick(image)}
+            />
+          );
+        })
       ) : (
         <ImageItem
-          tab={tab}
-          activeTab={activeTab}
-          images={images}
-          handleImageClick={handleImageClick}
+          image={images[activeTab] as string}
+          title={tab[activeTab].title}
+          onClick={() => handleImageClick(images[activeTab] as string)}
         />
       )}
     </>

@@ -1,6 +1,6 @@
 import {TabsProps} from './common.interface';
 
-const Tabs = ({tab, activeTab, setActiveTab}: TabsProps) => {
+const TabTitles = ({tab, activeTab, setActiveTab}: TabsProps) => {
   return (
     <div className='flex justify-center font-semibold text-sm md:text-lg'>
       {tab.map((item, index) => (
@@ -19,4 +19,4 @@ const Tabs = ({tab, activeTab, setActiveTab}: TabsProps) => {
   );
 };
 
-export default Tabs;
+export default TabTitles;

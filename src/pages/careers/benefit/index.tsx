@@ -1,21 +1,6 @@
 import {Card, CardContent} from '@/components/ui/card';
 import {TreePalm, HandCoins, Clock, Donut, PartyPopper, Cake, LibraryBig, Gift} from 'lucide-react';
 
-// const Icon = ({d, label}: {d: string; label: string}) => (
-//   <svg
-//     xmlns='http://www.w3.org/2000/svg'
-//     viewBox='0 0 24 24'
-//     fill='none'
-//     stroke='currentColor'
-//     strokeWidth='2'
-//     strokeLinecap='round'
-//     strokeLinejoin='round'
-//     className='w-32 h-32 mb-4 text-primary mx-auto'
-//     aria-label={label}>
-//     <path d={d} />
-//   </svg>
-// );
-
 const Benefits = () => {
   const benefitItems = [
     {Icon: TreePalm, text: '연차 및 리프레시 휴가제공'},
@@ -40,7 +25,6 @@ const Benefits = () => {
         {benefitItems.map((item, index) => (
           <Card key={index} className='flex flex-col items-center justify-center'>
             <CardContent className='text-center py-12'>
-              {/* <Icon d={item.icon} label={item.text} /> */}
               <item.Icon className='w-16 h-16 mx-auto mb-4 text-primary' />
               <p className='text-lg'>{item.text}</p>
             </CardContent>

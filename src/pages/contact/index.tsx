@@ -46,8 +46,6 @@ const Contact = () => {
     };
   }, []);
 
-  
-
   return (
     <div className='container mx-auto px-4 py-8 md:mt-[50px] md:mb-[200px]'>
       <h1 className='text-3xl font-bold mb-4 md:pb-[80px] text-center'>CONTACT</h1>
@@ -62,55 +60,6 @@ const Contact = () => {
       </div>
     </div>
   );
-  // return (
-  //   <div className='container mx-auto px-4 py-8 mb-[150px] h-full'>
-  //     <h1 className='text-3xl font-bold mb-4'>Contact</h1>
-  //     <hr className='border-gray-300 mb-8' />
-  //     <div className='container mx-auto px-4 flex flex-col md:flex-row items-center w-full h-full gap-8'>
-  //       <motion.div
-  //         className='w-full md:w-1/2 h-96 md:h-[600px] mb-8 md:mb-0 bg-red-300 flex flex-col py-[100px]'
-  //         initial={{opacity: 0, x: 100}}
-  //         animate={{opacity: 1, x: 0}}
-  //         transition={{duration: 0.5, delay: 0.2}}>
-  //         <h2 className='text-2xl font-bold mb-4  border-gray-200 border-[1px] h-[40%] flex justify-center items-center'>
-  //           회사 정보
-  //         </h2>
-  //         <div className='h-[60%] w-full flex flex-col px-[200px]'>
-  //           <div className='flex-[0_0_33%] border-gray-200 border-[1px] rounded-xl'>주소: 서울특별시 중구 세종대로 110</div>
-  //           <div className='flex-[0_0_33%]'>전화번호: 02-1234-5678</div>
-  //           <div className='flex-[0_0_33%]'>이메일: contact@company.com</div>
-  //         </div>
-  //         {/* <motion.p
-  //           className='mb-2'
-  //           initial={{opacity: 0, y: 20}}
-  //           animate={{opacity: 1, y: 0}}
-  //           transition={{duration: 0.3, delay: 0.4}}>
-  //           주소: 서울특별시 중구 세종대로 110
-  //         </motion.p>
-  //         <motion.p
-  //           className='mb-2'
-  //           initial={{opacity: 0, y: 20}}
-  //           animate={{opacity: 1, y: 0}}
-  //           transition={{duration: 0.3, delay: 0.5}}>
-  //           전화번호: 02-1234-5678
-  //         </motion.p>
-  //         <motion.p
-  //           className='mb-2'
-  //           initial={{opacity: 0, y: 20}}
-  //           animate={{opacity: 1, y: 0}}
-  //           transition={{duration: 0.3, delay: 0.6}}>
-  //           이메일: contact@company.com
-  //         </motion.p> */}
-  //       </motion.div>
-  //       <motion.div
-  //         ref={mapRef}
-  //         className='w-full md:w-1/2 h-96 md:h-[600px] mb-8 md:mb-0'
-  //         initial={{opacity: 0, x: -100}}
-  //         animate={{opacity: 1, x: 0}}
-  //         transition={{duration: 0.5}}></motion.div>
-  //     </div>
-  //   </div>
-  // );
 };
 
 export default Contact;
