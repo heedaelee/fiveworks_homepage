@@ -14,7 +14,7 @@ const Contact = () => {
   useEffect(() => {
     const script = document.createElement('script');
     script.async = true;
-    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=f70658f794fd73061f82fe7aedfe42a3&autoload=false`;
+    script.src = `//dapi.kakao.com/v2/maps/sdk.js?appkey=${import.meta.env.VITE_KAKAO_MAP_KEY}&autoload=false`;
     document.head.appendChild(script);
 
     script.onload = () => {
