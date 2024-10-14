@@ -1,6 +1,6 @@
 import {useEffect, useRef} from 'react';
 import {motion} from 'framer-motion';
-import ContactInfo from './contactInfo/ContactInfo';
+import ContactInfo from './contactInfo/Index';
 
 declare global {
   interface Window {
