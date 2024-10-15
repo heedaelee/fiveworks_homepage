@@ -1,12 +1,8 @@
 import {data} from '@/constants/business-data';
+import {TabContentProps} from '@/pages/business/Common/common.interface';
 import {getImages} from '@/utils';
 import {useEffect, useState} from 'react';
-import Title from '@/pages/business/Common/BusinessTitle';
-import Description from '@/pages/business/Common/Description';
-import TabTitles from '@/pages/business/Common/TabTitles';
-import TabsContent from '@/pages/business/Common/tab_content';
-import {TabContentProps} from '@/pages/business/Common/common.interface';
-import {GlobalStyles} from '@/styles/globalStyles';
+import BusinessSection from '../Common/BusinessSection';
 
 const Si = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -21,16 +17,14 @@ const Si = () => {
   }, []);
 
   return (
-    <div className={GlobalStyles.classes.businessContainer}>
-      <div className='w-full flex flex-col items-center animate-fade-in '>
-        <Title />
-        <Description description={description} workPerformance={workPerformance} />
-      </div>
-      <div className='w-full mt-16 flex flex-col gap-9'>
-        <TabTitles tab={tab} activeTab={activeTab} setActiveTab={setActiveTab} />
-        <TabsContent tab={tab} activeTab={activeTab} images={images} />
-      </div>
-    </div>
+    <BusinessSection
+      description={description}
+      workPerformance={workPerformance}
+      tab={tab}
+      activeTab={activeTab}
+      setActiveTab={setActiveTab}
+      images={images}
+    />
   );
 };
 

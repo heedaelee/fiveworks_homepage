@@ -2,7 +2,6 @@ import {MapPin, Phone, Mail} from 'lucide-react';
 import {motion} from 'framer-motion';
 import {GlobalStyles} from '@/styles/globalStyles';
 import {contact_data} from '@/pages/contact/contactInfo/contact-data';
-import {sub} from 'framer-motion/client';
 
 const Info = () => {
   const subwayLineNumber = `inline-block w-6 h-6 text-white rounded-xl text-center leading-6 font-bold mr-2`;
@@ -49,8 +48,14 @@ const Info = () => {
       </AnimatedDiv>
       {subway.map((item, index) => (
         <AnimatedDiv key={index} delay={0.4 + index * 0.1} className={flex_items_center}>
-          <span className={`${subwayLineNumber} bg-[${item.color}]`}>{item.line}</span>
-          <span className={`text-[${item.color}] font-bold mr-1`}>{item.name}</span>
+          <span
+            className={`${subwayLineNumber} ${item.line === 2 ? 'bg-[#00a651]' : 'bg-[#B7A57A]'}`}>
+            {item.line}
+          </span>
+          <span
+            className={`${item.line === 2 ? 'text-[#00a651]' : 'text-[#B7A57A]'} font-bold mr-1`}>
+            {item.name}
+          </span>
           <span>{`${item.exit}번 출구 : 도보 ${item.walk}분`}</span>
         </AnimatedDiv>
       ))}

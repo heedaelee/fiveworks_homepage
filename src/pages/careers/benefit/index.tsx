@@ -1,9 +1,11 @@
 import {Card, CardContent} from '@/components/ui/card';
 import {TreePalm, HandCoins, Clock, Donut, PartyPopper, Cake, LibraryBig, Gift} from 'lucide-react';
+import {useTranslation} from 'react-i18next';
 
 const Benefits = () => {
+  const {t} = useTranslation();
   const benefitItems = [
-    {Icon: TreePalm, text: '연차 및 리프레시 휴가제공'},
+    {Icon: TreePalm, text: t('benefits.items.annual_leave')},
     {Icon: HandCoins, text: '연차 수당 지급'},
     {Icon: Clock, text: '9시~10시 출근제도'},
     {Icon: Donut, text: '간식제공'},

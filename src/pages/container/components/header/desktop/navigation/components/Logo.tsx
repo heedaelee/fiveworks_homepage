@@ -14,7 +14,7 @@ const Logo = ({isOpen, isMobile}: {isOpen?: boolean; isMobile?: boolean}) => {
   };
 
   return !isMobile ? (
-    <div className={`w-[15%] flex flex-row justify-center p-[20px] h-[125px]`}>
+    <div className={`w-[10%] flex flex-row justify-center p-[20px] h-[125px] pl-0`}>
       <Link to='/'>
         <img
           src={getLogoImagePath()}

@@ -4,7 +4,7 @@ import {MenuListProps} from './interface.navigation';
 
 const MenuList = ({isOpen, setIsOpen}: MenuListProps) => {
   return (
-    <ul className={`flex flex-row justify-around pt-[35px] w-[85%] `}>
+    <ul className={`flex flex-row justify-around pt-[35px] w-[80%] `}>
       {MENU_LIST.map(menuItem => (
         <MenuItem
           setIsOpen={setIsOpen}

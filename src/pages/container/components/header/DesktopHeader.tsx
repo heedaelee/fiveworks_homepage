@@ -1,5 +1,6 @@
 import Logo from '@/pages/container/components/header/desktop/navigation/components/Logo';
 import MenuList from '@/pages/container/components/header/desktop/navigation/MenuList';
+import Languages from './desktop/navigation/components/lang';
 
 interface DesktopHeaderProps {
   isOpen: boolean;
@@ -16,9 +17,10 @@ const DesktopHeader = ({isOpen, setIsOpen, isHome}: DesktopHeaderProps) => {
         transition-all duration-500 ease-in-out ${isOpen && 'h-[249px]'}
         ${isHome && !isOpen ? 'bg-transparent' : 'bg-white shadow-custom'}
         `}>
-      <div className='container mx-auto flex flex-row h-full'>
+      <div className='container mx-auto flex flex-row h-ful'>
         <Logo isOpen={isOpen} />
         <MenuList isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Languages />
       </div>
     </header>
   );

@@ -22,7 +22,6 @@ export default function Human() {
             <p>기존의 틀을 벗어나 혁신적인 솔루션을 제시할 수 있는 능력을 중요하게 생각합니다.</p>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader>
             <Rocket className='w-10 h-10 mb-4 text-primary' />
@@ -33,7 +32,6 @@ export default function Human() {
             <p>불가능해 보이는 목표에 도전하고, 실패를 두려워하지 않는 인재를 원합니다.</p>
           </CardContent>
         </Card>
-
         <Card>
           <CardHeader>
             <Zap className='w-10 h-10 mb-4 text-primary' />
