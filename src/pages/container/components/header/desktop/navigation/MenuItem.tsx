@@ -21,6 +21,7 @@ const MenuItem = ({isOpen, setIsOpen, label, subItems, to}: MenuItemProps) => {
 
   const handleLinkClick = (event, path) => {
     // event.preventDefault(); // 기본 링크 동작을 막음
+    event.stopPropagation(); // 부모 요소로의 이벤트 전파를 막음
     setIsOpen(false); // isOpen 상태를 false로 설정
     // 이것도 됨
     // history.go(path); // 라우터로 이동

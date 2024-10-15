@@ -11,6 +11,7 @@ const imagePaths = {
   businessSi: import.meta.glob('/src/assets/img/pages/business/si/*.{png,jpg,jpeg,svg}'),
   businessBig: import.meta.glob('/src/assets/img/pages/business/bigdata/*.{png,jpg,jpeg,svg}'),
   businessProduct: import.meta.glob('/src/assets/img/pages/business/product/*.{png,jpg,jpeg,svg}'),
+  mediaNews: import.meta.glob('/src/assets/img/pages/media/news/*.{png,jpg,jpeg,svg}'),
 };
 /**
  *  한 페이지에 여러개의 이미지가 있을 경우, 이미지를 그룹화하여 반환하는 함수

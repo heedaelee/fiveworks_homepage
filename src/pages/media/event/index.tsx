@@ -48,16 +48,28 @@ const Event = () => {
 
   return (
     <div className='container mx-auto flex flex-col gap-[60px] mb-[150px]'>
-      <div>총 {totalCnt} 개의 게시물이 있습니다.</div>
-      <CardList data={currentItems} handleCardClick={handleImageClick} />
-      <Pagination count={count} page={page} onChange={handlePageChange} next={next} prev={prev} />
-      <GalleryPhotoModalWrapper
-        isModalOpen={isModalOpen}
-        selectedImage={selectedImage}
-        closeModal={closeModal}
-        handleImageLoad={handleImageLoad}
-        isImageLoaded={isImageLoaded}
-      />
+      {totalCnt !== 0 ? (
+        <>
+          <div>총 {totalCnt} 개의 게시물이 있습니다.</div>
+          <CardList data={currentItems} handleCardClick={handleImageClick} />
+          <Pagination
+            count={count}
+            page={page}
+            onChange={handlePageChange}
+            next={next}
+            prev={prev}
+          />
+          <GalleryPhotoModalWrapper
+            isModalOpen={isModalOpen}
+            selectedImage={selectedImage}
+            closeModal={closeModal}
+            handleImageLoad={handleImageLoad}
+            isImageLoaded={isImageLoaded}
+          />
+        </>
+      ) : (
+        <div>게시물이 없습니다.</div>
+      )}
     </div>
   );
 };

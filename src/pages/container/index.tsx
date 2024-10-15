@@ -29,7 +29,7 @@ const Container = () => {
     <div className={isHome ? 'h-full' : ''}>
       <div className='flex flex-col h-full'>
         {isMobile ? (
-          <MobileHeader isOpen={isOpen} setIsOpen={setIsOpen} />
+          <MobileHeader />
         ) : (
           <DesktopHeader isOpen={isOpen} setIsOpen={setIsOpen} isHome={isHome} />
         )}

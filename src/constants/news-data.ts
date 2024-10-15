@@ -1,3 +1,5 @@
+import {getImages} from '@/utils';
+
 export interface NewsItem {
   id: number;
   title: string;
@@ -17,7 +19,32 @@ function getConnectNaver() {
   return naver;
 }
 
-export const mockNewsData = [
+export const newsData: NewsDataType = [
+  {
+    id: 1,
+    title: '인공지능이 감정을 분석할 수 있을까? - 파이브웍스[혁신, 스타트업을 만나다]',
+    src: getImages('mediaNews')[0] as string,
+    regDate: '2024-10-15',
+    link: 'https://n.news.naver.com/mnews/article/144/0000887716?sid=110',
+  },
+  {
+    id: 2,
+    title: '인하대, 벤처스타트업 아카데미 사업단과 파이브웍스 MOU 체결',
+    src: getImages('mediaNews')[1] as string,
+    regDate: '2024-10-15',
+    link: 'https://www.kyosu.net/news/articleView.html?idxno=113796',
+  },
+  {
+    id: 3,
+    title:
+      '[한남대학교 창업중심대학 스타트업 CEO] "For the better life balance between Work and Life" ICT 전문 스타트업, 파이브웍스',
+    src: getImages('mediaNews')[2] as string,
+    regDate: '2024-10-15',
+    link: 'https://magazine.hankyung.com/job-joy/article/202402128198d',
+  },
+].reverse();
+
+/* export const mockNewsData = [
   {id: 1, title: 'Image 1', src: 'https://loremflickr.com/680/453'},
   {id: 2, title: 'Image 2', src: 'https://loremflickr.com/680/453'},
   {id: 3, title: 'Image 3', src: 'https://loremflickr.com/680/453'},
@@ -62,3 +89,4 @@ export const mockNewsData = [
     link: getConnectNaver(),
   }))
   .reverse();
+ */
