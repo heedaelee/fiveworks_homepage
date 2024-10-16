@@ -1,7 +1,7 @@
 import {data} from '@/constants/business-data';
 import {getImages} from '@/utils';
 import {useEffect, useState} from 'react';
-import BusinessSection from '../Common/BusinessSection';
+import BusinessLayout from '../Common/BusinessLayout';
 
 const Product = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -16,7 +16,7 @@ const Product = () => {
   }, []);
 
   return (
-    <BusinessSection
+    <BusinessLayout
       description={description}
       workPerformance={workPerformance}
       tab={tab}

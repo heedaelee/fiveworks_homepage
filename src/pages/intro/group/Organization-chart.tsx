@@ -1,41 +1,11 @@
-'use client';
-
 import React, {useEffect, useState} from 'react';
 import {motion} from 'framer-motion';
+import {useTranslation} from 'react-i18next';
 
 interface Department {
   name: string;
   children?: (Department | string)[];
 }
-
-const departments: Department[] = [
-  {
-    name: 'CEO',
-    children: [
-      {
-        name: '부대표',
-        children: [
-          {
-            name: 'DataSolution팀',
-            children: ['Solution A팀', 'Solution B팀', 'Solution C팀', 'Solution D팀'],
-          },
-          {
-            name: '경영지원팀',
-            children: ['경영지원팀', '전략기획팀'],
-          },
-          {
-            name: 'AI LAB팀',
-            children: ['AI Lab팀'],
-          },
-          {
-            name: '공공사업부팀',
-            children: ['Big Data팀', '공공사업팀'],
-          },
-        ],
-      },
-    ],
-  },
-];
 
 const useMediaQuery = (query: string): boolean => {
   const [matches, setMatches] = useState(false);
@@ -68,6 +38,48 @@ const HorizontalTree: React.FC = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [isMobile]);
+
+  const {t} = useTranslation();
+
+  const departments: Department[] = [
+    {
+      name: 'CEO',
+      children: [
+        {
+          name: t('intro.group.items.vicePresident'),
+          children: [
+            {
+              name: t('intro.group.items.dataSolution.title'),
+              children: [
+                t('intro.group.items.dataSolution.items.solutionA'),
+                t('intro.group.items.dataSolution.items.solutionB'),
+                t('intro.group.items.dataSolution.items.solutionC'),
+                t('intro.group.items.dataSolution.items.solutionD'),
+              ],
+            },
+            {
+              name: t('intro.group.items.management.title'),
+              children: [
+                t('intro.group.items.management.items.management'),
+                t('intro.group.items.management.items.strategy'),
+              ],
+            },
+            {
+              name: t('intro.group.items.ai.title'),
+              children: [t('intro.group.items.ai.items.ai')],
+            },
+            {
+              name: t('intro.group.items.public.title'),
+              children: [
+                t('intro.group.items.public.items.bigData'),
+                t('intro.group.items.public.items.publicBusiness'),
+              ],
+            },
+          ],
+        },
+      ],
+    },
+  ];
 
   return (
     <div className='overflow-hidden w-full h-full'>
@@ -119,8 +131,15 @@ const renderDepartment = (
         textAnchor='middle'
         dominantBaseline='middle'
         fontSize={17}
+        style={{
+          whiteSpace: 'pre-line',
+        }}
         fill='#333'>
-        {nodeName}
+        {nodeName.split('\n').map((line, i) => (
+          <tspan key={i} x={nodeX + nodeWidth / 2} dy={i === 0 ? 0 : '1.2em'}>
+            {line}
+          </tspan>
+        ))}
       </motion.text>
     </g>
   );

@@ -15,6 +15,50 @@ const {intro, business, media, careers, contact} = ROUTE_PATHS;
 
 export const MENU_LIST: MenuItem[] = [
   {
+    label: 'menulist.intro.title',
+    to: intro.overview,
+    subItems: [
+      {to: intro.overview, label: 'menulist.intro.items.overview'},
+      {to: intro.group, label: 'menulist.intro.items.group'},
+      {to: intro.history, label: 'menulist.intro.items.history'},
+      {to: intro.partners, label: 'menulist.intro.items.partners'},
+    ],
+  },
+  {
+    label: 'menulist.business.title',
+    to: business.ai,
+    subItems: [
+      {to: business.ai, label: 'menulist.business.items.ai'},
+      {to: business.si, label: 'menulist.business.items.si'},
+      {to: business.bigdata, label: 'menulist.business.items.bigdata'},
+      {to: business.product, label: 'menulist.business.items.product'},
+    ],
+  },
+  {
+    label: 'menulist.media.title',
+    to: media.news,
+    subItems: [
+      {to: media.news, label: 'menulist.media.items.news'},
+      {to: media.event, label: 'menulist.media.items.event'},
+    ],
+  },
+  {
+    label: 'menulist.careers.title',
+    to: careers.human,
+    subItems: [
+      {to: careers.human, label: 'menulist.careers.items.human'},
+      {to: careers.process, label: 'menulist.careers.items.process'},
+      {to: careers.benefit, label: 'menulist.careers.items.benefit'},
+    ],
+  },
+  {
+    label: 'menulist.contact.title',
+    to: contact.contact,
+    subItems: [{to: contact.contact, label: 'menulist.contact.items.contact'}],
+  },
+];
+/* export const MENU_LIST: MenuItem[] = [
+  {
     label: '회사소개',
     to: intro.overview,
     subItems: [
@@ -57,3 +101,4 @@ export const MENU_LIST: MenuItem[] = [
     subItems: [{to: contact.contact, label: 'CONTACT'}],
   },
 ];
+ */

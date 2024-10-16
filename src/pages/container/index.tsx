@@ -10,6 +10,8 @@ import Asdie from './components/aside';
 import useMobileCheck from '@/hooks/useMobileCheck';
 import DesktopHeader from './components/header/DesktopHeader';
 import MobileHeader from './components/header/MobileHeader';
+import {use} from 'i18next';
+import {useTranslation} from 'react-i18next';
 
 const Container = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,13 +19,16 @@ const Container = () => {
   const pathname = location.pathname;
 
   const isMobile = useMobileCheck();
+  const {t} = useTranslation();
 
   const firstMenuName =
     MENU_LIST.find(menuItem => menuItem.to.split('/')[1] === pathname.split('/')[1])?.subItems.find(
       subItem => subItem.to === pathname,
     )?.label || '';
 
-  console.log('firstMenuName : ', firstMenuName);
+  const appliedFirstMenuName = t(firstMenuName);
+  const subtitle = t('navigation.subtitle');
+  // console.log('firstMenuName : ', firstMenuName);
 
   return (
     <div className={isHome ? 'h-full' : ''}>
@@ -36,7 +41,7 @@ const Container = () => {
         {/* 홈 아닐시 */}
         {!isHome && (
           <>
-            <Asdie firstMenuName={firstMenuName} />
+            <Asdie firstMenuName={appliedFirstMenuName} subtitle={subtitle} />
             <SubNavigation />
           </>
         )}

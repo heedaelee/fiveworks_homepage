@@ -1,4 +1,4 @@
-import {TabContentProps} from '../common.interface';
+import {TabContentProps} from '../../common.interface';
 
 const Content = ({activeTab, tab}: Pick<TabContentProps, 'activeTab' | 'tab'>) => {
   return (

@@ -1,7 +1,7 @@
-import {TabContentProps} from '../common.interface';
+import {TabContentProps} from '../../common.interface';
 import ImageItem from './ImageItem';
 
-export interface ImageProps extends TabContentProps {
+export interface ImageProps extends Omit<TabContentProps, 'commonAnimation'> {
   handleImageClick: (image: string) => void;
 }
 

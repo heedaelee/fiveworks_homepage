@@ -1,4 +1,4 @@
-import {TabsProps} from './common.interface';
+import {TabsProps} from '../../common.interface';
 
 const TabTitles = ({tab, activeTab, setActiveTab}: TabsProps) => {
   return (

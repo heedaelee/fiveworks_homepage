@@ -17,7 +17,7 @@ const DesktopHeader = ({isOpen, setIsOpen, isHome}: DesktopHeaderProps) => {
         transition-all duration-500 ease-in-out ${isOpen && 'h-[249px]'}
         ${isHome && !isOpen ? 'bg-transparent' : 'bg-white shadow-custom'}
         `}>
-      <div className='container mx-auto flex flex-row h-ful'>
+      <div className='container mx-auto flex flex-row h-full'>
         <Logo isOpen={isOpen} />
         <MenuList isOpen={isOpen} setIsOpen={setIsOpen} />
         <Languages />

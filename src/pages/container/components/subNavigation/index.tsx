@@ -2,6 +2,7 @@ import {useEffect, useRef, useState} from 'react';
 import {MENU_LIST} from '@/constants/menu-list';
 import Dropdown from './dropdown';
 import {HomeIcon} from '@heroicons/react/24/solid';
+import {useTranslation} from 'react-i18next';
 
 const SubNavigation = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -40,6 +41,10 @@ const SubNavigation = () => {
   })?.label;
   // console.log('firstMenuName : ', firstMenuName);
 
+  const {t} = useTranslation();
+
+  const appliedFirstMenuName = t(firstMenuName);
+
   return (
     <section className='border-b border-[#ddd] mb-[60px] h-[54px]'>
       <div className='mx-auto container flex flex-row items-center h-full'>
@@ -49,13 +54,13 @@ const SubNavigation = () => {
           <HomeIcon className='h-6 w-6 text-black' />
         </a>
         <div className='border-r relative border-[#ddd] w-[200px] h-[54px] flex flex-row justify-start items-center px-[20px]'>
-          {menuItem.label}
+          {t(menuItem.label)}
         </div>
         <div className='relative' ref={dropdownRef}>
           <div
             onClick={handleDropdown}
             className='bg-gray-600 text-white border-r relative border-[#ddd] w-[200px] h-[54px] flex flex-row justify-between items-center px-[20px] cursor-pointer'>
-            <span>{firstMenuName}</span> <span>{`${isDropdownOpen ? '▲' : '▼'}`}</span>
+            <span>{appliedFirstMenuName}</span> <span>{`${isDropdownOpen ? '▲' : '▼'}`}</span>
           </div>
           {isDropdownOpen && <Dropdown items={menuItem.subItems} handleDropdown={handleDropdown} />}
         </div>

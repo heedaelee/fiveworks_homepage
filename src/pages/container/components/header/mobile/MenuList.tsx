@@ -3,6 +3,7 @@ import {ChevronDown, ChevronUp} from 'lucide-react';
 import {MENU_LIST} from '@/constants/menu-list';
 import {Link} from 'react-router-dom';
 import {MouseEvent} from 'react';
+import {useTranslation} from 'react-i18next';
 
 interface MenuListProps {
   openSubMenus: number[];
@@ -11,6 +12,8 @@ interface MenuListProps {
 }
 
 const MenuList = ({openSubMenus, toggleSubMenu, handleLinkClick}: MenuListProps) => {
+  const {t} = useTranslation();
+
   return (
     <>
       {MENU_LIST.map((item, index) => (
@@ -23,7 +26,8 @@ const MenuList = ({openSubMenus, toggleSubMenu, handleLinkClick}: MenuListProps)
             className='flex justify-between items-center w-full text-left text-xl font-bold py-2'
             onClick={() => toggleSubMenu(index)}
             aria-expanded={openSubMenus.includes(index)}>
-            {item.label}
+            {/* {item.label} */}
+            {t(item.label)}
             {openSubMenus.includes(index) ? (
               <ChevronUp className='w-5 h-5' />
             ) : (
@@ -49,7 +53,8 @@ const MenuList = ({openSubMenus, toggleSubMenu, handleLinkClick}: MenuListProps)
                       to={subItem.to}
                       onClick={e => handleLinkClick(e, subItem.to)}
                       className='text-white'>
-                      {subItem.label}
+                      {/* {subItem.label} */}
+                      {t(subItem.label)}
                     </Link>
                   </motion.li>
                 ))}

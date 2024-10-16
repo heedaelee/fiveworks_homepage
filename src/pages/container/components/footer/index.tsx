@@ -1,18 +1,21 @@
 import {ReactNode} from 'react';
+import {useTranslation} from 'react-i18next';
 
-const address = '서울 특별시 강남구 봉은사로 30길 42 202호';
+// const address = '서울 특별시 강남구 봉은사로 30길 42 202호';
 const tel = 'Tel: 02-3661-0813';
 const fax = 'Fax: 02-3664-0813';
-const businessNumber = '사업자번호: 261-88-01451';
+// const businessNumber = '사업자번호: 261-88-01451';
 const copyright = 'Copyright ©FiveWorks. All Rights Reserved.';
 const textStyle = 'text-[16px] text-[#6f7880]';
 
 const Footer = () => {
+  const {t} = useTranslation();
+
   return (
     <footer className='bg-black'>
       <div className='container flex flex-col mx-auto py-8'>
         <FooterSection>
-          <FooterText>{address}</FooterText>
+          <FooterText>{t(`footer.address`)}</FooterText>
           <FooterText>
             <div>{tel}</div>
           </FooterText>
@@ -22,7 +25,7 @@ const Footer = () => {
           <FooterText>{copyright}</FooterText>
           <FooterText className='flex flex-col md:items-end'>
             <div>{fax}</div>
-            <div>{businessNumber}</div>
+            <div>{t(`footer.businessNumber`)}</div>
           </FooterText>
         </FooterSection>
       </div>

@@ -13,24 +13,14 @@ const Logo = ({isOpen, isMobile}: {isOpen?: boolean; isMobile?: boolean}) => {
     return logoDefault;
   };
 
-  return !isMobile ? (
-    <div className={`w-[10%] flex flex-row justify-center p-[20px] h-[125px] pl-0`}>
+  return (
+    <div
+      className={`w-[20%] md:w-[10%] flex flex-row justify-center p-[10px] pt-[20px] md:p-[20px] h-[75px] md:h-[125px] md:pl-0`}>
       <Link to='/'>
         <img
-          src={getLogoImagePath()}
+          src={isMobile ? logoDefault : getLogoImagePath()}
           alt='logo'
-          className='h-[70px] object-cover'
-          onClick={() => navigate('/')}
-        />
-      </Link>
-    </div>
-  ) : (
-    <div className={`w-30%] flex flex-row justify-center p-[20px] h-[75px]`}>
-      <Link to='/'>
-        <img
-          src={logoDefault}
-          alt='logo'
-          className='h-[40px] object-cover'
+          className='h-[35px] md:h-[60px] object-cover'
           onClick={() => navigate('/')}
         />
       </Link>

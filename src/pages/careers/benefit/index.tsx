@@ -1,36 +1,50 @@
 import {Card, CardContent} from '@/components/ui/card';
 import {TreePalm, HandCoins, Clock, Donut, PartyPopper, Cake, LibraryBig, Gift} from 'lucide-react';
 import {useTranslation} from 'react-i18next';
+import {motion} from 'framer-motion';
 
 const Benefits = () => {
   const {t} = useTranslation();
   const benefitItems = [
     {Icon: TreePalm, text: t('benefits.items.annual_leave')},
-    {Icon: HandCoins, text: '연차 수당 지급'},
-    {Icon: Clock, text: '9시~10시 출근제도'},
-    {Icon: Donut, text: '간식제공'},
-    {Icon: PartyPopper, text: '경조사비 지급'},
-    {Icon: Cake, text: '생일자 오후 반차'},
-    {Icon: LibraryBig, text: '업무관련 교육 및 도서구입'},
+    {Icon: HandCoins, text: t('benefits.items.annual_allowance')},
+    {Icon: Clock, text: t('benefits.items.flexible_hours')},
+    {Icon: Donut, text: t('benefits.items.snacks')},
+    {Icon: PartyPopper, text: t('benefits.items.celebration_allowance')},
+    {Icon: Cake, text: t('benefits.items.birthday_half_day')},
+    {Icon: LibraryBig, text: t('benefits.items.education_books')},
     {
       Icon: Gift,
-      text: '명절 및 창립기념일 선물',
+      text: t('benefits.items.holiday_gifts'),
     },
   ];
 
   return (
     <div className='container mx-auto px-4 py-8 mb-[150px]'>
-      <h1 className='text-3xl font-bold mb-4'>복리후생</h1>
+      <motion.h1
+        initial={{opacity: 0, y: -20}}
+        whileInView={{opacity: 1, y: 0}}
+        transition={{duration: 2, ease: 'easeInOut'}}
+        className='text-3xl font-bold mb-4'>
+        {t('benefits.title')}
+      </motion.h1>
       <hr className='border-gray-300 mb-8' />
 
       <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6'>
         {benefitItems.map((item, index) => (
-          <Card key={index} className='flex flex-col items-center justify-center'>
-            <CardContent className='text-center py-12'>
-              <item.Icon className='w-16 h-16 mx-auto mb-4 text-primary' />
-              <p className='text-lg'>{item.text}</p>
-            </CardContent>
-          </Card>
+          <motion.div
+            key={index}
+            initial={{opacity: 0, y: 20}}
+            whileInView={{opacity: 1, y: 0}}
+            transition={{duration: 0.8, delay: index * 0.2}}
+            whileHover={{scale: 1.1}}>
+            <Card key={index} className='flex flex-col items-center justify-center'>
+              <CardContent className='text-center py-12'>
+                <item.Icon className='w-16 h-16 mx-auto mb-4 text-primary' />
+                <p className='text-lg'>{item.text}</p>
+              </CardContent>
+            </Card>
+          </motion.div>
         ))}
       </div>
     </div>

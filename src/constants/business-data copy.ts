@@ -1,9 +1,56 @@
 export const data = {
   ai: {
-    title: 'business.ai.title',
-    description: `business.ai.description`,
-    workPerformance: 'business.ai.workPerformance',
-    tab: 'business.ai.tab',
+    title: 'AI',
+    description: `A.I. Lab은 다양한 인공지능 모듈과 빅데이터 분석 기술을 기반으로 한 자동화 솔루션을 개발해오며, 기업의 디지털 혁신을 목표로 성장하고 있습니다.`,
+    workPerformance: [
+      'AI기반 PRA 솔루션 개발 (OCR, Object Detection)',
+      'BioMetrics 모듈 (Liveness detect, 감정분석모듈)',
+      'Data 분석 및 Data 통계를 활용한 예측(시청률 예측, 파고측정)',
+    ],
+    tab: [
+      {
+        title: '영수증 수집 및 OCR 분석 모듈 개발',
+        summary: `한국 및 해외 영수증 데이터 크롤링 통한 데이터 수집 후 추출`,
+        subTitles: [
+          '한국, 일본, 중국, 베트남 등 각국 영수증 데이터 수집',
+          '인공지능 기반 영수증 OCR 모듈 개발',
+        ],
+        image: '@/assets/img/pages/business/ai/1_OCR.png',
+      },
+      {
+        title: '상명대 로보어드바이저',
+        summary: '교내 정보를 제공하는 카카오톡 챗봇 서비스',
+        subTitles: [
+          '영상인식 기능 활용 모듈을 통해 면접상황에서 표정에 대한 피드백 제공',
+          '진학 정보 및 직업 추천',
+        ],
+        image: '@/assets/img/pages/business/ai/2_robo.png',
+      },
+      {
+        title: '세무자동화 플랫폼',
+        summary: `세무를 진행하는 동안 생성된 수기 또는 이미지의 문서 정보에서\n 
+          텍스트와 템플릿을 자연어 처리하는 업무 자동화 기술`,
+        subTitles: [
+          '세금신고 문서 생성 및 오류 탐지 기술',
+          '사용자 경험 기반 세무 프로세스가 적용된 대시보드',
+          '크롤링 기능이 포함된 빅데이터 수집 저장 시스템',
+          '회사와 세무대리인의 유기적인 소통 채널 구축',
+        ],
+        image: '@/assets/img/pages/business/ai/3_taxation.png',
+      },
+      {
+        title: '스마트 안전관리 솔루션',
+        summary: `작업자들이 건설 현장에서 안전사고를 사전에 예방하기 위해\n
+          CCTV나 이동형 영상을 이용한 딥러닝 알고리즘을 통해 \n
+          건설현장에서 효과적으로 안전관리를 할 수 있는 플랫폼 구축`,
+        subTitles: [
+          'CCTV 실시간 영상정보수집',
+          '인공지능 기반 근로자 안전보호구 착용 여부 판별',
+          '통합모니터링 시스템 제공',
+        ],
+        image: '@/assets/img/pages/business/ai/4_safety.png',
+      },
+    ],
   },
   si: {
     title: 'SI',

@@ -10,16 +10,16 @@ const Process = () => {
         <Title title='채용절차' />
         <div className='grid md:grid-cols-2 gap-8 mb-8'>
           {recruitmentSteps.map((step, index) => (
-            <RecruitmentStep key={index} {...step} />
+            <RecruitmentStep key={index} {...step} index={index} />
           ))}
         </div>
       </div>
-      <hr className='border-gray-300 mb-8 w-full' />
+      <hr className='border-gray-300 my-16 w-full' />
       <div className='container mx-auto'>
         <Title title='전형절차' />
         <div className='flex flex-col md:flex-row justify-between items-start md:items-center space-y-8 md:space-y-0 md:space-x-4 mb-8'>
           {processSteps.map((step, index) => (
-            <ProcessStep key={index} {...step} />
+            <ProcessStep key={index} {...step} index={index} />
           ))}
         </div>
       </div>

@@ -1,21 +1,25 @@
 import {motion} from 'framer-motion';
-// 최신 데이터 위에서 부터 보여주기 위해 배열을 역순으로 정렬, 위에서 추가된 데이터가 먼저 보이게 됨
-const events = [
-  {date: '2024.04', content: 'Smart Seller 현대백화점 면세점 납품'},
-  {
-    date: '2023.07',
-    content: '인공지능과 클라우드를 활용한 비대면 진술 조서 시스템 개발 참여기관 수행',
-  },
-  {date: '2023.05', content: '벤처 기업 인증'},
-  {date: '2023.01', content: 'AWS 교육 프로그램 & MSP 사업 연계'},
-  {date: '2021.11', content: '데이터 바우처 공급기업 선정'},
-  {date: '2021.02', content: 'AI바우처 공급기업 등록'},
-  {date: '2020.07', content: '전략형 창업과제 선정'},
-  {date: '2020.02', content: '기업 부설 연구소 설립'},
-  {date: '2019.08', content: '회사창립'},
-];
+import { useTranslation } from 'react-i18next';
 
 const CompanyHistory = () => {
+  const {t} = useTranslation();
+
+  // 최신 데이터 위에서 부터 보여주기 위해 배열을 역순으로 정렬, 위에서 추가된 데이터가 먼저 보이게 됨
+  const events = [
+    {date: '2024.04', content: t('intro.history.items.content_9')},
+    {
+      date: '2023.07',
+      content: t('intro.history.items.content_8'),
+    },
+    {date: '2023.05', content: t('intro.history.items.content_7')},
+    {date: '2023.01', content: t('intro.history.items.content_6')},
+    {date: '2021.11', content: t('intro.history.items.content_5')},
+    {date: '2021.02', content: t('intro.history.items.content_4')},
+    {date: '2020.07', content: t('intro.history.items.content_3')},
+    {date: '2020.02', content: t('intro.history.items.content_2')},
+    {date: '2019.08', content: t('intro.history.items.content_1')},
+  ];
+
   return (
     <div className='container mx-auto px-4 py-16 pt-10'>
       <h1 className='text-3xl md:text-4xl font-bold text-center mb-12 text-gray-600'>2024</h1>

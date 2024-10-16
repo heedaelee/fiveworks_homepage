@@ -1,11 +1,12 @@
 import {useState} from 'react';
-import {TabContentProps} from '../common.interface';
+import {motion} from 'framer-motion';
+import {TabContentProps} from '@/pages/business/Common/common.interface';
 import GalleryPhotoModalWrapper from '@/pages/media/event/GalleryPhotoModalWrapper';
 import {EventItem} from '@/constants/event-data';
-import Content from './content';
-import ImageWrapper from './ImageWrapper';
+import Content from '@/pages/business/Common/tab/tab_content/content';
+import ImageWrapper from '@/pages/business/Common/tab/tab_content/ImageWrapper';
 
-const TabsContent = ({tab, activeTab, images}: TabContentProps) => {
+const TabsContent = ({tab, activeTab, images, commonAnimation}: TabContentProps) => {
   const [selectedImage, setSelectedImage] = useState<EventItem['src'] | null>(null);
   const [isImageLoaded, setIsImageLoaded] = useState<boolean>(false);
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -35,14 +36,18 @@ const TabsContent = ({tab, activeTab, images}: TabContentProps) => {
   };
 
   return (
-    <div className='w-full p-0 md:p-6 flex flex-col gap-16 '>
-      <Content tab={tab} activeTab={activeTab} />
-      <ImageWrapper
-        tab={tab}
-        activeTab={activeTab}
-        images={images}
-        handleImageClick={handleImageClick}
-      />
+    <div className='w-full p-0 md:p-6 flex flex-col gap-16 snap-y snap-mandatory'>
+      <motion.div className='snap-start' {...commonAnimation(0.2)}>
+        <Content tab={tab} activeTab={activeTab} />
+      </motion.div>
+      <motion.div className='snap-start' {...commonAnimation(0.3)}>
+        <ImageWrapper
+          tab={tab}
+          activeTab={activeTab}
+          images={images}
+          handleImageClick={handleImageClick}
+        />
+      </motion.div>
       {isModalOpen && (
         <GalleryPhotoModalWrapper
           isModalOpen={isModalOpen}

@@ -4,10 +4,12 @@ import OrganizationChart from './Organization-chart';
 import useMobileCheck from '@/hooks/useMobileCheck';
 import MobileOrganizationChart from './MobileOrganizationChart';
 import {motion} from 'framer-motion';
+import {useTranslation} from 'react-i18next';
 
 const Group = () => {
   const isMobile = useMobileCheck();
-  const text = 'AI, 빅데이터, 클라우드의 완벽한 조화';
+  const {t} = useTranslation();
+  const TITLE = t('intro.group.title');
 
   const containerVariants = {
     hidden: {opacity: 1},
@@ -35,17 +37,13 @@ const Group = () => {
           AI, 빅데이터, 클라우드의 완벽한 조화
         </motion.h1> */}
         <motion.div className='h1' variants={containerVariants} initial='hidden' animate='visible'>
-          {text.split('').map((char, index) => (
+          {TITLE.split('').map((char, index) => (
             <motion.span key={index} variants={letterVariants}>
               {char}
             </motion.span>
           ))}
         </motion.div>
       </div>
-      {/* <img
-        src={groupImage}
-        className='h-[80%] w-full object-contain mb-[200px] animate-fade-in-down'
-      /> */}
       {isMobile ? <MobileOrganizationChart /> : <OrganizationChart />}
     </div>
   );

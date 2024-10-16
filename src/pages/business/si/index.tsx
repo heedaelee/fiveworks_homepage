@@ -2,7 +2,7 @@ import {data} from '@/constants/business-data';
 import {TabContentProps} from '@/pages/business/Common/common.interface';
 import {getImages} from '@/utils';
 import {useEffect, useState} from 'react';
-import BusinessSection from '../Common/BusinessSection';
+import BusinessLayout from '../Common/BusinessLayout';
 
 const Si = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -17,7 +17,7 @@ const Si = () => {
   }, []);
 
   return (
-    <BusinessSection
+    <BusinessLayout
       description={description}
       workPerformance={workPerformance}
       tab={tab}
