@@ -1,4 +1,4 @@
-import {data} from '@/constants/business-data';
+import {data_key} from '@/constants/business-data';
 import {getImages} from '@/utils';
 import {useEffect, useState} from 'react';
 import BusinessLayout from '../Common/BusinessLayout';
@@ -7,8 +7,8 @@ const Product = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [images, setImages] = useState<(string | string[])[]>([]);
 
-  const productData = data.product;
-  const {tab, description, workPerformance} = productData;
+  const productData = data_key.product;
+  const {tab_key, description_key, workPerformance_key} = productData;
   useEffect(() => {
     const data = getImages('businessProduct');
     console.log(data);
@@ -17,9 +17,9 @@ const Product = () => {
 
   return (
     <BusinessLayout
-      description={description}
-      workPerformance={workPerformance}
-      tab={tab}
+      description_key={description_key}
+      workPerformance_key={workPerformance_key}
+      tab_key={tab_key}
       activeTab={activeTab}
       setActiveTab={setActiveTab}
       images={images}

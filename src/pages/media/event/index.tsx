@@ -4,6 +4,7 @@ import usePagination from '@/hooks/usePagination';
 import CardList from '@/pages/media/Common/CardList';
 import {useState} from 'react';
 import GalleryPhotoModalWrapper from './GalleryPhotoModalWrapper';
+import {useTranslation} from 'react-i18next';
 
 const EVENT_COUNT_PER_PAGE = 9;
 
@@ -46,11 +47,13 @@ const Event = () => {
     setIsImageLoaded(true);
   };
 
+  const {t} = useTranslation();
+
   return (
     <div className='container mx-auto flex flex-col gap-[60px] mb-[150px]'>
       {totalCnt !== 0 ? (
         <>
-          <div>총 {totalCnt} 개의 게시물이 있습니다.</div>
+          <div>{t('media.totalItems', {totalCnt})}</div>
           <CardList data={currentItems} handleCardClick={handleImageClick} />
           <Pagination
             count={count}

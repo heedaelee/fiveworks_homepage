@@ -1,19 +1,27 @@
-import {TabContentProps, TabProps} from '../common.interface';
+import {TabIndexProps, TabType} from '../common.interface';
 import {motion} from 'framer-motion';
 import TabTitles from './tab_title';
-import TabsContent from './tab_content';
+import TabContent from './tab_content';
 import {useTranslation} from 'react-i18next';
 
-const TabComponent = ({tab, activeTab, setActiveTab, images, commonAnimation}: TabProps) => {
+const TabIndex = ({
+  tab_key,
+  activeTab,
+  setActiveTab,
+  images,
+  commonAnimation,
+}: TabIndexProps) => {
   const {t} = useTranslation();
-  const translatedTabs = t(tab, {returnObjects: true}) as TabContentProps['tab'];
+  const translatedTabs = t(tab_key, {returnObjects: true}) as TabType[];
 
+  console.log('translatedTabs : ');
+  console.log(translatedTabs);
   return (
     <div className='w-full mt-16 flex flex-col gap-9'>
       <motion.div {...commonAnimation(0.2)}>
         <TabTitles tab={translatedTabs} activeTab={activeTab} setActiveTab={setActiveTab} />
       </motion.div>
-      <TabsContent
+      <TabContent
         tab={translatedTabs}
         activeTab={activeTab}
         images={images}
@@ -23,4 +31,4 @@ const TabComponent = ({tab, activeTab, setActiveTab, images, commonAnimation}: T
   );
 };
 
-export default TabComponent;
+export default TabIndex;

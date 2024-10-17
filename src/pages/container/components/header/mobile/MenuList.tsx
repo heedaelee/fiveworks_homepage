@@ -1,9 +1,10 @@
-import {motion, AnimatePresence} from 'framer-motion';
+import {useTranslation} from 'react-i18next';
+import {motion} from 'framer-motion';
 import {ChevronDown, ChevronUp} from 'lucide-react';
 import {MENU_LIST} from '@/constants/menu-list';
-import {Link} from 'react-router-dom';
 import {MouseEvent} from 'react';
-import {useTranslation} from 'react-i18next';
+import SubMenuList from '@/pages/container/components/header/mobile/subMenuList';
+import LanguageSwitcher from './lang';
 
 interface MenuListProps {
   openSubMenus: number[];
@@ -26,7 +27,6 @@ const MenuList = ({openSubMenus, toggleSubMenu, handleLinkClick}: MenuListProps)
             className='flex justify-between items-center w-full text-left text-xl font-bold py-2'
             onClick={() => toggleSubMenu(index)}
             aria-expanded={openSubMenus.includes(index)}>
-            {/* {item.label} */}
             {t(item.label)}
             {openSubMenus.includes(index) ? (
               <ChevronUp className='w-5 h-5' />
@@ -34,35 +34,15 @@ const MenuList = ({openSubMenus, toggleSubMenu, handleLinkClick}: MenuListProps)
               <ChevronDown className='w-5 h-5' />
             )}
           </button>
-          <AnimatePresence>
-            {openSubMenus.includes(index) && (
-              <motion.ul
-                initial={{height: 0, opacity: 0}}
-                animate={{height: 'auto', opacity: 1}}
-                exit={{height: 0, opacity: 0}}
-                transition={{duration: 0.3, ease: 'easeInOut'}}
-                className='ml-4 overflow-hidden'>
-                {item.subItems.map((subItem, subIndex) => (
-                  <motion.li
-                    key={subIndex}
-                    initial={{opacity: 0, x: -20}}
-                    animate={{opacity: 1, x: 0}}
-                    transition={{delay: subIndex * 0.05}}
-                    className='py-2'>
-                    <Link
-                      to={subItem.to}
-                      onClick={e => handleLinkClick(e, subItem.to)}
-                      className='text-white'>
-                      {/* {subItem.label} */}
-                      {t(subItem.label)}
-                    </Link>
-                  </motion.li>
-                ))}
-              </motion.ul>
-            )}
-          </AnimatePresence>
+          <SubMenuList
+            item={item}
+            index={index}
+            openSubMenus={openSubMenus}
+            handleLinkClick={handleLinkClick}
+          />
         </motion.li>
       ))}
+      <LanguageSwitcher />
     </>
   );
 };

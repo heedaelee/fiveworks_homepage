@@ -42,8 +42,8 @@ const SubNavigation = () => {
   // console.log('firstMenuName : ', firstMenuName);
 
   const {t} = useTranslation();
-
-  const appliedFirstMenuName = t(firstMenuName);
+  const editedFristMenuName = firstMenuName ?? 'defaultMenuName';
+  const appliedFirstMenuName = t(editedFristMenuName);
 
   return (
     <section className='border-b border-[#ddd] mb-[60px] h-[54px]'>

@@ -1,10 +1,19 @@
+export interface BusinessSectionProps {
+  activeTab: number;
+  setActiveTab: (value: number) => void;
+  tab_key: string;
+  description_key: string;
+  workPerformance_key: string;
+  images: (string | string[])[];
+}
+
 export interface DescriptionProps {
-  description: string;
-  workPerformance: string[];
+  description_key: string;
+  workPerformance_key: string;
 }
 
 export interface TabContentProps {
-  tab: {title: string; summary: string; subTitles: string[]}[];
+  tab: TabType[];
   activeTab: number;
   images: (string | string[])[];
   commonAnimation: (delay: number) => {
@@ -14,11 +23,14 @@ export interface TabContentProps {
   };
 }
 
-export interface TabsProps {
+export type TabType = {title: string; summary: string; subTitles: string[]};
+
+export interface TabTitleType {
   tab: {title: string}[];
   activeTab: number;
   setActiveTab: (index: number) => void;
 }
 
 export type HeaderProps = DescriptionProps & Pick<TabContentProps, 'commonAnimation'>;
-export type TabProps = TabContentProps & Pick<TabProps, 'setActiveTab'>;
+export type TabIndexProps = Omit<BusinessSectionProps, keyof DescriptionProps> &
+  Pick<TabContentProps, 'commonAnimation'>;

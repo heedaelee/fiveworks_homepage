@@ -1,5 +1,3 @@
-import groupImage from '@/assets/img/pages/intro-group.png';
-// import OrganizationChart from './OrganizationChart';
 import OrganizationChart from './Organization-chart';
 import useMobileCheck from '@/hooks/useMobileCheck';
 import MobileOrganizationChart from './MobileOrganizationChart';

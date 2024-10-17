@@ -1,6 +1,6 @@
-import {TabsProps} from '../../common.interface';
+import {TabTitleType} from '../../common.interface';
 
-const TabTitles = ({tab, activeTab, setActiveTab}: TabsProps) => {
+const TabTitles = ({tab, activeTab, setActiveTab}: TabTitleType) => {
   return (
     <div className='flex justify-center font-semibold text-sm md:text-lg'>
       {tab.map((item, index) => (

@@ -1,23 +1,16 @@
-import {TabContentProps} from '@/pages/business/Common/common.interface';
 import Header from '@/pages/business/Common/header';
 import {GlobalStyles} from '@/styles/globalStyles';
-import TabComponent from './tab';
+import TabIndex from './tab';
+import { BusinessSectionProps } from './common.interface';
 
-interface BusinessSectionProps {
-  activeTab: number;
-  setActiveTab: (value: number) => void;
-  tab: TabContentProps['tab'];
-  description: string;
-  workPerformance: string[];
-  images: (string | string[])[];
-}
+
 
 const BusinessLayout = ({
   activeTab,
   setActiveTab,
-  tab,
-  description,
-  workPerformance,
+  tab_key,
+  description_key,
+  workPerformance_key,
   images,
 }: BusinessSectionProps) => {
   const commonAnimation = (delay: number) => ({
@@ -29,12 +22,12 @@ const BusinessLayout = ({
   return (
     <div className={GlobalStyles.classes.businessContainer}>
       <Header
-        description={description}
-        workPerformance={workPerformance}
+        description_key={description_key}
+        workPerformance_key={workPerformance_key}
         commonAnimation={commonAnimation}
       />
-      <TabComponent
-        tab={tab}
+      <TabIndex
+        tab_key={tab_key}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         images={images}

@@ -1,4 +1,4 @@
-import Logo from '@/pages/container/components/header/desktop/navigation/components/Logo';
+import Logo from '@/pages/container/components/header/desktop/navigation/components/logo/Logo';
 import MenuList from '@/pages/container/components/header/desktop/navigation/MenuList';
 import Languages from './desktop/navigation/components/lang';
 

@@ -1,4 +1,4 @@
-import Logo from '@/pages/container/components/header/desktop/navigation/components/Logo';
+import Logo from '@/pages/container/components/header/desktop/navigation/components/logo/Logo';
 import MobileMenu from '@/pages/container/components/header/mobile/MobileMenu';
 
 const MobileHeader = () => {

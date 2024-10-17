@@ -1,4 +1,4 @@
-import {data} from '@/constants/business-data';
+import {data_key} from '@/constants/business-data';
 import {getImages} from '@/utils';
 import {useEffect, useState} from 'react';
 import BusinessLayout from '../Common/BusinessLayout';
@@ -7,8 +7,8 @@ const Ai = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [images, setImages] = useState<(string | string[])[]>([]);
 
-  const aiData = data.ai;
-  const {tab, description, workPerformance} = aiData;
+  const aiData = data_key.ai;
+  const {tab_key, description_key, workPerformance_key} = aiData;
   useEffect(() => {
     const data = getImages('businessAi');
     console.log(data);
@@ -17,9 +17,9 @@ const Ai = () => {
 
   return (
     <BusinessLayout
-      description={description}
-      workPerformance={workPerformance}
-      tab={tab}
+      description_key={description_key}
+      workPerformance_key={workPerformance_key}
+      tab_key={tab_key}
       activeTab={activeTab}
       setActiveTab={setActiveTab}
       images={images}
