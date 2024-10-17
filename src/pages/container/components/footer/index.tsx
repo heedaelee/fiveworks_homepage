@@ -1,11 +1,9 @@
 import {ReactNode} from 'react';
 import {useTranslation} from 'react-i18next';
 
-// const address = '서울 특별시 강남구 봉은사로 30길 42 202호';
 const tel = 'Tel: 02-3661-0813';
 const email = 'email: yseom@5works.co.kr';
 const fax = 'Fax: 02-3664-0813';
-// const businessNumber = '사업자번호: 261-88-01451';
 const copyright = 'Copyright ©FiveWorks. All Rights Reserved.';
 const textStyle = 'text-[16px] text-[#6f7880]';
 
