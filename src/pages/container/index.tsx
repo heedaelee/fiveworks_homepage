@@ -10,11 +10,11 @@ import Asdie from './components/aside';
 import useMobileCheck from '@/hooks/useMobileCheck';
 import DesktopHeader from './components/header/DesktopHeader';
 import MobileHeader from './components/header/MobileHeader';
-import {use} from 'i18next';
 import {useTranslation} from 'react-i18next';
+import ScrollTopButton from './components/scrollTopButton';
 
 const Container = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const isHome = useIsHomepage();
   const pathname = location.pathname;
 
@@ -26,22 +26,20 @@ const Container = () => {
       subItem => subItem.to === pathname,
     )?.label || '';
 
-  const appliedFirstMenuName = t(firstMenuName);
-  const subtitle = t('navigation.subtitle');
   // console.log('firstMenuName : ', firstMenuName);
 
   return (
-    <div className={isHome ? 'h-full' : ''}>
+    <div className={`${isHome ? 'h-full' : ''} relative`}>
       <div className='flex flex-col h-full'>
         {isMobile ? (
           <MobileHeader />
         ) : (
-          <DesktopHeader isOpen={isOpen} setIsOpen={setIsOpen} isHome={isHome} />
+          <DesktopHeader isOpen={isMenuOpen} setIsOpen={setIsMenuOpen} isHome={isHome} />
         )}
         {/* 홈 아닐시 */}
         {!isHome && (
           <>
-            <Asdie firstMenuName={appliedFirstMenuName} subtitle={subtitle} />
+            <Asdie firstMenuName={t(firstMenuName)} subtitle={t('navigation.subtitle')} />
             <SubNavigation />
           </>
         )}
@@ -50,6 +48,7 @@ const Container = () => {
         </main>
       </div>
       <Footer />
+      {!isHome && <ScrollTopButton />}
     </div>
   );
 };

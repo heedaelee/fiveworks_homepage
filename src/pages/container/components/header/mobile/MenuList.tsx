@@ -42,7 +42,12 @@ const MenuList = ({openSubMenus, toggleSubMenu, handleLinkClick}: MenuListProps)
           />
         </motion.li>
       ))}
-      <LanguageSwitcher />
+      <motion.div
+        initial={{opacity: 0, y: 20}}
+        animate={{opacity: 1, y: 0}}
+        transition={{delay: MENU_LIST.length * 0.1}}>
+        <LanguageSwitcher />
+      </motion.div>
     </>
   );
 };
