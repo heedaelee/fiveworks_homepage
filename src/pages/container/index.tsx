@@ -1,5 +1,5 @@
-import {useState} from 'react';
-import {Outlet} from 'react-router-dom';
+import {useEffect, useState} from 'react';
+import {Outlet, useLocation} from 'react-router-dom';
 import '@/styles/globalCss.css';
 
 import useIsHomepage from '@/hooks/useIsHomePage';
@@ -20,6 +20,7 @@ const Container = () => {
 
   const isMobile = useMobileCheck();
   const {t} = useTranslation();
+  const locationForScroll = useLocation();
 
   const firstMenuName =
     MENU_LIST.find(menuItem => menuItem.to.split('/')[1] === pathname.split('/')[1])?.subItems.find(
@@ -27,6 +28,9 @@ const Container = () => {
     )?.label || '';
 
   // console.log('firstMenuName : ', firstMenuName);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [locationForScroll]);
 
   return (
     <div className={`${isHome ? 'h-full' : ''} relative`}>
