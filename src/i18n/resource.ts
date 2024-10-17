@@ -1,6 +1,20 @@
 export const resources = {
   ko: {
     translation: {
+      carousel: {
+        item1: {
+          title: '',
+          description: '최첨단 기술로 비즈니스의 미래를 열어갑니다',
+        },
+        item2: {
+          title: '고객 맞춤 디지털 트랜스포메이션',
+          description: '귀사의 성공을 위한 맞춤형 IT 전략을 제시합니다',
+        },
+        item3: {
+          title: '클라우드 & 빅데이터 솔루션',
+          description: '데이터의 힘을 극대화하는 최적의 IT 인프라 구축',
+        },
+      },
       menulist: {
         intro: {
           title: '회사소개',
@@ -359,6 +373,20 @@ export const resources = {
   },
   en: {
     translation: {
+      carousel: {
+        item1: {
+          title: '',
+          description: 'Opening the future of business with cutting-edge technology',
+        },
+        item2: {
+          title: 'Customized Digital Transformation for Customers',
+          description: 'We provide a customized IT strategy for your success',
+        },
+        item3: {
+          title: 'Cloud & Big Data Solutions',
+          description: 'Building the optimal IT infrastructure that maximizes the power of data',
+        },
+      },
       menulist: {
         intro: {
           title: 'Introduction',
