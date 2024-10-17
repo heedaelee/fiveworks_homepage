@@ -1,5 +1,5 @@
-import Logo from '@/pages/container/components/header/desktop/navigation/components/logo/Logo';
-import MobileMenu from '@/pages/container/components/header/mobile/MobileMenu';
+import Logo from '@/pages/container/components/header/desktopComponents/navigation/components/logo/Logo';
+import MobileMenu from '@/pages/container/components/header/mobileComponents/MobileMenu';
 
 const MobileHeader = () => {
   return (

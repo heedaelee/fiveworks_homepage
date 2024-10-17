@@ -2,7 +2,7 @@ import {motion, AnimatePresence} from 'framer-motion';
 
 import {MouseEvent} from 'react';
 import MenuList from './MenuList';
-import Languages from '../desktop/navigation/components/lang';
+import Languages from '../desktopComponents/navigation/components/lang';
 
 interface MenuContentProps {
   isOpen: boolean;

@@ -1,15 +1,36 @@
 import useEmblaCarousel from 'embla-carousel-react';
-import './carosule.css';
 import Autoplay from 'embla-carousel-autoplay';
 import Fade from 'embla-carousel-fade';
 import CarouselSlide from './CaroselSlide';
 import {usePrevNextButtons} from './ArrowButtons';
 import CarouselControls from './CarouselControls';
 import {useEffect, useState} from 'react';
-import {CarouselData} from './data';
-import {motion} from 'framer-motion';
+import {useTranslation} from 'react-i18next';
 
 const Carousel = () => {
+  const {t} = useTranslation();
+
+  const CarouselData = [
+    {
+      imageUrl:
+        'https://images.unsplash.com/photo-1531973576160-7125cd663d86?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      title: 'Welcome, We are Fiveworks',
+      description: t('carousel.item1.description'),
+    },
+    {
+      imageUrl:
+        'https://images.unsplash.com/photo-1587727383733-f5222d6855b5?q=80&w=3570&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      title: t('carousel.item2.title'),
+      description: t('carousel.item2.description'),
+    },
+    {
+      imageUrl:
+        'https://images.unsplash.com/photo-1619472376731-3ca648a34b69?q=80&w=3628&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      title: t('carousel.item3.title'),
+      description: t('carousel.item3.description'),
+    },
+  ];
+
   /* duration 화면 전환 속도, delay 한페이지 머무르는 속도 */
   const [emblaRef, emblaApi] = useEmblaCarousel({loop: true, duration: 300}, [
     Fade(),
@@ -55,7 +76,6 @@ const Carousel = () => {
           currentIndex={currentIndex}
           totalIndex={CarouselData.length}
         />
-        
       </div>
     </div>
   );

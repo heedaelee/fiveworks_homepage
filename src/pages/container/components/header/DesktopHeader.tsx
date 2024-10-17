@@ -1,6 +1,6 @@
-import Logo from '@/pages/container/components/header/desktop/navigation/components/logo/Logo';
-import MenuList from '@/pages/container/components/header/desktop/navigation/MenuList';
-import Languages from './desktop/navigation/components/lang';
+import Logo from '@/pages/container/components/header/desktopComponents/navigation/components/logo/Logo';
+import MenuList from '@/pages/container/components/header/desktopComponents/navigation/MenuList';
+import Languages from './desktopComponents/navigation/components/lang';
 
 interface DesktopHeaderProps {
   isOpen: boolean;
