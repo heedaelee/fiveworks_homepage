@@ -1,7 +1,7 @@
 import {TFunction} from 'i18next';
 
 import {TreePalm, HandCoins, Clock, Donut, PartyPopper, Cake, LibraryBig, Gift} from 'lucide-react';
-import { ItemType } from './benefit.interface';
+import {ItemType} from '@/pages/careers/benefit/benefit.interface';
 
 export const getBenefitItems = (t: TFunction): ItemType[] => [
   {Icon: TreePalm, text: t('benefits.items.annual_leave')},

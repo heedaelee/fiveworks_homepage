@@ -15,7 +15,7 @@ const CardItem = ({item, handleCardClick}: CardItemProps) => {
   return (
     /* 680x453 img */
     <div
-      className={`w-full h-auto cursor-pointer group ${GlobalStyles.classes.box_shadow}`}
+      className={`w-full h-auto cursor-pointer ${GlobalStyles.classes.box_shadow}`}
       onClick={() => handleCardClick(link)}>
       <Image item={item} />
       <TextBox item={item} />

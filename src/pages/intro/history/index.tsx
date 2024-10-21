@@ -1,6 +1,6 @@
 // import historyImage from '@/assets/img/pages/intro-history.png';
 import {GlobalStyles} from '@/styles/globalStyles';
-import HistoryGraph from './HistoryGraph';
+import HistoryGraph from './components/HistoryGraph';
 
 const History = () => {
   return (
