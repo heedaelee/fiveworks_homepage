@@ -105,7 +105,6 @@ export const resources = {
             content_6: 'AWS 교육 프로그램 & MSP 사업 연계',
             content_7: '벤처 기업 인증',
             content_8: '인공지능과 클라우드를 활용한 비대면 진술 조서 시스템 개발 참여기관 수행',
-            content_9: 'Smart Seller, 현대백화점 면세점 납품',
           },
         },
         partner: {
@@ -459,7 +458,6 @@ export const resources = {
             content_7: 'Venture Company Certification',
             content_8:
               'Participation in the development of a non-face-to-face statement system using artificial intelligence and cloud',
-            content_9: 'Smart Seller, Hyundai Department Store Duty-free shop delivery',
           },
         },
         partner: {
