@@ -78,35 +78,20 @@ export const resources = {
         group: {
           title: 'AI, 빅데이터, 클라우드의 완벽한 조화',
           items: {
-            vicePresident: '부대표',
             dataSolution: {
-              title: 'DataSolution팀',
-              items: {
-                solutionA: 'Solution A팀',
-                solutionB: 'Solution B팀',
-                solutionC: 'Solution C팀',
-                solutionD: 'Solution D팀',
-              },
+              title: 'DataSolution',
+            },
+            bigdata: {
+              title: '빅데이터',
             },
             management: {
-              title: '경영지원팀',
-              items: {
-                management: '경영지원팀',
-                strategy: '전략기획팀',
-              },
+              title: '전략기획',
             },
             ai: {
-              title: 'AI LAB팀',
-              items: {
-                ai: 'AI Lab팀',
-              },
+              title: 'AI LAB',
             },
             public: {
-              title: '공공사업부팀',
-              items: {
-                bigData: 'Big Data팀',
-                publicBusiness: '공공사업팀',
-              },
+              title: '공공사업',
             },
           },
         },
@@ -446,48 +431,20 @@ export const resources = {
         group: {
           title: 'Perfect Harmony of AI, Big Data, and Cloud',
           items: {
-            vicePresident: 'Vice President',
             dataSolution: {
               title: 'DataSolution',
-              items: {
-                solutionA: 'Solution A',
-                solutionB: 'Solution B',
-                solutionC: 'Solution C',
-                solutionD: 'Solution D',
-              },
+            },
+            bigdata: {
+              title: 'BigData',
             },
             management: {
-              title: 'Management\nSupport',
-              items: {
-                management: 'Management\nSupport',
-                strategy: 'Strategy\nPlanning',
-              },
+              title: 'Management',
             },
             ai: {
               title: 'AI LAB',
-              items: {
-                ai: 'AI LAB',
-              },
             },
             public: {
-              title: 'Public\nBusiness',
-              items: {
-                bigData: 'Big Data',
-                publicBusiness: 'Public\nBusiness',
-              },
-            },
-            benefits: {
-              title: 'Benefits',
-              items: {
-                annual_leave: 'Annual Leave and Refresh Leave',
-                annual_allowance: 'Annual Allowance',
-                flexible_hours: '9 AM ~ 10 AM Flexible Working Hours',
-                snacks: 'Snacks Provided',
-                celebration_allowance: 'Celebration Allowance',
-                birthday_half_day: 'Half Day Off on Birthday',
-                education_books: 'Work-related Education and Book Purchase',
-                holiday_gifts: 'Holiday and Anniversary Gifts',
-              },
+              title: 'Public Business',
             },
           },
         },
