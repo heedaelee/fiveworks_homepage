@@ -1,19 +1,11 @@
 /* eslint-disable react-refresh/only-export-components */
 import React, {ComponentPropsWithRef, useCallback, useEffect, useState} from 'react';
-import {EmblaCarouselType} from 'embla-carousel';
-
-type UsePrevNextButtonsType = (emblaApi: EmblaCarouselType | undefined) => {
-  prevBtnDisabled: boolean;
-  nextBtnDisabled: boolean;
-  onPrevButtonClick: () => void;
-  onNextButtonClick: () => void;
-  isVisible: boolean;
-};
+import {UsePrevNextButtonsType} from '@/pages/home/components/carousel.interface';
 
 export const usePrevNextButtons: UsePrevNextButtonsType = emblaApi => {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true);
   const [nextBtnDisabled, setNextBtnDisabled] = useState(true);
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible] = useState(true);
 
   const handleButtonClick = useCallback(
     (direction: 'prev' | 'next') => {
@@ -24,18 +16,29 @@ export const usePrevNextButtons: UsePrevNextButtonsType = emblaApi => {
     [emblaApi],
   );
 
-  const onPrevButtonClick = useCallback(() => handleButtonClick('prev'), [handleButtonClick]);
-  const onNextButtonClick = useCallback(() => handleButtonClick('next'), [handleButtonClick]);
+  const onPrevButtonClick = useCallback(() => {
+    handleButtonClick('prev');
+    const autoplay = emblaApi?.plugins()?.autoplay;
+    if (autoplay) autoplay.play();
+  }, [handleButtonClick, emblaApi]);
 
-  const onSelect = useCallback((emblaApi: EmblaCarouselType) => {
-    setPrevBtnDisabled(!emblaApi.canScrollPrev());
-    setNextBtnDisabled(!emblaApi.canScrollNext());
-  }, []);
+  const onNextButtonClick = useCallback(() => {
+    handleButtonClick('next');
+    const autoplay = emblaApi?.plugins()?.autoplay;
+    if (autoplay) autoplay.play();
+  }, [handleButtonClick, emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    const options = emblaApi.internalEngine().options;
+    setPrevBtnDisabled(!emblaApi.canScrollPrev() && !options.loop);
+    setNextBtnDisabled(!emblaApi.canScrollNext() && !options.loop);
+  }, [emblaApi]);
 
   useEffect(() => {
     if (!emblaApi) return;
 
-    onSelect(emblaApi);
+    onSelect();
     emblaApi.on('reInit', onSelect).on('select', onSelect);
   }, [emblaApi, onSelect]);
 

@@ -1,11 +1,11 @@
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
 import Fade from 'embla-carousel-fade';
-import CarouselSlide from './CaroselSlide';
-import {usePrevNextButtons} from './ArrowButtons';
-import CarouselControls from './CarouselControls';
+import {usePrevNextButtons} from './control/ArrowButtons';
+import CarouselControls from './control';
 import {useEffect, useState} from 'react';
 import {useTranslation} from 'react-i18next';
+import CarouselList from '@/pages/home/components/carousel/slide';
 
 const Carousel = () => {
   const {t} = useTranslation();
@@ -38,6 +38,7 @@ const Carousel = () => {
       delay: 5000,
     }),
   ]);
+  // console.log('emblaApi : ', emblaApi?.internalEngine().options);
   const [currentIndex, setCurrentIndex] = useState(1);
 
   const {prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick} =
@@ -46,7 +47,7 @@ const Carousel = () => {
   useEffect(() => {
     if (emblaApi) {
       const onSelect = () => {
-        // console.log('emblaApi.selectedScrollSnap()', emblaApi.selectedScrollSnap());
+        // console.log('호출');
         const selectedIndex = emblaApi.selectedScrollSnap();
         setCurrentIndex(selectedIndex + 1);
       };
@@ -63,11 +64,7 @@ const Carousel = () => {
   return (
     <div className='embla overflow-hidden w-full h-full absolute'>
       <div className='embla_viewport h-full' ref={emblaRef}>
-        <div className='embla__container flex h-full'>
-          {CarouselData.map((data, index) => (
-            <CarouselSlide key={index} {...data} />
-          ))}
-        </div>
+        <CarouselList CarouselData={CarouselData} currentIndex={currentIndex} />
         <CarouselControls
           prevBtnDisabled={prevBtnDisabled}
           nextBtnDisabled={nextBtnDisabled}
