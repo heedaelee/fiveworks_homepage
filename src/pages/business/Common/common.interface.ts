@@ -12,6 +12,10 @@ export interface DescriptionProps {
   workPerformance_key: string;
 }
 
+export interface PerformanceListProps {
+  items: string[];
+}
+
 export interface TabContentProps {
   tab: TabType[];
   activeTab: number;

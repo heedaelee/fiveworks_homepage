@@ -20,16 +20,16 @@ const imagePaths = {
  */
 export const getImages = (category: keyof typeof imagePaths) => {
   const images = imagePaths[category];
-  console.log('images');
-  console.log(images);
+  // console.log('images');
+  // console.log(images);
   const imageKeys = Object.keys(images);
-  console.log(imageKeys);
+  // console.log(imageKeys);
   const groupedImages: {[key: string]: string | string[]} = {};
 
   imageKeys.forEach(key => {
     const fileName = key.split('/').pop() || '';
     const match = fileName.match(/(\d+)_/);
-    console.log(match);
+    // console.log(match);
     if (match) {
       const number = match[1];
       if (!groupedImages[number]) {
@@ -44,8 +44,8 @@ export const getImages = (category: keyof typeof imagePaths) => {
     return value.length === 1 ? value[0] : value;
   });
 
-  console.log('groupedImages');
-  console.log(groupedImages);
+  // console.log('groupedImages');
+  // console.log(groupedImages);
   return result;
 };
 

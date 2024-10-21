@@ -17,9 +17,9 @@ const Bigdata = () => {
 
   return (
     <BusinessLayout
-    description_key={description_key}
-    workPerformance_key={workPerformance_key}
-    tab_key={tab_key}
+      description_key={description_key}
+      workPerformance_key={workPerformance_key}
+      tab_key={tab_key}
       activeTab={activeTab}
       setActiveTab={setActiveTab}
       images={images}
