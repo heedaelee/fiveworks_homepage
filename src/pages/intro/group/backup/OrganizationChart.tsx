@@ -1,6 +1,6 @@
 import React, {useState, useEffect, useRef} from 'react';
 import Tree from 'react-d3-tree';
-import {orgChartData} from '../chart-data';
+import {orgChartData} from './chart-data';
 
 const OrganizationChart = () => {
   const [translate, setTranslate] = useState({x: 0, y: 0});
