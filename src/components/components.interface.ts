@@ -1,6 +1,6 @@
-import {MouseEvent} from 'react';
-
-// cpmponents/pagination/index.tsx
+import {SVGProps} from 'react';
+// pagnation
+// components/pagination/index.tsx
 export interface PaginationProps {
   count: number;
   page: number;
@@ -12,7 +12,9 @@ export interface PaginationProps {
 export interface PaginationButtonProps {
   onClick: () => void;
   disabled: boolean;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: React.ComponentType<SVGProps<SVGSVGElement>>;
   iconPosition: 'left' | 'right';
   children: string;
 }
+
+export type renderPaginationButtonType = (props: PaginationButtonProps) => JSX.Element;

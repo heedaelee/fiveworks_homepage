@@ -1,9 +1,9 @@
 import {useEffect, useState} from 'react';
 import {IconButton, ItemProps} from '@material-tailwind/react';
 import {ArrowRightIcon, ArrowLeftIcon} from '@heroicons/react/24/outline';
-import {SVGProps} from 'react';
-import PaginationButton from './PaginationButton';
-import {PaginationProps} from '@/types/UItypes';
+
+import PaginationButton from '@/components/pagination/PaginationButton';
+import {PaginationProps, renderPaginationButtonType} from '@/components/components.interface';
 
 export function Pagination({count, onChange, page, next, prev}: PaginationProps) {
   const [active, setActive] = useState(1);
@@ -60,21 +60,14 @@ export function Pagination({count, onChange, page, next, prev}: PaginationProps)
     //현재 page
     setActive(page);
   }, [page]);
-  type renderPaginationButtonType = (
-    disabled: boolean,
-    icon: React.ComponentType<SVGProps<SVGSVGElement>>,
-    iconPosition: 'left' | 'right',
-    onClick: () => void,
-    children: string,
-  ) => JSX.Element;
 
-  const renderPaginationButton: renderPaginationButtonType = (
+  const renderPaginationButton: renderPaginationButtonType = ({
     disabled,
     icon,
     iconPosition,
     onClick,
     children,
-  ) => (
+  }) => (
     <PaginationButton disabled={disabled} icon={icon} iconPosition={iconPosition} onClick={onClick}>
       {children}
     </PaginationButton>
@@ -82,9 +75,21 @@ export function Pagination({count, onChange, page, next, prev}: PaginationProps)
 
   return (
     <div className='flex items-center justify-center gap-4 my-4'>
-      {renderPaginationButton(active === 1, ArrowLeftIcon, 'left', handlePrevClick, 'Previous')}
+      {renderPaginationButton({
+        disabled: active === 1,
+        icon: ArrowLeftIcon,
+        iconPosition: 'left',
+        onClick: handlePrevClick,
+        children: 'Previous',
+      })}
       <div className='flex items-center gap-2'>{buttons}</div>
-      {renderPaginationButton(active === count, ArrowRightIcon, 'right', handleNextClick, 'Next')}
+      {renderPaginationButton({
+        disabled: active === count,
+        icon: ArrowRightIcon,
+        iconPosition: 'right',
+        onClick: handleNextClick,
+        children: 'Next',
+      })}
     </div>
   );
 }

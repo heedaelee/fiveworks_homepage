@@ -1,4 +1,4 @@
-import {PaginationButtonProps} from '@/types/UItypes';
+import {PaginationButtonProps} from '@/components/components.interface';
 import {Button} from '@material-tailwind/react';
 
 const PaginationButton = ({
