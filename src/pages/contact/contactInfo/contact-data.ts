@@ -1,7 +1,7 @@
 export const contact_data = {
   address: '서울 특별시 강남구 봉은사로 30길 42 202호',
   tel: 'Tel: 02-3661-0813',
-  email: 'yseom@5works.co.kr',
+  email: '5works@5works.co.kr',
   subway: [
     {
       line: 2,

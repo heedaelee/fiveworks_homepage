@@ -2,7 +2,7 @@ import {ReactNode} from 'react';
 import {useTranslation} from 'react-i18next';
 
 const tel = 'Tel: 02-3661-0813';
-const email = 'email: yseom@5works.co.kr';
+const email = 'email: 5works@5works.co.kr';
 const fax = 'Fax: 02-3664-0813';
 const copyright = 'Copyright ©FiveWorks. All Rights Reserved.';
 const textStyle = 'text-[16px] text-[#6f7880]';
