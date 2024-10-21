@@ -1,9 +1,7 @@
 import Header from '@/pages/business/Common/header';
 import {GlobalStyles} from '@/styles/globalStyles';
 import TabIndex from './tab';
-import { BusinessSectionProps } from './common.interface';
-
-
+import {BusinessSectionProps} from '@/pages/business/Common/common.interface';
 
 const BusinessLayout = ({
   activeTab,

@@ -1,4 +1,4 @@
-import {TabTitleType} from '../../common.interface';
+import {TabTitleType} from '@/pages/business/Common/common.interface';
 
 const TabTitles = ({tab, activeTab, setActiveTab}: TabTitleType) => {
   return (

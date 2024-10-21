@@ -12,7 +12,7 @@ const Si = () => {
   const {tab_key, description_key, workPerformance_key} = siData;
   useEffect(() => {
     const data = getImages('businessSi');
-    console.log(`SIdata :   ${data}`);
+    // console.log(`SIdata :   ${data}`);
     setImages(data);
   }, []);
 

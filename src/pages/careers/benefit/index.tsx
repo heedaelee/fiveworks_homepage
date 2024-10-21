@@ -1,23 +1,12 @@
 import {Card, CardContent} from '@/components/ui/card';
-import {TreePalm, HandCoins, Clock, Donut, PartyPopper, Cake, LibraryBig, Gift} from 'lucide-react';
+
 import {useTranslation} from 'react-i18next';
 import {motion} from 'framer-motion';
+import {getBenefitItems} from './getBenefitItems';
 
 const Benefits = () => {
   const {t} = useTranslation();
-  const benefitItems = [
-    {Icon: TreePalm, text: t('benefits.items.annual_leave')},
-    {Icon: HandCoins, text: t('benefits.items.annual_allowance')},
-    {Icon: Clock, text: t('benefits.items.flexible_hours')},
-    {Icon: Donut, text: t('benefits.items.snacks')},
-    {Icon: PartyPopper, text: t('benefits.items.celebration_allowance')},
-    {Icon: Cake, text: t('benefits.items.birthday_half_day')},
-    {Icon: LibraryBig, text: t('benefits.items.education_books')},
-    {
-      Icon: Gift,
-      text: t('benefits.items.holiday_gifts'),
-    },
-  ];
+  const benefitItems = getBenefitItems(t);
 
   return (
     <div className='container mx-auto px-4 py-8 mb-[150px]'>

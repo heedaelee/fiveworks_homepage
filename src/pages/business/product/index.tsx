@@ -11,7 +11,7 @@ const Product = () => {
   const {tab_key, description_key, workPerformance_key} = productData;
   useEffect(() => {
     const data = getImages('businessProduct');
-    console.log(data);
+    // console.log(data);
     setImages(data);
   }, []);
 
