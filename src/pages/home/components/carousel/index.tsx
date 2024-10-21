@@ -32,7 +32,7 @@ const Carousel = () => {
   ];
 
   /* duration 화면 전환 속도, delay 한페이지 머무르는 속도 */
-  const [emblaRef, emblaApi] = useEmblaCarousel({loop: true, duration: 300}, [
+  const [emblaRef, emblaApi] = useEmblaCarousel({loop: true, duration: 50}, [
     Fade(),
     Autoplay({
       delay: 5000,
