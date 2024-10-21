@@ -5,7 +5,7 @@ import {ROUTE_PATHS} from '@/constants/routes';
 import Home from '@/pages/home';
 import Overview from '@/pages/intro/overview';
 import Group from '@/pages/intro/group';
-import History from '@/pages/intro/history';
+import HistoryGraph from '@/pages/intro/history';
 import Partners from '@/pages/intro/partners';
 import Ai from '@/pages/business/ai';
 import Si from '@/pages/business/si';
@@ -44,7 +44,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path={intro.overview} element={<Overview />} />
         <Route path={intro.group} element={<Group />} />
-        <Route path={intro.history} element={<History />} />
+        <Route path={intro.history} element={<HistoryGraph />} />
         <Route path={intro.partners} element={<Partners />} />
         <Route path={business.ai} element={<Ai />} />
         <Route path={business.si} element={<Si />} />

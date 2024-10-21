@@ -1,6 +1,6 @@
 // import historyImage from '@/assets/img/pages/intro-history.png';
 import {GlobalStyles} from '@/styles/globalStyles';
-import CompanyHistory from './company-history';
+import HistoryGraph from './HistoryGraph';
 
 const History = () => {
   return (
@@ -8,7 +8,7 @@ const History = () => {
       <div className='w-full flex flex-col items-center animate-fade-in'>
         <h1 className='h1'>HISTORY</h1>
       </div>
-      <CompanyHistory />
+      <HistoryGraph />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import {motion} from 'framer-motion';
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
 
-const CompanyHistory = () => {
+const HistoryGraph = () => {
   const {t} = useTranslation();
 
   // 최신 데이터 위에서 부터 보여주기 위해 배열을 역순으로 정렬, 위에서 추가된 데이터가 먼저 보이게 됨
@@ -56,11 +56,7 @@ const CompanyHistory = () => {
   );
 };
 
-interface GradientDotProps {
-  index: number;
-}
-
-const GradientDot: React.FC<GradientDotProps> = ({index}) => {
+const GradientDot: React.FC<{index: number}> = ({index}) => {
   // Calculate the color based on the index
   const colorValue = Math.min(255, Math.max(0, index * 25));
   const backgroundColor = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
@@ -72,4 +68,4 @@ const GradientDot: React.FC<GradientDotProps> = ({index}) => {
   );
 };
 
-export default CompanyHistory;
+export default HistoryGraph;
