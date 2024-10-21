@@ -10,14 +10,14 @@ export interface NewsItem {
 
 export type NewsDataType = NewsItem[];
 
-function getRandomDate(start: Date, end: Date): string {
-  const date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
-  return date.toISOString().split('T')[0]; // Format as YYYY-MM-DD
-}
-function getConnectNaver() {
-  const naver = 'https://www.naver.com';
-  return naver;
-}
+// function getRandomDate(start: Date, end: Date): string {
+//   const date = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+//   return date.toISOString().split('T')[0]; // Format as YYYY-MM-DD
+// }
+// function getConnectNaver() {
+//   const naver = 'https://www.naver.com';
+//   return naver;
+// }
 
 export const newsData: NewsDataType = [
   {

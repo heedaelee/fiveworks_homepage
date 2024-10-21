@@ -23,6 +23,7 @@ const imagePaths = {
   businessBig: import.meta.glob('/src/assets/img/pages/business/bigdata/*.{png,jpg,jpeg,svg}'),
   businessProduct: import.meta.glob('/src/assets/img/pages/business/product/*.{png,jpg,jpeg,svg}'),
   mediaNews: import.meta.glob('/src/assets/img/pages/media/news/*.{png,jpg,jpeg,svg}'),
+  mediaEvent: import.meta.glob('/src/assets/img/pages/media/event/*.{png,jpg,jpeg,svg}'),
   carousel : import.meta.glob('/src/assets/img/pages/home/carousel/*.{png,jpg,jpeg,svg}'),  
 };
 /**

@@ -5,7 +5,7 @@ import usePagination from '@/hooks/usePagination';
 import CardList from '@/pages/media/Common/CardList';
 
 import {useState} from 'react';
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
 
 const NEWS_COUNT_PER_PAGE = 9;
 
@@ -40,7 +40,7 @@ const News = () => {
       {totalCnt !== 0 ? (
         <>
           <div>{t('media.totalItems', {totalCnt})}</div>
-          <CardList data={currentItems} handleCardClick={handleCardClick} />
+          <CardList data={currentItems} type='news' handleCardClick={handleCardClick} />
           <Pagination
             count={count}
             page={page}
