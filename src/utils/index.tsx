@@ -1,7 +1,18 @@
 export const getPartnerImages = () => {
   const images = import.meta.glob('/src/assets/img/pages/partners/*.{png,jpg,jpeg,svg}');
-  console.log(images);
-  return Object.keys(images);
+  const imagePaths = Object.keys(images);
+
+  // Extract numeric prefix and sort
+  const sortedImagePaths = imagePaths.sort((a, b) => {
+    const getPrefix = (path: string) => {
+      const match = path.match(/\/(\d+)\./);
+      return match ? parseInt(match[1], 10) : 0;
+    };
+
+    return getPrefix(a) - getPrefix(b);
+  });
+
+  return sortedImagePaths;
 };
 
 // utils/getImages.ts
