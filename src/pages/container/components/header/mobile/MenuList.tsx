@@ -4,7 +4,7 @@ import {ChevronDown, ChevronUp} from 'lucide-react';
 import {MENU_LIST} from '@/constants/menu-list';
 import {MouseEvent} from 'react';
 import SubMenuList from '@/pages/container/components/header/mobileComponents/subMenuList';
-import LanguageSwitcher from './lang';
+import LanguageSwitcher from '../mobileComponents/lang';
 
 interface MenuListProps {
   openSubMenus: number[];

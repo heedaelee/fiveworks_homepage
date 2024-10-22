@@ -103,8 +103,9 @@ export const resources = {
             content_4: 'AI바우처 공급기업 등록',
             content_5: '데이터 바우처 공급기업 선정',
             content_6: 'AWS 교육 프로그램 & MSP 사업 연계',
-            content_7: '벤처 기업 인증',
+            content_7: '벤처 기업 인증 <br/>창업 도약 과제 패키지 수행',
             content_8: '인공지능과 클라우드를 활용한 비대면 진술 조서 시스템 개발 참여기관 수행',
+            content_9: 'OMNIMIX - AI (약물효능 및 작용기전 분석서비스)출시',
           },
         },
         partner: {
@@ -455,7 +456,7 @@ export const resources = {
             content_4: 'AI Voucher Supply Company Registration',
             content_5: 'Data Voucher Supply Company Selection',
             content_6: 'AWS Education Program & MSP Business Linkage',
-            content_7: 'Venture Company Certification',
+            content_7: 'Venture Company Certification <br /> Startup Leap Task Package Performance',
             content_8:
               'Participation in the development of a non-face-to-face statement system using artificial intelligence and cloud',
           },

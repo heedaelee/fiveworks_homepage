@@ -8,6 +8,10 @@ type EventType = {
 // 최신 데이터 위에서 부터 보여주기 위해 배열을 역순으로 정렬, 위에서 추가된 데이터가 먼저 보이게 됨
 const getEvents = (t: TFunction): EventType[] => [
   {
+    date: '2024.10',
+    content: t('intro.history.items.content_9'),
+  },
+  {
     date: '2023.07',
     content: t('intro.history.items.content_8'),
   },
