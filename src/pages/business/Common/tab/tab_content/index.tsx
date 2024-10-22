@@ -37,10 +37,10 @@ const TabContent = ({tab, activeTab, images, commonAnimation}: TabContentProps) 
 
   return (
     <div className='w-full p-0 md:p-6 flex flex-col gap-16'>
-      <motion.div {...commonAnimation(0.2)}>
+      {/* <motion.div {...commonAnimation(0.2)}>
         <Content tab={tab} activeTab={activeTab} />
-      </motion.div>
-      <motion.div {...commonAnimation(0.3)}>
+      </motion.div> */}
+      <motion.div {...commonAnimation(0.3)} >
         <ImageWrapper
           tab={tab}
           activeTab={activeTab}

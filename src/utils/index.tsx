@@ -18,10 +18,15 @@ export const getPartnerImages = () => {
 // utils/getImages.ts
 const imagePaths = {
   // partners: import.meta.glob('/src/assets/img/pages/partners/*.{png,jpg,jpeg,svg}'),
-  businessAi: import.meta.glob('/src/assets/img/pages/business/ai/*.{png,jpg,jpeg,svg}'),
-  businessSi: import.meta.glob('/src/assets/img/pages/business/si/*.{png,jpg,jpeg,svg}'),
-  businessBig: import.meta.glob('/src/assets/img/pages/business/bigdata/*.{png,jpg,jpeg,svg}'),
-  businessProduct: import.meta.glob('/src/assets/img/pages/business/product/*.{png,jpg,jpeg,svg}'),
+  business_bioinfometrics: import.meta.glob(
+    '/src/assets/img/pages/business/bioinfometrics/*.{png,jpg,jpeg,svg}',
+  ),
+  business_biometrics: import.meta.glob(
+    '/src/assets/img/pages/business/biometrics/*.{png,jpg,jpeg,svg}',
+  ),
+  business_imageProcessing: import.meta.glob(
+    '/src/assets/img/pages/business/imageProcessing/*.{png,jpg,jpeg,svg}',
+  ),
   mediaNews: import.meta.glob('/src/assets/img/pages/media/news/*.{png,jpg,jpeg,svg}'),
   mediaEvent: import.meta.glob('/src/assets/img/pages/media/event/*.{png,jpg,jpeg,svg}'),
   carousel: import.meta.glob('/src/assets/img/pages/home/carousel/*.{png,jpg,jpeg,svg}'),

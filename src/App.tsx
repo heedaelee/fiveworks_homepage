@@ -7,10 +7,10 @@ import Overview from '@/pages/intro/overview';
 import Group from '@/pages/intro/group';
 import HistoryGraph from '@/pages/intro/history';
 import Partners from '@/pages/intro/partners';
-import Ai from '@/pages/business/ai';
+import Bioinformatics from '@/pages/business/bioinformatics';
 import Si from '@/pages/business/si';
-import Bigdata from '@/pages/business/bigdata';
-import Product from '@/pages/business/product';
+import Biometrics from '@/pages/business/biometrics';
+import ImageProcessing from '@/pages/business/imageProcessing';
 import News from '@/pages/media/news';
 import Event from '@/pages/media/event';
 import Human from './pages/careers/human';
@@ -46,10 +46,9 @@ function App() {
         <Route path={intro.group} element={<Group />} />
         <Route path={intro.history} element={<HistoryGraph />} />
         <Route path={intro.partners} element={<Partners />} />
-        <Route path={business.ai} element={<Ai />} />
-        <Route path={business.si} element={<Si />} />
-        <Route path={business.bigdata} element={<Bigdata />} />
-        <Route path={business.product} element={<Product />} />
+        <Route path={business.bioinformatics} element={<Bioinformatics />} />
+        <Route path={business.biometrics} element={<Biometrics />} />
+        <Route path={business.imageProcessing} element={<ImageProcessing />} />
         <Route path={media.news} element={<News />} />
         <Route path={media.event} element={<Event />} />
         <Route path={careers.human} element={<Human />} />

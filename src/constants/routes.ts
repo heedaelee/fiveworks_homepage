@@ -5,13 +5,11 @@ export const ROUTE_PATHS = {
     group: '/intro/group',
     history: '/intro/history',
     partners: '/intro/partners',
-    map: '/intro/map',
   },
   business: {
-    ai: '/business/ai',
-    si: '/business/si',
-    bigdata: '/business/bigdata',
-    product: '/business/product',
+    bioinformatics: '/business/bioinformatics',
+    biometrics: '/business/biometrics',
+    imageProcessing: '/business/imageProcessing',
   },
   media: {
     news: '/media/news',

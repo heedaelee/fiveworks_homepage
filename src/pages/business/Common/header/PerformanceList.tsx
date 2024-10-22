@@ -4,7 +4,7 @@ const PerformanceList = ({items}: PerformanceListProps) => {
   return (
     <ul className='list-disc list-inside'>
       {items.map((item: string, index: number) => (
-        <li key={index}>{item}</li>
+        <li key={index} dangerouslySetInnerHTML={{__html: item}} />
       ))}
     </ul>
   );

@@ -3,14 +3,14 @@ import {getImages} from '@/utils';
 import {useEffect, useState} from 'react';
 import BusinessLayout from '../Common/BusinessLayout';
 
-const Product = () => {
+const ImageProcessing = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [images, setImages] = useState<(string | string[])[]>([]);
 
-  const productData = data_key.product;
-  const {tab_key, description_key, workPerformance_key} = productData;
+  const imageProcessingData = data_key.ImageProcessing;
+  const {tab_key, description_key, workPerformance_key} = imageProcessingData;
   useEffect(() => {
-    const data = getImages('businessProduct');
+    const data = getImages('business_imageProcessing');
     // console.log(data);
     setImages(data);
   }, []);
@@ -27,4 +27,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default ImageProcessing;

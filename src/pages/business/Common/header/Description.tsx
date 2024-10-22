@@ -11,7 +11,7 @@ const Description = ({description_key, workPerformance_key}: DescriptionProps) =
   return (
     <div className='bg-gray-100 w-full p-8 rounded-lg mt-16 '>
       <p className='text-start mb-4 font-semibold'>{t(description_key)}</p>
-      <h2 className='font-bold mb-2'>[{t('business.header.label')}]</h2>
+      {/* <h2 className='font-bold mb-2'>[{t('business.header.label')}]</h2> */}
       <PerformanceList items={items} />
     </div>
   );

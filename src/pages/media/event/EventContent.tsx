@@ -1,4 +1,5 @@
 import {EventItem} from '@/constants/event-data';
+import {GlobalStyles} from '@/styles/globalStyles';
 
 interface EventContentProps {
   event: EventItem;
@@ -11,7 +12,7 @@ const EventContent = ({event, onBack}: EventContentProps) => {
     return text.replace(
       urlPattern,
       url =>
-        `<a style="color: blue; text-decoration: underline;" href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`,
+        `<a ${GlobalStyles.linkText} href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`,
     );
   };
 

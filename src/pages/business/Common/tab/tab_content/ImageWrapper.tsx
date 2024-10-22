@@ -16,6 +16,7 @@ const ImageWrapper = ({activeTab, tab, images, handleImageClick}: ImageProps) =>
               image={image}
               title={`${tab[activeTab].title} ${index + 1}`}
               onClick={() => handleImageClick(image)}
+              className='mb-16'
             />
           );
         })

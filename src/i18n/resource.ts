@@ -1,3 +1,5 @@
+import {GlobalStyles} from '@/styles/globalStyles';
+
 export const resources = {
   ko: {
     translation: {
@@ -28,10 +30,9 @@ export const resources = {
         business: {
           title: '사업영역',
           items: {
-            ai: 'AI',
-            si: 'SI',
-            bigdata: 'Big Data',
-            product: '제품 개발',
+            bioinformatics: 'Bioinformatics',
+            biometrics: 'Biometrics',
+            imageProcessing: '영상처리',
           },
         },
         media: {
@@ -117,156 +118,55 @@ export const resources = {
           title: '사업부문 소개',
           label: '주요성과',
         },
-        ai: {
-          title: 'AI',
-          description: `A.I. Lab은 다양한 인공지능 모듈과 빅데이터 분석 기술을 기반으로 한 자동화 솔루션을 개발해오며, 기업의 디지털 혁신을 목표로 성장하고 있습니다.`,
+        bioinformatrics: {
+          title: 'Bioinformatrics',
+          description: `Bioinfometrics 부문에서 최신 딥러닝, 컴퓨터 비전 및 머신러닝 기술을 적용해 생체 데이터의 정확성과 효율성을 극대화하고 있으며, OMNIMIX 솔루션 개발에 박차를 가하고 있습니다.`,
           workPerformance: [
-            'AI기반 PRA 솔루션 개발 (OCR, Object Detection)',
-            'BioMetrics 모듈 (Liveness detect, 감정분석모듈)',
-            'Data 분석 및 Data 통계를 활용한 예측(시청률 예측, 파고측정)',
+            `<a href="https://omnimix-ai.com/" target="_blank" ${GlobalStyles.linkText}>OMNIMIX 출시</a> : 거대언어모델(LLM)과 검색엔진 기반 검색증강기술 (RAG)을 활용한 한약재-질병 상호작용 확인 및 후보물질 도출 프로그램`,
           ],
           tab: [
             {
-              title: '영수증 수집 및 OCR 분석 모듈 개발',
-              summary: `한국 및 해외 영수증 데이터 크롤링 통한 데이터 수집 후 추출`,
+              title: '약물 효능 및 작용기전 분석 서비스',
+              summary: `LLM과 검색엔진 기반 검색 증강기술 활용해 데이터 기반, 성분 질병간 네트워크 분석 결과 제공`,
               subTitles: [
-                '한국, 일본, 중국, 베트남 등 각국 영수증 데이터 수집',
-                '인공지능 기반 영수증 OCR 모듈 개발',
+                '데이터 통합 및 수집 시스템',
+                '네트워크 약리학 기반 스크리닝',
+                '통합 모니터링 서비스',
+                '검색 엔진 기반의 관리 및 활용',
+                '빅데이터 / 알고리즘 기반 챗본',
               ],
-              image: '@/assets/img/pages/business/ai/1_OCR.png',
-            },
-            {
-              title: '상명대 로보어드바이저',
-              summary: '교내 정보를 제공하는 카카오톡 챗봇 서비스',
-              subTitles: [
-                '영상인식 기능 활용 모듈을 통해 면접상황에서 표정에 대한 피드백 제공',
-                '진학 정보 및 직업 추천',
-              ],
-              image: '@/assets/img/pages/business/ai/2_robo.png',
-            },
-            {
-              title: '세무자동화 플랫폼',
-              summary: `세무를 진행하는 동안 생성된 수기 또는 이미지의 문서 정보에서\n 
-                텍스트와 템플릿을 자연어 처리하는 업무 자동화 기술`,
-              subTitles: [
-                '세금신고 문서 생성 및 오류 탐지 기술',
-                '사용자 경험 기반 세무 프로세스가 적용된 대시보드',
-                '크롤링 기능이 포함된 빅데이터 수집 저장 시스템',
-                '회사와 세무대리인의 유기적인 소통 채널 구축',
-              ],
-              image: '@/assets/img/pages/business/ai/3_taxation.png',
-            },
-            {
-              title: '스마트 안전관리 솔루션',
-              summary: `작업자들이 건설 현장에서 안전사고를 사전에 예방하기 위해\n
-                CCTV나 이동형 영상을 이용한 딥러닝 알고리즘을 통해 \n
-                건설현장에서 효과적으로 안전관리를 할 수 있는 플랫폼 구축`,
-              subTitles: [
-                'CCTV 실시간 영상정보수집',
-                '인공지능 기반 근로자 안전보호구 착용 여부 판별',
-                '통합모니터링 시스템 제공',
-              ],
-              image: '@/assets/img/pages/business/ai/4_safety.png',
+              image: '@/assets/img/pages/business/bioinfomatrics/1_Bioinformatics.jpg',
             },
           ],
         },
-        si: {
-          title: 'SI',
-          description: `SI 프로젝트를 통해 기업의 운영 효율성을 높이는 통합 플랫폼을 구축하며, 비즈니스 성과를 극대화하는 것을 목표로 하고 있습니다.`,
+        biometrics: {
+          title: 'Biometrics',
+          description: `Biometrics 분야에서 생체 데이터를 통합적으로 분석하는 다중 바이오 마커 감정 분석 서비스를 개발하고 있습니다. 이 서비스는 얼굴 표정의 여러 바이오 마커를 분석하여 사용자의 감정 상태를 정밀하게 평가하는 데 중점을 둡니다. 이를 통해 고객 경험 개선, 맞춤형 서비스 제공, 심리적 상태 모니터링 등의 다양한 응용 분야에서 혁신적인 솔루션을 제공하며, 기업의 사용자 인터랙션을 한 차원 높은 수준으로 끌어올리는 데 기여하고 있습니다.`,
           workPerformance: [
-            '웹 개발 (React, Vue, Angular)',
-            '앱 개발 (React Native, Flutter)',
-            '서버 개발 (Node.js, Spring Boot)',
-            '데이터베이스 설계 및 구축 (MySQL, MongoDB)',
-            'CI/CD 구축 및 운영 (Jenkins, GitLab)',
+            '분노, 경멸, 불안, 슬픔, 중립, 행복, 놀라움 등 7가지 감정 분석',
+            '얼굴의 비대칭적 움직임 등을 비교후 유사도의 수치를 통해 분석된 감정상태로 면접 등 다양한 솔루션 적용',
           ],
           tab: [
             {
-              title: `광고 효율 예측 기술 개발`,
-              summary: `광고 효율 예측을 위한 데이터 수집 및 분석, 맞춤형 광고 솔루션 개발`,
-              subTitles: [
-                '광고 제공 옵션에 따른 광고 예상 매출액 예측',
-                '광고 매출 향상을 위한 광고 별 맞춤 옵션 추천',
-                '광고 매출 향상을 위한 광고 문구 추천',
-              ],
-              image: '@/assets/img/pages/business/si/1_advertising.png',
-            },
-            {
-              title: '무인치킨방 자동튀김기 및 관리시스템',
-              summary: `Big Data 기반의 A.I., Deep Learning을 응용한 제품 인식 알고리즘을 통해\n무인치킨방용 IoT형 튀김기와 관리시스템 서비스 개발`,
-              subTitles: ['매장 정보 및 보안 관리', '기기 및 식자재 관리', '수익 관리'],
-              image: '@/assets/img/pages/business/si/2_chicken.png',
+              title: `다중 바이오 마커 감정 분석 서비스`,
             },
           ],
         },
-        bigdata: {
-          title: 'Big Data',
-          description: `BigData Lab은 고급 데이터 분석과 예측 모델링을 통해 다양한 산업에서 데이터 기반 혁신을 실현하며, 미래지향적인 비즈니스 전략 수립을 돕고 있습니다.`,
+        ImageProcessing: {
+          title: 'ImageProcessing',
+          description: `영상처리 분야에서는 광학 문자 인식(OCR) 기술을 활용하여 텍스트 이미지를 기계가 인식 가능한 텍스트 형식으로 변환하는 혁신적인 솔루션을 개발하고 있습니다. 이를 통해 여권 정보와 같은 중요한 문서의 텍스트를 자동으로 추출하고 처리할 수 있으며, YOLO(You Only Look Once) 알고리즘을 적용한 객체 추출 기술로 다양한 사물 인식과 분석 작업에 활용됩니다. 이 솔루션은 보안, 인증, 데이터 처리의 효율성을 높여 다양한 산업에 실질적인 가치를 제공합니다.`,
           workPerformance: [
-            '빅데이터 수집 및 저장 (Hadoop, Spark)',
-            '빅데이터 분석 및 처리 (Pandas, Numpy)',
-            '빅데이터 시각화 (Tableau, PowerBI)',
-            '데이터 파이프라인 구축 및 최적화 (Airflow, Kafka)',
-            '실시간 데이터 처리 및 스트리밍 분석 (Flink, Kafka Streams)',
-            '머신러닝 모델을 통한 예측 분석 (Scikit-learn, TensorFlow)',
+            '스캔, 촬영 통해 이미지 파일을 이진 데이터로 변환',
+            '텍스트 이미지 가장자리를 부드럽게 전처리, 스크립트 인식률 향상',
+            '패턴 매칭및 특징 추출을 활용하여 문자 인식률 향상',
+            '분석 종료 후 추출된 텍스트 데이터를 파일로 변환',
           ],
           tab: [
             {
-              title: 'MES 3.0 통합 로그 분석 시스템 구축',
-              summary: `Pivotal Cloud Foundry 에 따른 인프라 및 개발 업무에 적합한 통합 IT 자원 모니터링 체계 구축.`,
-              subTitles: [
-                '다양한 모니터링 통합',
-                '서비스 모니터링 체계 구현',
-                '사전 예방 가능한 관제 인프라 구축',
-              ],
-              image: '@/assets/img/pages/business/bigdata/1_mes3.0.png',
+              title: '광학문자 인식 OCR',
             },
             {
-              title: '이상징후 탐지 시스템 구축',
-              summary: `기업 내부의 데이터(인사, IP, H/W, S/W, DB, 로그 등)을 수집하고 작성된 시나리오 기반으로 이상징후를 탐지하여 탐지된 이상행위 등급에 따른 소명처리 시스템 구축.`,
-              subTitles: [
-                '기업 내부 데이터 수집 및 분석',
-                '이상징후 탐지 시나리오 작성',
-                '이상징후 탐지 시스템 구축',
-              ],
-              image: [
-                '@/assets/img/pages/business/bigdata/2_abnormal_sign.png',
-                '@/assets/img/pages/business/bigdata/2_abnormal_sign2.png',
-              ],
-            },
-            {
-              title: 'One-Stop Influencer Management System',
-              summary: `Influencer들의 Commerce 활동 데이터를 수집 및 분석, 소셜 마케팅 분석 플랫폼 구축.`,
-              subTitles: [
-                '제품과 Influencer 매칭',
-                '게시물 키워드(해시태그) 추천',
-                '인공지능 기반 감성분석 방법론을통한 브랜딩 방향성 제시',
-              ],
-              image: '@/assets/img/pages/business/bigdata/3_influ.png',
-            },
-          ],
-        },
-        product: {
-          title: 'Product',
-          description: `제품개발 Lab은 최신 기술 트렌드와 시장 요구를 반영한 고성능 제품을 설계하고, 제품 경쟁력을 강화하는 데 중점을 두고 있습니다.`,
-          workPerformance: [
-            '제품 기획 및 설계',
-            '프로토타입 개발 및 검증',
-            '제조 공정 최적화 및 관리',
-            '사용자 경험(UX) 리서치 및 테스트',
-            '신기술 적용 및 제품 성능 향상 연구',
-            '제품 품질 관리 및 개선',
-            '시장 요구 분석 및 제품 전략 수립',
-          ],
-          tab: [
-            {
-              title: 'e카운셀링크 화상 심리상담',
-              summary: `화상상담을 통한 심리상담 서비스`,
-              subTitles: [
-                '상담사와 회원 매칭 시스템 구현',
-                '비대면 표면측정기술을 응용한 감정분석',
-              ],
-              image: '@/assets/img/pages/business/product/1_e_counseling.png',
+              title: '여권 & 객체 인식',
             },
           ],
         },
@@ -385,10 +285,9 @@ export const resources = {
         business: {
           title: 'Business Area',
           items: {
-            ai: 'AI',
-            si: 'SI',
-            bigdata: 'Big Data',
-            product: 'Product Development',
+            bioinformatics: 'Bioinformatics',
+            biometrics: 'Biometrics',
+            imageProcessing: 'ImageProcessing',
           },
         },
         media: {
@@ -459,6 +358,7 @@ export const resources = {
             content_7: 'Venture Company Certification <br /> Startup Leap Task Package Performance',
             content_8:
               'Participation in the development of a non-face-to-face statement system using artificial intelligence and cloud',
+            content_9: 'OMNIMIX - AI (Drug Efficacy and Mechanism Analysis Service) Launch',
           },
         },
         partner: {
@@ -470,245 +370,143 @@ export const resources = {
           title: 'Business Area',
           label: 'WorkPerformance',
         },
-        ai: {
-          title: 'AI',
-          description: `A.I. Lab is developing automation solutions based on various artificial intelligence modules and big data analysis technologies, aiming to grow with the goal of digital innovation of companies.`,
+        bioinformatics: {
+          title: 'Bioinformatics',
+          description: `In the Bioinformatics sector, we are developing the OMNIMIX solution by applying the latest deep learning, computer vision, and machine learning technologies to maximize the accuracy and efficiency of biological data.`,
           workPerformance: [
-            'AI-based PRA solution development (OCR, Object Detection)',
-            'BioMetrics module (Liveness detect, emotion analysis module)',
-            'Prediction using data analysis and statistics (viewing rate prediction, wave measurement)',
+            `<a href="https://omnimix-ai.com/" target="_blank" ${GlobalStyles.linkText}>OMNIMIX Launch</a> : A program that confirms the interaction between herbal medicine and diseases and derives candidate substances using a giant language model (LLM) and search engine-based search augmentation technology (RAG)`,
           ],
           tab: [
             {
-              title: 'Receipt Collection and OCR Analysis Module Development',
-              summary: `Data collection and extraction by crawling Korean and overseas receipt data`,
+              title: 'Drug Efficacy and Mechanism Analysis Service',
+              summary: `Utilizing LLM and search engine-based search augmentation technology to provide network analysis results of data-based, ingredient-disease interactions`,
               subTitles: [
-                'Receipt data collection from various countries such as Korea, Japan, China, and Vietnam',
-                'Development of AI-based receipt OCR module',
+                'Data integration and collection system',
+                'Network pharmacology-based screening',
+                'Integrated monitoring service',
+                'Search engine-based management and utilization',
+                'Big data / algorithm-based chatbot',
               ],
-              image: '@/assets/img/pages/business/ai/1_OCR.png',
-            },
-            {
-              title: 'Sangmyung University RoboAdvisor',
-              summary: 'KakaoTalk chatbot service that provides campus information',
-              subTitles: [
-                'Feedback on facial expressions in interview situations using image recognition module',
-                'Academic information and career recommendations',
-              ],
-              image: '@/assets/img/pages/business/ai/2_robo.png',
-            },
-            {
-              title: 'Tax Automation Platform',
-              summary: `Business automation technology that processes text and templates from handwritten or image documents created during tax processing`,
-              subTitles: [
-                'Tax return document creation and error detection technology',
-                'Dashboard with user experience-based tax processes',
-                'Big data collection and storage system including crawling function',
-                'Establishment of an organic communication channel between the company and the tax representative',
-              ],
-              image: '@/assets/img/pages/business/ai/3_taxation.png',
-            },
-            {
-              title: 'Smart Safety Management Solution',
-              summary: `Platform for effective safety management on construction sites using deep learning algorithms with CCTV or mobile video`,
-              subTitles: [
-                'Real-time video information collection from CCTV',
-                'AI-based determination of whether workers are wearing safety gear',
-                'Provision of integrated monitoring system',
-              ],
-              image: '@/assets/img/pages/business/ai/4_safety.png',
+              image: '@/assets/img/pages/business/bioinfomatrics/1_Bioinformatics.jpg',
             },
           ],
         },
-        si: {
-          title: 'SI',
-          description: `We aim to build an integrated platform that enhances the operational efficiency of companies through SI projects and maximizes business performance.`,
+        biometrics: {
+          title: 'Biometrics',
+          description: `In the Biometrics sector, we are developing a multi-bio marker emotion analysis service that integrates and analyzes biological data. This service focuses on evaluating the user's emotional state precisely by analyzing multiple bio markers of facial expressions. By providing innovative solutions in various application areas such as improving customer experience, providing customized services, and monitoring psychological states, we contribute to raising corporate user interactions to a higher level.`,
           workPerformance: [
-            'Web Development (React, Vue, Angular)',
-            'App Development (React Native, Flutter)',
-            'Server Development (Node.js, Spring Boot)',
-            'Database Design and Construction (MySQL, MongoDB)',
-            'CI/CD Construction and Operation (Jenkins, GitLab)',
+            'Analysis of 7 emotions: anger, contempt, anxiety, sadness, neutral, happiness, surprise',
+            'Application of various solutions such as interviews based on analyzed emotional states by comparing the similarity of facial asymmetrical movements',
           ],
           tab: [
             {
-              title: `Development of Advertising Efficiency Prediction Technology`,
-              summary: `Data collection and analysis for advertising efficiency prediction, development of customized advertising solutions`,
-              subTitles: [
-                'Prediction of expected advertising revenue according to advertising options',
-                'Recommendation of customized options for each ad to increase ad revenue',
-                'Recommendation of ad copy to increase ad revenue',
-              ],
-              image: '@/assets/img/pages/business/si/1_advertising.png',
-            },
-            {
-              title: 'Unmanned Chicken Room Automatic Fryer and Management System',
-              summary: `Development of IoT-type fryer and management system for unmanned chicken room using Big Data-based A.I., Deep Learning product recognition algorithm`,
-              subTitles: [
-                'Store information and security management',
-                'Device and food material management',
-                'Revenue management',
-              ],
-              image: '@/assets/img/pages/business/si/2_chicken.png',
+              title: `Multi Bio Marker Emotion Analysis Service`,
             },
           ],
         },
-        bigdata: {
-          title: 'Big Data',
-          description: `BigData Lab is realizing data-based innovation in various industries through advanced data analysis and predictive modeling, and helping to establish future-oriented business strategies.`,
+        ImageProcessing: {
+          title: 'ImageProcessing',
+          description: `In the Image Processing sector, we are developing an innovative solution that utilizes Optical Character Recognition (OCR) technology to convert text images into machine-readable text format. This solution automatically extracts and processes text from important documents such as passport information, and is applied to various object recognition and analysis tasks using the YOLO (You Only Look Once) algorithm. This solution provides substantial value to various industries by increasing the efficiency of security, authentication, and data processing.`,
           workPerformance: [
-            'Big data collection and storage (Hadoop, Spark)',
-            'Big data analysis and processing (Pandas, Numpy)',
-            'Big data visualization (Tableau, PowerBI)',
-            'Data pipeline construction and optimization (Airflow, Kafka)',
-            'Real-time data processing and streaming analysis (Flink, Kafka Streams)',
-            'Prediction analysis using machine learning models (Scikit-learn, TensorFlow)',
+            'Convert image files from scans or photos into binary data',
+            'Preprocess text image edges smoothly to improve script recognition rate',
+            'Improve character recognition rate by utilizing pattern matching and feature extraction',
+            'Convert extracted text data to files after analysis is complete',
           ],
           tab: [
             {
-              title: 'MES 3.0 Integrated Log Analysis System Construction',
-              summary: `Establishment of an integrated IT resource monitoring system suitable for infrastructure and development work according to Pivotal Cloud Foundry.`,
-              subTitles: [
-                'Various monitoring integration',
-                'Service monitoring system implementation',
-                'Preventive control infrastructure construction',
-              ],
-              image: '@/assets/img/pages/business/bigdata/1_mes3.0.png',
+              title: 'Optical Character Recognition OCR',
             },
             {
-              title: 'Abnormal Sign Detection System Construction',
-              summary: `Collection of internal company data (personnel, IP, H/W, S/W, DB, logs, etc.) and detection of abnormal signs based on written scenarios to build a system for handling evidence according to the grade of detected abnormal behavior.`,
-              subTitles: [
-                'Collection and analysis of internal company data',
-                'Development of abnormal sign detection scenario',
-                'Construction of abnormal sign detection system',
-              ],
-              image: [
-                '@/assets/img/pages/business/bigdata/2_abnormal_sign.png',
-                '@/assets/img/pages/business/bigdata/2_abnormal_sign2.png',
-              ],
-            },
-            {
-              title: 'One-Stop Influencer Management System',
-              summary: `Collection and analysis of influencer commerce activity data, and construction of a social marketing analysis platform.`,
-              subTitles: [
-                'Product and influencer matching',
-                'Post keyword (hashtag) recommendation',
-                'Branding direction suggestion based on artificial intelligence-based sentiment analysis methodology',
-              ],
-              image: '@/assets/img/pages/business/bigdata/3_influ.png',
+              title: 'Passport & Object Recognition',
             },
           ],
         },
-        product: {
-          title: 'Product',
-          description: `Product Development Lab focuses on designing high-performance products that reflect the latest technology trends and market demands, and enhancing product competitiveness.`,
-          workPerformance: [
-            'Product planning and design',
-            'Prototype development and verification',
-            'Manufacturing process optimization and management',
-            'User Experience (UX) research and testing',
-            'Research on applying new technologies and improving product performance',
-            'Product quality management and improvement',
-            'Market demand analysis and product strategy formulation',
-          ],
-          tab: [
-            {
-              title: 'eCounselingLink Video Counseling',
-              summary: `Video counseling service through video counseling`,
-              subTitles: [
-                'Counselor and member matching system implementation',
-                'Emotion analysis using non-face-to-face surface measurement technology',
-              ],
-              image: '@/assets/img/pages/business/product/1_e_counseling.png',
-            },
-          ],
-        },
-      },
-      media: {
-        totalItems: '{{totalCnt}} posts in total.',
-        items: {
-          news: 'News',
-          event: 'Event',
-        },
-      },
-      careers: {
-        human: {
-          title: 'Innovative Talent',
-          subTitle: 'We are looking for talents with creative and innovative thinking.',
+        media: {
+          totalItems: '{{totalCnt}} posts in total.',
           items: {
-            creative_thinking: {
-              title: 'Creative Thinking',
-              description: 'Discover new ideas and solve problems creatively.',
-              content:
-                'We value the ability to propose innovative solutions that go beyond existing frameworks.',
+            news: 'News',
+            event: 'Event',
+          },
+        },
+        careers: {
+          human: {
+            title: 'Innovative Talent',
+            subTitle: 'We are looking for talents with creative and innovative thinking.',
+            items: {
+              creative_thinking: {
+                title: 'Creative Thinking',
+                description: 'Discover new ideas and solve problems creatively.',
+                content:
+                  'We value the ability to propose innovative solutions that go beyond existing frameworks.',
+              },
+              challenge_spirit: {
+                title: 'Challenge Spirit',
+                description: 'Do not fear new challenges and continue to grow.',
+                content:
+                  'We want talents who challenge seemingly impossible goals and are not afraid of failure.',
+              },
+              quick_adaptation: {
+                title: 'Quick Adaptation',
+                description: 'Quickly adapt and respond to rapidly changing environments.',
+                content:
+                  'We need the ability to respond quickly to changes in technology and the market, and to quickly learn new technologies.',
+              },
             },
-            challenge_spirit: {
-              title: 'Challenge Spirit',
-              description: 'Do not fear new challenges and continue to grow.',
-              content:
-                'We want talents who challenge seemingly impossible goals and are not afraid of failure.',
+          },
+          process: {
+            recruitment: {
+              title: 'Recruitment Process',
+              steps: {
+                item1: {
+                  title: 'Regular Recruitment',
+                  content1: 'Recruit the necessary talents throughout the year.',
+                  content2: 'You can apply anytime.',
+                },
+                item2: {
+                  title: 'Special Recruitment',
+                  content1: 'Recruit intensively',
+                  content2: 'Please check the announcement.',
+                },
+              },
             },
-            quick_adaptation: {
-              title: 'Quick Adaptation',
-              description: 'Quickly adapt and respond to rapidly changing environments.',
-              content:
-                'We need the ability to respond quickly to changes in technology and the market, and to quickly learn new technologies.',
+            selection: {
+              title: 'Selection Process',
+              steps: {
+                item1: {
+                  title: 'Application',
+                  content: 'Apply through various job sites',
+                },
+                item2: {
+                  title: 'Document Screening',
+                  content:
+                    'After receiving the application, the screening process is conducted and the successful applicants are notified',
+                },
+                item3: {
+                  title: 'Interview',
+                  content:
+                    'Comprehensive evaluation of the applicant’s competence, aptitude, and personality',
+                },
+                item4: {
+                  title: 'Final Selection',
+                  content: 'Recruitment decision',
+                },
+              },
             },
           },
         },
-        process: {
-          recruitment: {
-            title: 'Recruitment Process',
-            steps: {
-              item1: {
-                title: 'Regular Recruitment',
-                content1: 'Recruit the necessary talents throughout the year.',
-                content2: 'You can apply anytime.',
-              },
-              item2: {
-                title: 'Special Recruitment',
-                content1: 'Recruit intensively',
-                content2: 'Please check the announcement.',
-              },
-            },
+        benefits: {
+          title: 'Benefits',
+          items: {
+            annual_leave: 'Annual Leave and Refresh Leave',
+            annual_allowance: 'Annual Allowance',
+            flexible_hours: '9 AM ~ 10 AM Flexible Working Hours',
+            snacks: 'Snacks Provided',
+            celebration_allowance: 'Celebration Allowance',
+            birthday_half_day: 'Half Day Off on Birthday',
+            education_books: 'Work-related Education and Book Purchase',
+            holiday_gifts: 'Holiday and Anniversary Gifts',
           },
-          selection: {
-            title: 'Selection Process',
-            steps: {
-              item1: {
-                title: 'Application',
-                content: 'Apply through various job sites',
-              },
-              item2: {
-                title: 'Document Screening',
-                content:
-                  'After receiving the application, the screening process is conducted and the successful applicants are notified',
-              },
-              item3: {
-                title: 'Interview',
-                content:
-                  'Comprehensive evaluation of the applicant’s competence, aptitude, and personality',
-              },
-              item4: {
-                title: 'Final Selection',
-                content: 'Recruitment decision',
-              },
-            },
-          },
-        },
-      },
-      benefits: {
-        title: 'Benefits',
-        items: {
-          annual_leave: 'Annual Leave and Refresh Leave',
-          annual_allowance: 'Annual Allowance',
-          flexible_hours: '9 AM ~ 10 AM Flexible Working Hours',
-          snacks: 'Snacks Provided',
-          celebration_allowance: 'Celebration Allowance',
-          birthday_half_day: 'Half Day Off on Birthday',
-          education_books: 'Work-related Education and Book Purchase',
-          holiday_gifts: 'Holiday and Anniversary Gifts',
         },
       },
     },

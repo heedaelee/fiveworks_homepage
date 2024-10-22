@@ -1,18 +1,17 @@
 import {data_key} from '@/constants/business-data';
-import {TabContentProps} from '@/pages/business/Common/common.interface';
 import {getImages} from '@/utils';
 import {useEffect, useState} from 'react';
 import BusinessLayout from '../Common/BusinessLayout';
 
-const Si = () => {
+const Bioinformatics = () => {
   const [activeTab, setActiveTab] = useState(0);
-  const [images, setImages] = useState<TabContentProps['images']>([]);
+  const [images, setImages] = useState<(string | string[])[]>([]);
 
-  const siData = data_key.si;
-  const {tab_key, description_key, workPerformance_key} = siData;
+  const bioinfometricsData = data_key.bioinfometrics;
+  const {tab_key, description_key, workPerformance_key} = bioinfometricsData;
   useEffect(() => {
-    const data = getImages('businessSi');
-    // console.log(`SIdata :   ${data}`);
+    const data = getImages('business_bioinfometrics');
+    console.log(data);
     setImages(data);
   }, []);
 
@@ -28,4 +27,4 @@ const Si = () => {
   );
 };
 
-export default Si;
+export default Bioinformatics;

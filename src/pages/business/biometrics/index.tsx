@@ -3,14 +3,14 @@ import {getImages} from '@/utils';
 import {useEffect, useState} from 'react';
 import BusinessLayout from '../Common/BusinessLayout';
 
-const Ai = () => {
+const Biometrics = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [images, setImages] = useState<(string | string[])[]>([]);
 
-  const aiData = data_key.ai;
-  const {tab_key, description_key, workPerformance_key} = aiData;
+  const biometricsData = data_key.biometrics;
+  const {tab_key, description_key, workPerformance_key} = biometricsData;
   useEffect(() => {
-    const data = getImages('businessAi');
+    const data = getImages('business_biometrics');
     console.log(data);
     setImages(data);
   }, []);
@@ -27,4 +27,4 @@ const Ai = () => {
   );
 };
 
-export default Ai;
+export default Biometrics;
