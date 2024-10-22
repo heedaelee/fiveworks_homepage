@@ -3,7 +3,6 @@ import {motion} from 'framer-motion';
 import {TabContentProps} from '@/pages/business/Common/common.interface';
 import GalleryPhotoModalWrapper from '@/pages/media/event/backup/GalleryPhotoModalWrapper';
 import {EventItem} from '@/constants/event-data';
-import Content from '@/pages/business/Common/tab/tab_content/Content';
 import ImageWrapper from '@/pages/business/Common/tab/tab_content/ImageWrapper';
 
 const TabContent = ({tab, activeTab, images, commonAnimation}: TabContentProps) => {
@@ -40,7 +39,7 @@ const TabContent = ({tab, activeTab, images, commonAnimation}: TabContentProps) 
       {/* <motion.div {...commonAnimation(0.2)}>
         <Content tab={tab} activeTab={activeTab} />
       </motion.div> */}
-      <motion.div {...commonAnimation(0.3)} >
+      <motion.div {...commonAnimation(0.3)}>
         <ImageWrapper
           tab={tab}
           activeTab={activeTab}

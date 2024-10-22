@@ -6,6 +6,7 @@ import {useState} from 'react';
 // import GalleryPhotoModalWrapper from './backup/GalleryPhotoModalWrapper';
 import {useTranslation} from 'react-i18next';
 import EventContent from './EventContent';
+import {CardPramType, handleCardClickType} from '../Common/common.interface';
 
 const EVENT_COUNT_PER_PAGE = 9;
 
@@ -29,10 +30,9 @@ const Event = () => {
   /**
    * 이미지 클릭시 모달창 열기
    * */
-  const handleImageClick = (item: string | EventItem) => {
-    if (typeof item === 'string') return;
-    console.log('item : ', item);
-    setSelectedEvent(item);
+  const handleImageClick: handleCardClickType = ({link, type}: CardPramType) => {
+    if (type !== 'event') return;
+    setSelectedEvent(link);
     // setIsModalOpen(true);
   };
   const handleBackClick = () => {

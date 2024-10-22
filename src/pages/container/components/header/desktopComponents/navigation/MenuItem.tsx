@@ -1,7 +1,7 @@
 import {Link} from 'react-router-dom';
 import {MenuItemProps} from './interface.navigation';
 import useIsHomepage from '@/hooks/useIsHomePage';
-import {useEffect, useState} from 'react';
+import {MouseEvent, useEffect, useState} from 'react';
 import {useTranslation} from 'react-i18next';
 
 const MenuItem = ({isOpen, setIsOpen, label, subItems, to}: MenuItemProps) => {
@@ -21,7 +21,7 @@ const MenuItem = ({isOpen, setIsOpen, label, subItems, to}: MenuItemProps) => {
 
   const isHome = useIsHomepage();
 
-  const handleLinkClick = (event, path) => {
+  const handleLinkClick = (event: MouseEvent<HTMLAnchorElement>) => {
     // event.preventDefault(); // 기본 링크 동작을 막음
     event.stopPropagation(); // 부모 요소로의 이벤트 전파를 막음
     setIsOpen(false); // isOpen 상태를 false로 설정
@@ -29,14 +29,14 @@ const MenuItem = ({isOpen, setIsOpen, label, subItems, to}: MenuItemProps) => {
 
   return (
     <li className={`w-1/5 text-center ${renderUpperTextColor()} font-semibold`}>
-      <Link to={to} onClick={event => handleLinkClick(event, to)}>
+      <Link to={to} onClick={event => handleLinkClick(event)}>
         {t(label)}
       </Link>
       <ul className={`${visibleClass}  mt-[21px] text-center`} style={fadeStyle}>
         {subItems &&
           subItems.map(subItem => (
             <li key={subItem.to} className='py-2 font-normal'>
-              <Link to={subItem.to} onClick={event => handleLinkClick(event, subItem.to)}>
+              <Link to={subItem.to} onClick={event => handleLinkClick(event)}>
                 {t(subItem.label)}
               </Link>
             </li>

@@ -1,6 +1,5 @@
 import {Route, Routes} from 'react-router-dom';
 import Container from '@/pages/container';
-// import Home from '@/pages/home';
 import {ROUTE_PATHS} from '@/constants/routes';
 import Home from '@/pages/home';
 import Overview from '@/pages/intro/overview';
@@ -8,7 +7,6 @@ import Group from '@/pages/intro/group';
 import HistoryGraph from '@/pages/intro/history';
 import Partners from '@/pages/intro/partners';
 import Bioinformatics from '@/pages/business/bioinformatics';
-import Si from '@/pages/business/si';
 import Biometrics from '@/pages/business/biometrics';
 import ImageProcessing from '@/pages/business/imageProcessing';
 import News from '@/pages/media/news';
@@ -17,23 +15,6 @@ import Human from './pages/careers/human';
 import Process from './pages/careers/process';
 import Benefits from './pages/careers/benefit';
 import Contact from './pages/contact';
-
-// 예시 컴포넌트들
-// const Home = () => <div>Home</div>;
-// const Overview = () => <div>Overview</div>;
-// const Group = () => <div>Group</div>;
-// const History = () => <div>History</div>;
-// const Partners = () => <div>Partners</div>;
-// const AI = () => <div>AI</div>;
-// const SI = () => <div>SI</div>;
-// const BigData = () => <div>BigData</div>;
-// const Product = () => <div>Product</div>;
-// const News = () => <div>News</div>;
-// const Event = () => <div>Event</div>;
-// const Human = () => <div>Human</div>;
-// const Process = () => <div>Process</div>;
-// const Benefit = () => <div>Benefit</div>;
-// const Contact = () => <div>Contact</div>;
 
 const {intro, business, media, careers, contact} = ROUTE_PATHS;
 

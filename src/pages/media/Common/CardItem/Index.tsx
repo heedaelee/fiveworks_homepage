@@ -15,9 +15,9 @@ const CardItem = ({item, type, handleCardClick}: CardItemProps) => {
 
   const handleClick = () => {
     if (type === 'news') {
-      handleCardClick((item as NewsItem).link);
+      handleCardClick({type: 'news', link: (item as NewsItem).link});
     } else if (type === 'event') {
-      handleCardClick(item as EventItem);
+      handleCardClick({type: 'event', link: item as EventItem});
     }
   };
   return (

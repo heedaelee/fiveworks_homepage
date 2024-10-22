@@ -6,6 +6,7 @@ import CardList from '@/pages/media/Common/CardList';
 
 import {useState} from 'react';
 import {useTranslation} from 'react-i18next';
+import {CardPramType, handleCardClickType} from '../Common/common.interface';
 
 const NEWS_COUNT_PER_PAGE = 9;
 
@@ -28,9 +29,9 @@ const News = () => {
   // console.log(`mockNewsData.length : ${mockNewsData.length}`);
   // console.log(`currentItems : ${currentItems}`);
 
-  const handleCardClick = (url: string) => {
-    // console.log('card clicked', url);
-    window.open(url, '_blank');
+  const handleCardClick: handleCardClickType = ({type, link}: CardPramType) => {
+    console.log('card clicked', link);
+    if (type === 'news') window.open(link, '_blank');
   };
 
   const {t} = useTranslation();
