@@ -1,9 +1,9 @@
 export const data_key = {
-  bioinfometrics: {
-    title_key: 'business.bioinformatrics.title',
-    description_key: `business.bioinformatrics.description`,
-    workPerformance_key: 'business.bioinformatrics.workPerformance',
-    tab_key: 'business.bioinformatrics.tab',
+  bioinfomatics: {
+    title_key: 'business.Bioinformatics.title',
+    description_key: `business.Bioinformatics.description`,
+    workPerformance_key: 'business.Bioinformatics.workPerformance',
+    tab_key: 'business.Bioinformatics.tab',
   },
   biometrics: {
     title_key: 'business.biometrics.title',

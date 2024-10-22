@@ -1,7 +1,18 @@
-export const getPartnerImages = () => {
-  const images = import.meta.glob('/src/assets/img/pages/partners/*.{png,jpg,jpeg,svg}');
-  const imagePaths = Object.keys(images);
+const getImagePath = (path: pathType) => {
+  switch (path) {
+    case 'company':
+      return import.meta.glob('/src/assets/img/pages/partners/company/*.{png,jpg,jpeg,svg}');
+    case 'education':
+      return import.meta.glob('/src/assets/img/pages/partners/education/*.{png,jpg,jpeg,svg}');
+    case 'government':
+      return import.meta.glob('/src/assets/img/pages/partners/government/*.{png,jpg,jpeg,svg}');
+  }
+};
 
+type pathType = 'company' | 'education' | 'government';
+export const getPartnerImages = (path: pathType) => {
+  const images = getImagePath(path);
+  const imagePaths = Object.keys(images);
   // Extract numeric prefix and sort
   const sortedImagePaths = imagePaths.sort((a, b) => {
     const getPrefix = (path: string) => {
@@ -18,8 +29,8 @@ export const getPartnerImages = () => {
 // utils/getImages.ts
 const imagePaths = {
   // partners: import.meta.glob('/src/assets/img/pages/partners/*.{png,jpg,jpeg,svg}'),
-  business_bioinfometrics: import.meta.glob(
-    '/src/assets/img/pages/business/bioinfometrics/*.{png,jpg,jpeg,svg}',
+  business_bioinfomatics: import.meta.glob(
+    '/src/assets/img/pages/business/bioinfomatics/*.{png,jpg,jpeg,svg}',
   ),
   business_biometrics: import.meta.glob(
     '/src/assets/img/pages/business/biometrics/*.{png,jpg,jpeg,svg}',

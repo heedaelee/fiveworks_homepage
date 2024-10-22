@@ -39,7 +39,7 @@ const TabContent = ({tab, activeTab, images, commonAnimation}: TabContentProps) 
       {/* <motion.div {...commonAnimation(0.2)}>
         <Content tab={tab} activeTab={activeTab} />
       </motion.div> */}
-      <motion.div {...commonAnimation(0.3)}>
+      <motion.div {...commonAnimation(0.3)} >
         <ImageWrapper
           tab={tab}
           activeTab={activeTab}

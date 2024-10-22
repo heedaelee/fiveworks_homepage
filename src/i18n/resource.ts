@@ -118,15 +118,15 @@ export const resources = {
           title: '사업부문 소개',
           label: '주요성과',
         },
-        bioinformatrics: {
-          title: 'Bioinformatrics',
-          description: `Bioinfometrics 부문에서 최신 딥러닝, 컴퓨터 비전 및 머신러닝 기술을 적용해 생체 데이터의 정확성과 효율성을 극대화하고 있으며, OMNIMIX 솔루션 개발에 박차를 가하고 있습니다.`,
+        Bioinformatics: {
+          title: 'Bioinformatics',
+          description: `bioinfomatics 부문에서 최신 딥러닝, 컴퓨터 비전 및 머신러닝 기술을 적용해 생체 데이터의 정확성과 효율성을 극대화하고 있으며, OMNIMIX 솔루션 개발에 박차를 가하고 있습니다.`,
           workPerformance: [
             `<a href="https://omnimix-ai.com/" target="_blank" ${GlobalStyles.linkText}>OMNIMIX 출시</a> : 거대언어모델(LLM)과 검색엔진 기반 검색증강기술 (RAG)을 활용한 한약재-질병 상호작용 확인 및 후보물질 도출 프로그램`,
           ],
           tab: [
             {
-              title: '약물 효능 및 작용기전 분석 서비스',
+              title: 'Omnimix (약물 효능 및 작용기전 분석 서비스)',
               summary: `LLM과 검색엔진 기반 검색 증강기술 활용해 데이터 기반, 성분 질병간 네트워크 분석 결과 제공`,
               subTitles: [
                 '데이터 통합 및 수집 시스템',
@@ -135,7 +135,7 @@ export const resources = {
                 '검색 엔진 기반의 관리 및 활용',
                 '빅데이터 / 알고리즘 기반 챗본',
               ],
-              image: '@/assets/img/pages/business/bioinfomatrics/1_Bioinformatics.jpg',
+              image: '@/assets/img/pages/business/bioinfomatics/1_Bioinformatics.jpg',
             },
           ],
         },
@@ -378,7 +378,7 @@ export const resources = {
           ],
           tab: [
             {
-              title: 'Drug Efficacy and Mechanism Analysis Service',
+              title: 'Omnimix (Drug Efficacy and Mechanism Analysis Service)',
               summary: `Utilizing LLM and search engine-based search augmentation technology to provide network analysis results of data-based, ingredient-disease interactions`,
               subTitles: [
                 'Data integration and collection system',
@@ -387,7 +387,7 @@ export const resources = {
                 'Search engine-based management and utilization',
                 'Big data / algorithm-based chatbot',
               ],
-              image: '@/assets/img/pages/business/bioinfomatrics/1_Bioinformatics.jpg',
+              image: '@/assets/img/pages/business/bioinfomatics/1_Bioinformatics.jpg',
             },
           ],
         },

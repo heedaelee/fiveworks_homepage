@@ -18,7 +18,7 @@ const GalleryPhotoModal = ({
       <div ref={modalRef} className='bg-white p4 rounded relative'>
         <img
           src={selectedImage}
-          className='w-[400px] md:w-[800px] h-auto max-h-[800px] object-contain'
+          className='w-[400px] md:w-auto h-auto max-h-screen object-contain'
           onLoad={handleImageLoad}
           onClick={closeModal}
         />

@@ -2,6 +2,7 @@ import useOutsideClick from '@/hooks/useOutsideClick';
 import GalleryPhotoModal from './GalleryPhotoModal';
 import {useEffect} from 'react';
 
+
 interface GalleryPhotoModalProps {
   isModalOpen: boolean;
   selectedImage: string | null;

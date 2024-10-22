@@ -7,11 +7,11 @@ const Bioinformatics = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [images, setImages] = useState<(string | string[])[]>([]);
 
-  const bioinfometricsData = data_key.bioinfometrics;
-  const {tab_key, description_key, workPerformance_key} = bioinfometricsData;
+  const bioinfomaticsData = data_key.bioinfomatics;
+  const {tab_key, description_key, workPerformance_key} = bioinfomaticsData;
   useEffect(() => {
-    const data = getImages('business_bioinfometrics');
-    console.log(data);
+    const data = getImages('business_bioinfomatics');
+    console.log('imgData: ', data);
     setImages(data);
   }, []);
 
