@@ -2,7 +2,7 @@ import {TFunction} from 'i18next';
 
 export interface Department {
   name: string;
-  children?: (Department | string)[];
+  children?: Department[];
 }
 
 export const getDepartments = (t: TFunction): Department[] => [

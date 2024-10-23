@@ -1,119 +1,93 @@
-import React from 'react';
 import {motion} from 'framer-motion';
+import React from 'react';
 import {Department} from '../getDepartments';
 
-const renderDepartmentTree = (
-  dept: Department,
-  x: number,
-  y: number,
-  level: number,
-): React.ReactNode => {
-  const nodeWidth = 120;
-  const nodeHeight = 60;
-  const horizontalGap = 200;
-  const verticalGap = 80;
+const nodeWidth = 160;
+const nodeHeight = 80;
+const horizontalGap = 400; // Increased from 200
+const verticalGap = 120; // Increased from 100
 
-  const renderNode = (nodeName: string, nodeX: number, nodeY: number) => (
-    <g key={nodeName}>
-      <motion.rect
-        initial={{opacity: 0, scale: 0}}
-        animate={{opacity: 1, scale: 1}}
-        transition={{duration: 0.5, delay: level * 0.1}}
-        x={nodeX}
-        y={nodeY - nodeHeight / 2}
-        width={nodeWidth}
-        height={nodeHeight}
-        rx={5}
-        ry={5}
-        fill='#f0f0f0'
-        stroke='#bababa'
-        strokeWidth={1}
-      />
-      <motion.text
-        initial={{opacity: 0}}
-        animate={{opacity: 1}}
-        transition={{duration: 0.5, delay: level * 0.1 + 0.2}}
-        x={nodeX + nodeWidth / 2}
-        y={nodeY}
-        textAnchor='middle'
-        dominantBaseline='middle'
-        fontSize={17}
-        style={{
-          whiteSpace: 'pre-line',
-        }}
-        fill='#333'>
-        {nodeName.split('\n').map((name, i) => (
-          <tspan key={i} x={nodeX + nodeWidth / 2} dy={i === 0 ? 0 : '1.2em'}>
-            {name}
-          </tspan>
-        ))}
-      </motion.text>
-    </g>
-  );
-
-  const calculateChildrenHeight = (children: (Department | string)[]): number => {
-    return children.reduce((total, child) => {
-      if (typeof child === 'string') {
-        return total + verticalGap;
-      } else {
-        return total + Math.max(verticalGap, calculateChildrenHeight(child.children || []));
-      }
-    }, 0);
-  };
-
-  const totalHeight = dept.children ? calculateChildrenHeight(dept.children) : 0;
-  let currentY = y - totalHeight / 2;
-
+export const renderDepartmentTree = (dept: Department, x: number, y: number) => {
+  console.log(dept);
+  // 자식 노드가 있으면 자식 노드의 수만큼 높이를 계산한다.
+  const childrenCount = dept.children ? dept.children.length : 0;
+  const totalHeight = (childrenCount - 1) * verticalGap;
+  // Y는 0부터 시작
+  const startY = y - totalHeight / 2;
+  // console.log('childrenCount', childrenCount);
+  // console.log('totalHeight', totalHeight);
+  // console.log('startY', startY);
+  // console.log('dept.name', dept.name);
+  // 이 return은 CEO 노드를 그려줌
   return (
     <React.Fragment key={dept.name}>
-      {renderNode(dept.name, x, y)}
+      {/* CEO */}
+      {renderNode(dept.name, x, y, 0)}
+      {/* 2Depts 부서 */}
       {dept.children &&
-        dept.children.map(child => {
-          const childX = x + nodeWidth + horizontalGap;
-          let childY = currentY;
+        dept.children.map((child, index) => {
+          const childX = x + horizontalGap;
+          const childY = startY + index * verticalGap;
+          const midX = x + horizontalGap / 2;
 
-          if (typeof child === 'string') {
-            currentY += verticalGap;
-            return (
-              <React.Fragment key={child}>
-                <motion.line
-                  initial={{pathLength: 0}}
-                  animate={{pathLength: 1}}
-                  transition={{duration: 0.5, delay: level * 0.1 + 0.3}}
-                  x1={x + nodeWidth}
-                  y1={y}
-                  x2={childX}
-                  y2={childY}
-                  stroke='#bababa'
-                  strokeWidth={1}
-                />
-                {renderNode(child, childX, childY)}
-              </React.Fragment>
-            );
-          } else {
-            const childHeight = calculateChildrenHeight(child.children || []);
-            childY += childHeight / 2;
-            currentY += Math.max(childHeight, verticalGap);
-            return (
-              <React.Fragment key={child.name}>
-                <motion.line
-                  initial={{pathLength: 0}}
-                  animate={{pathLength: 1}}
-                  transition={{duration: 0.5, delay: level * 0.1 + 0.3}}
-                  x1={x + nodeWidth}
-                  y1={y}
-                  x2={childX}
-                  y2={childY}
-                  stroke='#bababa'
-                  strokeWidth={1}
-                />
-                {renderDepartmentTree(child, childX, childY, level + 1)}
-              </React.Fragment>
-            );
-          }
+          // console.log('2depts 시작');
+          // console.log('child', child);
+          // console.log('childX', childX);
+          // console.log('childY', childY);
+          // console.log('midX', midX);
+          // console.log(
+          //   `시작점 M${x + nodeWidth / 2},${y} 수평선H${midX} 수직선V${childY} 수평선H${childX - nodeWidth / 2} `,
+          // );
+          // console.log('2depts 끝');
+
+          return (
+            <React.Fragment key={child.name}>
+              <motion.path
+                initial={{pathLength: 0}}
+                animate={{pathLength: 1}}
+                transition={{duration: 0.5, delay: 0.3}}
+                d={`M${x + nodeWidth / 2},${y} H${midX} V${childY} H${childX - nodeWidth / 2} `}
+                fill='none'
+                stroke='#d8d8d8d6'
+                strokeWidth={1}
+              />
+              {renderNode(child.name, childX, childY, index)}
+            </React.Fragment>
+          );
         })}
     </React.Fragment>
   );
 };
 
-export default renderDepartmentTree;
+const renderNode = (nodeName: string, x: number, y: number, index: number) => (
+  <g key={nodeName}>
+    <motion.rect
+      initial={{opacity: 0, scale: 0}}
+      animate={{opacity: 1, scale: 1}}
+      transition={{duration: 0.5, delay: index * 0.15 + 0.2}}
+      x={x - nodeWidth / 2}
+      y={y - nodeHeight / 2}
+      width={nodeWidth}
+      height={nodeHeight}
+      rx={10}
+      ry={10}
+      fill='#f0f0f0'
+      // stroke='#bababa'
+      // strokeWidth={2}
+      filter='url(#shadow)'
+    />
+    <motion.text
+      initial={{opacity: 0}}
+      animate={{opacity: 1}}
+      transition={{duration: 0.5, delay: 0.2}}
+      x={x}
+      y={y}
+      textAnchor='middle'
+      dominantBaseline='middle'
+      fontSize={18}
+      // fontWeight='semnibold'
+      fill='#696868'>
+      {nodeName}
+    </motion.text>
+  </g>
+);
