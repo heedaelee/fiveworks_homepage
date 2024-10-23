@@ -6,7 +6,7 @@ interface EventContentProps {
   onBack: () => void;
 }
 
-const EventContent = ({event, onBack}: EventContentProps) => {
+const EventDetail = ({event, onBack}: EventContentProps) => {
   const linkify = (text: string) => {
     const urlPattern = /(https?:\/\/[^\s]+)/g;
     return text.replace(
@@ -48,4 +48,4 @@ const EventContent = ({event, onBack}: EventContentProps) => {
   );
 };
 
-export default EventContent;
+export default EventDetail;
