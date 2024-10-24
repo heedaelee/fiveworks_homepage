@@ -8,7 +8,7 @@ const horizontalGap = 400; // Increased from 200
 const verticalGap = 120; // Increased from 100
 
 export const renderDepartmentTree = (dept: Department, x: number, y: number) => {
-  console.log(dept);
+  // console.log(dept);
   // 자식 노드가 있으면 자식 노드의 수만큼 높이를 계산한다.
   const childrenCount = dept.children ? dept.children.length : 0;
   const totalHeight = (childrenCount - 1) * verticalGap;

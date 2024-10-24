@@ -11,7 +11,7 @@ const Biometrics = () => {
   const {tab_key, description_key, workPerformance_key} = biometricsData;
   useEffect(() => {
     const data = getImages('business_biometrics');
-    console.log(data);
+    // console.log(data);
     setImages(data);
   }, []);
 

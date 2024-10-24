@@ -11,10 +11,11 @@ import Biometrics from '@/pages/business/biometrics';
 import ImageProcessing from '@/pages/business/imageProcessing';
 import News from '@/pages/media/news';
 import Event from '@/pages/media/event';
-import Human from './pages/careers/human';
-import Process from './pages/careers/process';
-import Benefits from './pages/careers/benefit';
-import Contact from './pages/contact';
+import Human from '@/pages/careers/human';
+import Process from '@/pages/careers/process';
+import Benefits from '@/pages/careers/benefit';
+import Contact from '@/pages/contact';
+import NotFound from '@/pages/error';
 
 const {intro, business, media, careers, contact} = ROUTE_PATHS;
 
@@ -37,6 +38,7 @@ function App() {
         <Route path={careers.benefit} element={<Benefits />} />
         <Route path={contact.contact} element={<Contact />} />
       </Route>
+      <Route path='*' element={<NotFound />} />
     </Routes>
   );
 }

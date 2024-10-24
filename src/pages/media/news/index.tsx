@@ -30,7 +30,7 @@ const News = () => {
   // console.log(`currentItems : ${currentItems}`);
 
   const handleCardClick: handleCardClickType = ({type, link}: CardPramType) => {
-    console.log('card clicked', link);
+    // console.log('card clicked', link);
     if (type === 'news') window.open(link, '_blank');
   };
 

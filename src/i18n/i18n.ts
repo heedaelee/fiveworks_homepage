@@ -9,7 +9,7 @@ i18n
   .init({
     resources,
     fallbackLng: 'ko',
-    debug: true,
+    // debug: true,
     interpolation: {
       escapeValue: false, // React already does escaping
     },

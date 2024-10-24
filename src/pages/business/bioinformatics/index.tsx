@@ -11,7 +11,7 @@ const Bioinformatics = () => {
   const {tab_key, description_key, workPerformance_key} = bioinfomaticsData;
   useEffect(() => {
     const data = getImages('business_bioinfomatics');
-    console.log('imgData: ', data);
+    // console.log('imgData: ', data);
     setImages(data);
   }, []);
 
