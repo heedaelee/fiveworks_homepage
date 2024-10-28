@@ -14,7 +14,7 @@ const Benefits = () => {
         whileInView={{opacity: 1, y: 0}}
         transition={{duration: 2, ease: 'easeInOut'}}
         className='text-3xl font-bold mb-4'>
-        {t('benefits.title')}
+        {t('careers.benefits.title')}
       </motion.h1>
       <hr className='border-gray-300 mb-8' />
 
