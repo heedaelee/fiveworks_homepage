@@ -8,6 +8,7 @@ export interface ImageProps extends Omit<TabContentProps, 'commonAnimation'> {
 const ImageWrapper = ({activeTab, tab, images, handleImageClick}: ImageProps) => {
   return (
     <>
+      {/* 다중이미지 */}
       {Array.isArray(images[activeTab]) ? (
         (images[activeTab] as string[]).map((image, index) => {
           return (
@@ -21,6 +22,7 @@ const ImageWrapper = ({activeTab, tab, images, handleImageClick}: ImageProps) =>
           );
         })
       ) : (
+        /* 단일이미지 */
         <ImageItem
           image={images[activeTab] as string}
           title={tab[activeTab].title}

@@ -1,7 +1,8 @@
 import {data_key} from '@/constants/business-data';
-import {getImages} from '@/utils';
 import {useEffect, useState} from 'react';
 import BusinessLayout from '../Common/BusinessLayout';
+import image1 from '@/assets/img/pages/business/bioinformatics/1_Bioinformatics.jpg';
+import image2 from '@/assets/img/pages/business/bioinformatics/1_Bioinformatics2.jpg';
 
 const Bioinformatics = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -10,7 +11,8 @@ const Bioinformatics = () => {
   const bioinfomaticsData = data_key.bioinfomatics;
   const {tab_key, description_key, workPerformance_key} = bioinfomaticsData;
   useEffect(() => {
-    const data = getImages('business_bioinfomatics');
+    // const data = getImages('business_bioinfomatics');
+    const data = [[image1, image2]];
     // console.log('imgData: ', data);
     setImages(data);
   }, []);

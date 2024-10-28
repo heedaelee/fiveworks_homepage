@@ -1,8 +1,8 @@
 import {data_key} from '@/constants/business-data';
-import {getImages} from '@/utils';
+// import {getImages} from '@/utils';
 import {useEffect, useState} from 'react';
 import BusinessLayout from '../Common/BusinessLayout';
-
+import image1 from '@/assets/img/pages/business/biometrics/1_Biometrics.jpg';
 const Biometrics = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [images, setImages] = useState<(string | string[])[]>([]);
@@ -10,9 +10,7 @@ const Biometrics = () => {
   const biometricsData = data_key.biometrics;
   const {tab_key, description_key, workPerformance_key} = biometricsData;
   useEffect(() => {
-    const data = getImages('business_biometrics');
-    // console.log(data);
-    setImages(data);
+    setImages([image1]);
   }, []);
 
   return (

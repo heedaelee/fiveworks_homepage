@@ -8,11 +8,22 @@ import {useTranslation} from 'react-i18next';
 import CarouselList from '@/pages/home/components/carousel/slide';
 
 const Carousel = () => {
+  const [pathNames, setPathNames] = useState<string[]>([]);
   const {t} = useTranslation();
 
-  const pathNames = Object.keys(
-    import.meta.glob('/src/assets/img/pages/home/carousel/*.{png,jpg,jpeg,svg}'),
-  );
+  const images = import.meta.glob('/src/assets/img/pages/home/carousel/*.{png,jpg,jpeg,svg}');
+
+  useEffect(() => {
+    const loadImages = async () => {
+      const paths = Object.keys(images);
+      const urls = await Promise.all(
+        paths.map(path => images[path]().then((mod: any) => mod.default)),
+      );
+      setPathNames(urls);
+    };
+
+    loadImages();
+  }, []);
 
   const CarouselData = [
     {

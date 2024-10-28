@@ -66,7 +66,7 @@ export const resources = {
       },
       intro: {
         overview: {
-          title: `혁신을 선도하는 FIVE WORKS`,
+          title: `혁신을 선도하는 FIVEWORKS`,
           content_1: `파이브웍스는 Biometrics, RPA, 영상처리 기술을 기반으로 각종 Web/APP Solution 및 KIOSK SW를
           개발하고 있습니다.`,
           content_2: `파이브웍스는 5년간 다양한 사업군의 프로젝트를 통해 확보된 기술을 바탕으로 자체솔루션을
@@ -321,10 +321,10 @@ export const resources = {
       },
       intro: {
         overview: {
-          title: `FIVE WORKS Leading Innovation`,
-          content_1: `FIVE WORKS is developing various Web/APP Solutions and KIOSK SW based on Biometrics, RPA, and Image Processing technologies.`,
-          content_2: `FIVE WORKS is conducting research and development of its own solutions based on technologies secured through various projects in various business areas over the past 5 years, and the company is growing by an average of more than 50% every year. The CEO and executives understand the grievances of employees more than anyone else, and spare no support and effort for the retention and development of employees.`,
-          content_3: `FIVE WORKS is striving to achieve sales of more than 3 billion won within 5 years. In addition, we will make efforts to reward the achievements of employees who have worked together through investment and listing.`,
+          title: `FIVEWORKS Leading Innovation`,
+          content_1: `FIVEWORKS is developing various Web/APP Solutions and KIOSK SW based on Biometrics, RPA, and Image Processing technologies.`,
+          content_2: `FIVEWORKS is conducting research and development of its own solutions based on technologies secured through various projects in various business areas over the past 5 years, and the company is growing by an average of more than 50% every year. The CEO and executives understand the grievances of employees more than anyone else, and spare no support and effort for the retention and development of employees.`,
+          content_3: `FIVEWORKS is striving to achieve sales of more than 3 billion won within 5 years. In addition, we will make efforts to reward the achievements of employees who have worked together through investment and listing.`,
           content_4: `We look forward to your continued interest and support.`,
         },
         group: {
@@ -422,75 +422,75 @@ export const resources = {
             },
           ],
         },
-        media: {
-          totalItems: '{{totalCnt}} posts in total.',
+      },
+      media: {
+        totalItems: '{{totalCnt}} posts in total.',
+        items: {
+          news: 'News',
+          event: 'Event',
+        },
+      },
+      careers: {
+        human: {
+          title: 'Innovative Talent',
+          subTitle: 'We are looking for talents with creative and innovative thinking.',
           items: {
-            news: 'News',
-            event: 'Event',
+            creative_thinking: {
+              title: 'Creative Thinking',
+              description: 'Discover new ideas and solve problems creatively.',
+              content:
+                'We value the ability to propose innovative solutions that go beyond existing frameworks.',
+            },
+            challenge_spirit: {
+              title: 'Challenge Spirit',
+              description: 'Do not fear new challenges and continue to grow.',
+              content:
+                'We want talents who challenge seemingly impossible goals and are not afraid of failure.',
+            },
+            quick_adaptation: {
+              title: 'Quick Adaptation',
+              description: 'Quickly adapt and respond to rapidly changing environments.',
+              content:
+                'We need the ability to respond quickly to changes in technology and the market, and to quickly learn new technologies.',
+            },
           },
         },
-        careers: {
-          human: {
-            title: 'Innovative Talent',
-            subTitle: 'We are looking for talents with creative and innovative thinking.',
-            items: {
-              creative_thinking: {
-                title: 'Creative Thinking',
-                description: 'Discover new ideas and solve problems creatively.',
-                content:
-                  'We value the ability to propose innovative solutions that go beyond existing frameworks.',
+        process: {
+          recruitment: {
+            title: 'Recruitment Process',
+            steps: {
+              item1: {
+                title: 'Regular Recruitment',
+                content1: 'Recruit the necessary talents throughout the year.',
+                content2: 'You can apply anytime.',
               },
-              challenge_spirit: {
-                title: 'Challenge Spirit',
-                description: 'Do not fear new challenges and continue to grow.',
-                content:
-                  'We want talents who challenge seemingly impossible goals and are not afraid of failure.',
-              },
-              quick_adaptation: {
-                title: 'Quick Adaptation',
-                description: 'Quickly adapt and respond to rapidly changing environments.',
-                content:
-                  'We need the ability to respond quickly to changes in technology and the market, and to quickly learn new technologies.',
+              item2: {
+                title: 'Special Recruitment',
+                content1: 'Recruit intensively',
+                content2: 'Please check the announcement.',
               },
             },
           },
-          process: {
-            recruitment: {
-              title: 'Recruitment Process',
-              steps: {
-                item1: {
-                  title: 'Regular Recruitment',
-                  content1: 'Recruit the necessary talents throughout the year.',
-                  content2: 'You can apply anytime.',
-                },
-                item2: {
-                  title: 'Special Recruitment',
-                  content1: 'Recruit intensively',
-                  content2: 'Please check the announcement.',
-                },
+          selection: {
+            title: 'Selection Process',
+            steps: {
+              item1: {
+                title: 'Application',
+                content: 'Apply through various job sites',
               },
-            },
-            selection: {
-              title: 'Selection Process',
-              steps: {
-                item1: {
-                  title: 'Application',
-                  content: 'Apply through various job sites',
-                },
-                item2: {
-                  title: 'Document Screening',
-                  content:
-                    'After receiving the application, the screening process is conducted and the successful applicants are notified',
-                },
-                item3: {
-                  title: 'Interview',
-                  content:
-                    'Comprehensive evaluation of the applicant’s competence, aptitude, and personality',
-                },
-                item4: {
-                  title: 'Final Selection',
-                  content: 'Recruitment decision',
-                },
+              item2: {
+                title: 'Document Screening',
+                content:
+                  'After receiving the application, the screening process is conducted and the successful applicants are notified',
+              },
+              item3: {
+                title: 'Interview',
+                content:
+                  'Comprehensive evaluation of the applicant’s competence, aptitude, and personality',
+              },
+              item4: {
+                title: 'Final Selection',
+                content: 'Recruitment decision',
               },
             },
           },
