@@ -4,12 +4,13 @@ import TabTitles from '@/pages/business/Common/tab/tab_title';
 import TabContent from '@/pages/business/Common/tab/tab_content';
 import {useTranslation} from 'react-i18next';
 
-const TabIndex = ({tab_key, activeTab, setActiveTab, images, commonAnimation}: TabIndexProps) => {
+const TabContainer = ({tab_key, activeTab, setActiveTab, images, commonAnimation}: TabIndexProps) => {
   const {t} = useTranslation();
   const translatedTabs = t(tab_key, {returnObjects: true}) as TabType[];
 
   // console.log('translatedTabs : ');
   // console.log(translatedTabs);
+  // console.log('tabIndex', images);
   return (
     <div className='w-full mt-16 flex flex-col gap-9'>
       <motion.div {...commonAnimation(0.2)}>
@@ -25,4 +26,4 @@ const TabIndex = ({tab_key, activeTab, setActiveTab, images, commonAnimation}: T
   );
 };
 
-export default TabIndex;
+export default TabContainer;

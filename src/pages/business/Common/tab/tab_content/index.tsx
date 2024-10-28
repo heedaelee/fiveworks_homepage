@@ -34,6 +34,11 @@ const TabContent = ({tab, activeTab, images, commonAnimation}: TabContentProps) 
     setIsImageLoaded(true);
   };
 
+  // console.log('TabContentimages: ', images);
+  // console.log('TabContentactiveTab: ', activeTab);
+  // console.log('TabContenttab: ', tab);
+  // console.log('gㅐ당이미지  : ', images[activeTab]);
+
   return (
     <div className='w-full p-0 md:p-6 flex flex-col gap-16'>
       <motion.div {...commonAnimation(0.3)}>
@@ -46,6 +51,8 @@ const TabContent = ({tab, activeTab, images, commonAnimation}: TabContentProps) 
       </motion.div>
       {isModalOpen && (
         <GalleryPhotoModalWrapper
+          handleImageClick={handleImageClick}
+          images={images[activeTab]}
           isModalOpen={isModalOpen}
           selectedImage={selectedImage}
           closeModal={closeModal}

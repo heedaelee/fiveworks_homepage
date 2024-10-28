@@ -3,8 +3,8 @@ import {useEffect, useState} from 'react';
 import BusinessLayout from '../Common/BusinessLayout';
 import image1 from '@/assets/img/pages/business/bioinformatics/1.jpg';
 import image2 from '@/assets/img/pages/business/bioinformatics/2.jpg';
-import image3 from '@/assets/img/pages/business/bioinformatics/2.jpg';
-import image4 from '@/assets/img/pages/business/bioinformatics/2.jpg';
+import image3 from '@/assets/img/pages/business/bioinformatics/3.jpg';
+import image4 from '@/assets/img/pages/business/bioinformatics/4.jpg';
 
 const Bioinformatics = () => {
   const [activeTab, setActiveTab] = useState(0);

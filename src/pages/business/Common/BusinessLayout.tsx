@@ -1,6 +1,6 @@
 import Header from '@/pages/business/Common/header';
 import {GlobalStyles} from '@/styles/globalStyles';
-import TabIndex from './tab';
+import TabContainer from './tab';
 import {BusinessSectionProps} from '@/pages/business/Common/common.interface';
 
 const BusinessLayout = ({
@@ -24,7 +24,7 @@ const BusinessLayout = ({
         workPerformance_key={workPerformance_key}
         commonAnimation={commonAnimation}
       />
-      <TabIndex
+      <TabContainer
         tab_key={tab_key}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
