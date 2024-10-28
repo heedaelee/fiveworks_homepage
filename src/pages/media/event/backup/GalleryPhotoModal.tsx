@@ -23,12 +23,14 @@ const GalleryPhotoModal = ({
   const isMultipleImages = Array.isArray(images);
   // console.log('현재 이미지 : ', selectedImage);
   // console.log('전체 이미지: ', images);
+  // console.log('isMultipleImages : ', images.indexOf(selectedImage));
 
   const [currentIndex, setCurrentIndex] = useState(images.indexOf(selectedImage));
   const isMobile = useMobileCheck();
 
   useEffect(() => {
-    handleImageClick(images[currentIndex]);
+    /* 복수 이미지일때만 이미지 변경할수 있도록*/
+    isMultipleImages && handleImageClick(images[currentIndex]);
   }, [currentIndex]);
 
   const showPreviousImage = () => {
