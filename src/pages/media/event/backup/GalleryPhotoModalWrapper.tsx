@@ -2,13 +2,14 @@ import useOutsideClick from '@/hooks/useOutsideClick';
 import GalleryPhotoModal from './GalleryPhotoModal';
 import {useEffect} from 'react';
 
-
 interface GalleryPhotoModalProps {
   isModalOpen: boolean;
   selectedImage: string | null;
   closeModal: () => void;
   handleImageLoad: () => void;
   isImageLoaded: boolean;
+  images: string | string[];
+  handleImageClick: (image: string) => void;
 }
 
 const GalleryPhotoModalWrapper = ({
@@ -17,6 +18,8 @@ const GalleryPhotoModalWrapper = ({
   closeModal,
   handleImageLoad,
   isImageLoaded,
+  handleImageClick,
+  images,
 }: GalleryPhotoModalProps) => {
   /**
    * 모달창 외부 클릭시 모달창 닫기
@@ -43,8 +46,10 @@ const GalleryPhotoModalWrapper = ({
 
   return (
     <GalleryPhotoModal
+      images={images}
       closeModal={closeModal}
       handleImageLoad={handleImageLoad}
+      handleImageClick={handleImageClick}
       selectedImage={selectedImage}
       modalRef={modalRef as React.RefObject<HTMLDivElement>}
       isImageLoaded={isImageLoaded}
