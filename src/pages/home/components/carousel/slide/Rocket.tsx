@@ -1,13 +1,16 @@
 import {motion} from 'framer-motion';
 import {RocketLaunchIcon} from '@heroicons/react/24/outline';
+import useMobileCheck from '@/hooks/useMobileCheck';
 
 const Rocket = ({currentIndex}: {currentIndex: number}) => {
+  const isMobile = useMobileCheck();
+
   return (
     <motion.div
       key={currentIndex}
       className='absolute bottom-0 left-0 w-full h-[0.8px] bg-white '
       initial={{width: 0}}
-      animate={{width: '100%'}}
+      animate={{width: `${isMobile ? '80%' : '100%'}`}}
       transition={{
         duration: 5,
         ease: 'linear',
