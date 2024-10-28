@@ -1,5 +1,3 @@
-import useMobileCheck from '@/hooks/useMobileCheck';
-
 const Asdie = ({firstMenuName, subtitle}: {firstMenuName: string; subtitle: string}) => {
   const isLongTitle = firstMenuName.length > 10;
 
