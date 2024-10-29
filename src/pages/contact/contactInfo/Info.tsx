@@ -17,13 +17,13 @@ const Info = () => {
     subway: [
       {
         line: 2,
-        name: '역삼역',
+        name: `${t('contact.station.yeoksam')}`,
         exit: 7,
         walk: 8,
       },
       {
         line: 9,
-        name: '언주역',
+        name: `${t('contact.station.eonju')}`,
         exit: 6,
         walk: 5,
       },

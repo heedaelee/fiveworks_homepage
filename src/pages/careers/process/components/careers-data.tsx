@@ -30,23 +30,17 @@ export const getRecruitmentSteps = (t: TFunction) => [
   {
     icon: CalendarClock,
     title: t('careers.process.recruitment.steps.item1.title'),
-    description: (
-      <>
-        {t('careers.process.recruitment.steps.item1.content1')}
-        <br />
-        {t('careers.process.recruitment.steps.item1.content2')}
-      </>
-    ),
+    description: t('careers.process.recruitment.steps.item1.content1'),
+    description2: t('careers.process.recruitment.steps.item1.content2'),
+    list1: t('careers.process.recruitment.steps.item1.list1'),
+    list2: t('careers.process.recruitment.steps.item1.list2'),
   },
   {
     icon: Clock,
     title: t('careers.process.recruitment.steps.item2.title'),
-    description: (
-      <>
-        {t('careers.process.recruitment.steps.item2.content1')}
-        <br />
-        {t('careers.process.recruitment.steps.item2.content2')}
-      </>
-    ),
+    description: t('careers.process.recruitment.steps.item2.content1'),
+    description2: t('careers.process.recruitment.steps.item2.content2'),
+    list1: t('careers.process.recruitment.steps.item2.list1'),
+    list2: t('careers.process.recruitment.steps.item2.list2'),
   },
 ];
