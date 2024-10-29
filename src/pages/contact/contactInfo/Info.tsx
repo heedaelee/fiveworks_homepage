@@ -1,12 +1,34 @@
 import {MapPin, Phone, Mail} from 'lucide-react';
 import {motion} from 'framer-motion';
 import {GlobalStyles} from '@/styles/globalStyles';
-import {contact_data} from '@/pages/contact/contactInfo/contact-data';
+import {useTranslation} from 'react-i18next';
 
 const Info = () => {
   const subwayLineNumber = `inline-block w-6 h-6 text-white rounded-xl text-center leading-6 font-bold mr-2`;
   const icon = `w-6 h-6 mr-4 text-gray-600`;
   const flex_items_center = GlobalStyles.classes.contact_flex_items_center;
+
+  const {t} = useTranslation();
+
+  const contact_data = {
+    address: `${t('footer.address')}`,
+    tel: 'Tel: 02-3661-0813',
+    email: '5works@5works.co.kr',
+    subway: [
+      {
+        line: 2,
+        name: '역삼역',
+        exit: 7,
+        walk: 8,
+      },
+      {
+        line: 9,
+        name: '언주역',
+        exit: 6,
+        walk: 5,
+      },
+    ],
+  };
   const {address, tel, email, subway} = contact_data;
 
   const animationProps = {
@@ -56,7 +78,7 @@ const Info = () => {
             className={`${item.line === 2 ? 'text-[#00a651]' : 'text-[#B7A57A]'} font-bold mr-1`}>
             {item.name}
           </span>
-          <span>{`${item.exit}번 출구 : 도보 ${item.walk}분`}</span>
+          <span>{`${item.exit}${t('contact.line')} ${t('contact.exit')} : ${t('contact.walk')} ${item.walk}${t('contact.min')}`}</span>
         </AnimatedDiv>
       ))}
     </div>

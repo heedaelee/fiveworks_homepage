@@ -51,9 +51,9 @@ export const resources = {
           },
         },
         contact: {
-          title: 'CONTACT',
+          title: 'Contact',
           items: {
-            contact: 'CONTACT',
+            contact: 'Contact',
           },
         },
       },
@@ -61,12 +61,12 @@ export const resources = {
         subtitle: '고객의 비즈니스를 위한 스마트하고 효율적인 기술 파트너가 되어드리겠습니다',
       },
       footer: {
-        address: '서울 특별시 강남구 봉은사로 30길 42 202호',
+        address: '서울특별시 강남구 봉은사로 30길 42 202호',
         businessNumber: '사업자번호: 261-88-01451',
       },
       intro: {
         overview: {
-          title: `혁신을 선도하는 FIVEWORKS`,
+          title: `혁신을 선도하는 Fiveworks`,
           content_1: `파이브웍스는 Biometrics, RPA, 영상처리 기술을 기반으로 각종 Web/APP Solution 및 KIOSK SW를
           개발하고 있습니다.`,
           content_2: `파이브웍스는 5년간 다양한 사업군의 프로젝트를 통해 확보된 기술을 바탕으로 자체솔루션을
@@ -118,9 +118,9 @@ export const resources = {
           title: '사업부문 소개',
           label: '주요성과',
         },
-        Bioinformatics: {
+        bioinformatics: {
           title: 'Bioinformatics',
-          description: `bioinfomatics 부문에서 최신 딥러닝, 컴퓨터 비전 및 머신러닝 기술을 적용해 생체 데이터의 정확성과 효율성을 극대화하고 있으며, OMNIMIX 솔루션 개발에 박차를 가하고 있습니다.`,
+          description: `bioinformatics 부문에서 최신 딥러닝, 컴퓨터 비전 및 머신러닝 기술을 적용해 생체 데이터의 정확성과 효율성을 극대화하고 있으며, OMNIMIX 솔루션 개발에 박차를 가하고 있습니다.`,
           workPerformance: [
             `<a href="https://omnimix-ai.com/" target="_blank" ${GlobalStyles.linkText}>OMNIMIX 출시</a> : 거대언어모델(LLM)과 검색엔진 기반 검색증강기술 (RAG)을 활용한 한약재-질병 상호작용 확인 및 후보물질 도출 프로그램`,
           ],
@@ -135,7 +135,7 @@ export const resources = {
                 '검색 엔진 기반의 관리 및 활용',
                 '빅데이터 / 알고리즘 기반 챗본',
               ],
-              image: '@/assets/img/pages/business/bioinfomatics/1_Bioinformatics.jpg',
+              image: '@/assets/img/pages/business/bioinformatics/1_Bioinformatics.jpg',
             },
           ],
         },
@@ -254,6 +254,16 @@ export const resources = {
           },
         },
       },
+      contact: {
+        station: {
+          yeoksam: '역삼역',
+          eonju: '언주역',
+        },
+        line: '번',
+        exit: '출구',
+        walk: '도보',
+        min: '분',
+      },
     },
   },
   en: {
@@ -321,10 +331,10 @@ export const resources = {
       },
       intro: {
         overview: {
-          title: `FIVEWORKS Leading Innovation`,
-          content_1: `FIVEWORKS is developing various Web/APP Solutions and KIOSK SW based on Biometrics, RPA, and Image Processing technologies.`,
-          content_2: `FIVEWORKS is conducting research and development of its own solutions based on technologies secured through various projects in various business areas over the past 5 years, and the company is growing by an average of more than 50% every year. The CEO and executives understand the grievances of employees more than anyone else, and spare no support and effort for the retention and development of employees.`,
-          content_3: `FIVEWORKS is striving to achieve sales of more than 3 billion won within 5 years. In addition, we will make efforts to reward the achievements of employees who have worked together through investment and listing.`,
+          title: `Fiveworks Leading Innovation`,
+          content_1: `Fiveworks is developing various Web/APP Solutions and KIOSK SW based on Biometrics, RPA, and Image Processing technologies.`,
+          content_2: `Fiveworks is conducting research and development of its own solutions based on technologies secured through various projects in various business areas over the past 5 years, and the company is growing by an average of more than 50% every year. The CEO and executives understand the grievances of employees more than anyone else, and spare no support and effort for the retention and development of employees.`,
+          content_3: `Fiveworks is striving to achieve sales of more than 3 billion won within 5 years. In addition, we will make efforts to reward the achievements of employees who have worked together through investment and listing.`,
           content_4: `We look forward to your continued interest and support.`,
         },
         group: {
@@ -387,7 +397,7 @@ export const resources = {
                 'Search engine-based management and utilization',
                 'Big data / algorithm-based chatbot',
               ],
-              image: '@/assets/img/pages/business/bioinfomatics/1_Bioinformatics.jpg',
+              image: '@/assets/img/pages/business/bioinformatics/1_Bioinformatics.jpg',
             },
           ],
         },
@@ -508,6 +518,16 @@ export const resources = {
             holiday_gifts: 'Holiday and Anniversary Gifts',
           },
         },
+      },
+      contact: {
+        station: {
+          yeoksam: 'YeoksamStation',
+          eonju: 'EonjuStation',
+        },
+        line: ' Line',
+        exit: 'Exit',
+        walk: 'Walk',
+        min: 'min',
       },
     },
   },

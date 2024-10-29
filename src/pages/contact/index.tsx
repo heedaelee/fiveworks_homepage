@@ -76,7 +76,7 @@ const Contact = () => {
 
   return (
     <div className='container mx-auto px-4 py-8 md:mt-[50px] md:mb-[200px]'>
-      <h1 className='text-3xl font-bold mb-4 md:pb-[80px] text-center'>CONTACT</h1>
+      <h1 className='text-3xl font-bold mb-4 md:pb-[80px] text-center'>Contact</h1>
       <div className='flex flex-col md:flex-row gap-8'>
         <ContactInfo />
         <motion.div

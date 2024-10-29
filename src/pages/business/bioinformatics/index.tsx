@@ -10,10 +10,10 @@ const Bioinformatics = () => {
   const [activeTab, setActiveTab] = useState(0);
   const [images, setImages] = useState<(string | string[])[]>([]);
 
-  const bioinfomaticsData = data_key.bioinfomatics;
-  const {tab_key, description_key, workPerformance_key} = bioinfomaticsData;
+  const bioinformaticsData = data_key.bioinformatics;
+  const {tab_key, description_key, workPerformance_key} = bioinformaticsData;
   useEffect(() => {
-    // const data = getImages('business_bioinfomatics');
+    // const data = getImages('business_bioinformatics');
     const data = [[image1, image2, image3, image4]];
     // console.log('imgData: ', data);
     setImages(data);
